@@ -1,0 +1,76 @@
+buildscript {
+    repositories {
+        gradlePluginPortal()
+        google()
+    }
+    
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.10"
+        classpath "com.google.cloud.tools:appengine-gradle-plugin:2.4.2"
+        classpath "com.github.jengelman.gradle.plugins:shadow:6.1.0"
+    }
+}
+apply from: 'ext.gradle'
+
+apply plugin: "com.github.johnrengelman.shadow"
+apply plugin: 'kotlin'
+apply plugin: 'application'
+apply plugin: 'com.google.cloud.tools.appengine'
+
+group 'net.ambitious.daigoapi'
+version '1.0.0'
+mainClassName = "net.ambitious.daigoapi.ApplicationKt"
+
+sourceSets {
+    main.kotlin.srcDirs = main.java.srcDirs = ['src']
+    test.kotlin.srcDirs = test.java.srcDirs = ['test']
+    main.resources.srcDirs = ['resources']
+    test.resources.srcDirs = ['testresources']
+}
+
+repositories {
+    gradlePluginPortal()
+    google()
+}
+
+appengine {
+    stage {
+        setAppEngineDirectory(".")
+    }
+    deploy {
+        def globalConfiguration = rootProject.extensions.getByName("ext")
+
+        projectId = globalConfiguration["projectId"]
+        version = globalConfiguration["versionCode"]
+    }
+}
+
+dependencies {
+    def ktor_version = captureVersion(implementation('io.ktor:ktor-server-netty:1.6.7'))
+    implementation "io.ktor:ktor-locations:$ktor_version"
+    implementation "io.ktor:ktor:ktor-auth:$ktor_version"
+    implementation "ch.qos.logback:logback-classic:1.2.10"
+    implementation "org.jsoup:jsoup:1.14.3"
+
+    testImplementation "io.ktor:ktor-server-tests:$ktor_version"
+    testImplementation "io.mockk:mockk:1.12.2"
+    testImplementation "org.json:json:20211205"
+
+}
+
+static String captureVersion(Dependency dependency) {
+    return dependency.version
+}
+
+kotlin.experimental.coroutines = 'enable'
+
+task yamlCopy(type: Copy) {
+    from 'secret.yaml'
+    into 'build/staged-app'
+}
+
+task stage {
+    dependsOn assemble
+}
+
+appengineDeploy.dependsOn yamlCopy
