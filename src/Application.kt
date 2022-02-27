@@ -8,6 +8,7 @@ import io.ktor.response.*
 import io.ktor.routing.*
 import io.ktor.server.engine.*
 import io.ktor.server.netty.*
+import org.json.simple.JSONObject
 
 @Suppress("unused")
 fun Application.module() {
@@ -17,9 +18,14 @@ fun Application.module() {
       call.respond(HttpStatusCode.NotFound)
     }
   }
+
   install(Authentication) {
   }
+
   routing {
+    get("/health") {
+      call.respond(JSONObject(mapOf("status" to "ok")).toJSONString())
+    }
   }
 }
 
