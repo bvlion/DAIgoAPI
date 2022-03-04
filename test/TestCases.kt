@@ -14,8 +14,7 @@ class TestCases {
   fun setUp() {
     engine = TestApplicationEngine(applicationEngineEnvironment {
       config = MapApplicationConfig(
-        "app.auth_header" to "test",
-        "app.pretty_print" to "false"
+        "app.auth_header" to "test"
       )
       log = LoggerFactory.getLogger("ktor.test")
     }).apply {

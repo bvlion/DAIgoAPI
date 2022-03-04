@@ -1,6 +1,5 @@
 package net.ambitious.daigoapi
 
-import com.fasterxml.jackson.databind.SerializationFeature
 import io.ktor.application.*
 import io.ktor.auth.*
 import io.ktor.features.*
@@ -22,11 +21,7 @@ fun Application.module() {
   }
 
   install(ContentNegotiation) {
-    jackson {
-      if (environment.config.property("app.pretty_print").getString() == "true") {
-        enable(SerializationFeature.INDENT_OUTPUT)
-      }
-    }
+    jackson()
   }
 
   install(CallLogging) {
@@ -34,19 +29,23 @@ fun Application.module() {
   }
 
   install(Authentication) {
+    bearer {
+      realm = "DAIgoAPI Server"
+      validate(environment.config.property("app.auth_header").getString())
+    }
   }
 
   routing {
-//    authenticate {
+    authenticate {
       get("/create-dai-go") {
         val target = call.request.queryParameters["target"]
         if (target == null) {
           call.respond(HttpStatusCode.BadRequest, mapOf("text" to "target is empty"))
           return@get
         }
-        call.respond(mapOf("text" to Util.createDaiGo(target)))
+        call.respond(mapOf("text" to createDaiGo(target)))
       }
-//    }
+    }
 
     get("/health") {
       call.respond(mapOf("status" to "ok"))
