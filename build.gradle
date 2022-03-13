@@ -52,6 +52,8 @@ dependencies {
     implementation "io.ktor:ktor-jackson:$ktor_version"
     implementation "ch.qos.logback:logback-classic:1.2.10"
     implementation 'com.atilika.kuromoji:kuromoji-ipadic:0.9.0'
+    implementation 'com.google.cloud:google-cloud-firestore:3.0.13'
+    implementation 'com.google.firebase:firebase-admin:8.1.0'
 
     testImplementation "io.ktor:ktor-server-tests:$ktor_version"
     testImplementation "io.mockk:mockk:1.12.2"

@@ -7,3 +7,5 @@
 *.iws
 .DS_Store
 secret.yaml
+*.log
+.firebaserc
