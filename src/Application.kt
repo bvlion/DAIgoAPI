@@ -35,15 +35,22 @@ fun Application.module() {
     }
   }
 
+  val firestore = firestore(environment.config.property("firestore.database_url").getString())
+  setOriginalWords(firestore)
+
   routing {
     authenticate {
-      get("/create-dai-go") {
+      get("/get-dai-go") {
         val target = call.request.queryParameters["target"]
         if (target == null) {
           call.respond(HttpStatusCode.BadRequest, mapOf("text" to "target is empty"))
           return@get
         }
         call.respond(mapOf("text" to createDaiGo(target)))
+      }
+
+      post("/upsert-dai-go") {
+        call.respond(save(firestore, call.receive()))
       }
     }
 

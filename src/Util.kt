@@ -3,9 +3,8 @@ package net.ambitious.daigoapi
 import com.atilika.kuromoji.ipadic.Tokenizer
 
 fun createDaiGo(target: String): String {
-  // 全部漢字の場合はなるべく1文字ずつ読む
-  if (target.matches(Regex("^[\\u4E00-\\u9FFF]+\$"))) {
-
+  originalWords[target]?.let {
+    return it
   }
   val tokens = Tokenizer().tokenize(target)
   return tokens.joinToString("") {
