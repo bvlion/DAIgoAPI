@@ -14,7 +14,8 @@ class TestCases {
   fun setUp() {
     engine = TestApplicationEngine(applicationEngineEnvironment {
       config = MapApplicationConfig(
-        "app.auth_header" to "test"
+        "app.auth_header" to "test",
+        "firestore.database_url" to ""
       )
       log = LoggerFactory.getLogger("ktor.test")
     }).apply {
@@ -35,6 +36,45 @@ class TestCases {
       handleRequest(HttpMethod.Get, "/health").response.run {
         Assert.assertEquals(HttpStatusCode.OK, status())
         Assert.assertEquals(JSONObject(mapOf("status" to "ok")).toJSONString(), content)
+      }
+    }
+  }
+
+  /** get daigo test */
+  @Test
+  fun getDaigo() {
+    with(engine) {
+      // error no auth
+      handleRequest(HttpMethod.Get, "/get-dai-go").response.run {
+        Assert.assertEquals(HttpStatusCode.Unauthorized, status())
+      }
+
+      // error auth
+      handleRequest(HttpMethod.Get, "/get-dai-go"){
+        addHeader(HttpHeaders.Authorization, "Bearer test2")
+      }.response.run {
+        Assert.assertEquals(HttpStatusCode.Unauthorized, status())
+      }
+      handleRequest(HttpMethod.Get, "/get-dai-go?target=努力大事"){
+        addHeader(HttpHeaders.Authorization, "Bearer test2")
+      }.response.run {
+        Assert.assertEquals(HttpStatusCode.Unauthorized, status())
+      }
+
+      // error no parameter
+      handleRequest(HttpMethod.Get, "/get-dai-go"){
+        addHeader(HttpHeaders.Authorization, "Bearer test")
+      }.response.run {
+        Assert.assertEquals(HttpStatusCode.BadRequest, status())
+        Assert.assertEquals(JSONObject(mapOf("text" to "target is empty")).toJSONString(), content)
+      }
+
+      // success
+      handleRequest(HttpMethod.Get, "/get-dai-go?target=努力大事"){
+        addHeader(HttpHeaders.Authorization, "Bearer test")
+      }.response.run {
+        Assert.assertEquals(HttpStatusCode.OK, status())
+        Assert.assertEquals(JSONObject(mapOf("text" to "DD")).toJSONString(), content)
       }
     }
   }
