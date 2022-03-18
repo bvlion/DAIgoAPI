@@ -33,8 +33,16 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-gradle-
 
+    - name: Set up node 16
+      uses: actions/setup-node@v2
+      with:
+        node-version: 16
+
+    - name: set firebase
+      run: npm install -g firebase-tools
+
     - name: build
-      run: ./gradlew clean test stage
+      run: firebase emulators:exec "./gradlew clean test stage" --only firestore
 
     - name: Test Report
       uses: JamesIves/github-pages-deploy-action@4.0.0
