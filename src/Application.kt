@@ -50,7 +50,12 @@ fun Application.module() {
       }
 
       post("/upsert-dai-go") {
-        call.respond(save(firestore, call.receive()))
+        val param = call.receiveOrNull<SaveRequest>()
+        if (param?.word.isNullOrEmpty() || param?.daiGo.isNullOrEmpty()) {
+          call.respond(HttpStatusCode.BadRequest, mapOf("save" to "parameter is empty"))
+          return@post
+        }
+        call.respond(save(firestore, param!!, log))
       }
     }
 

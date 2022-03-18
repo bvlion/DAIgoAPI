@@ -78,4 +78,123 @@ class TestCases {
       }
     }
   }
+
+  /** upsert daigo test */
+  @Test
+  fun upsertDaigo() {
+    with(engine) {
+      // error no auth
+      handleRequest(HttpMethod.Post, "/upsert-dai-go").response.run {
+        Assert.assertEquals(HttpStatusCode.Unauthorized, status())
+      }
+
+      // error auth
+      handleRequest(HttpMethod.Post, "/upsert-dai-go") {
+        addHeader(HttpHeaders.Authorization, "Bearer test2")
+      }.response.run {
+        Assert.assertEquals(HttpStatusCode.Unauthorized, status())
+      }
+
+      // error header
+      handleRequest(HttpMethod.Post, "/upsert-dai-go") {
+        addHeader(HttpHeaders.Authorization, "Bearer test")
+      }.response.run {
+        Assert.assertEquals(HttpStatusCode.BadRequest, status())
+        Assert.assertEquals(JSONObject(mapOf("save" to "parameter is empty")).toJSONString(), content)
+      }
+
+      // error no parameter
+      handleRequest(HttpMethod.Post, "/upsert-dai-go") {
+        addHeader(HttpHeaders.Authorization, "Bearer test")
+        addHeader(HttpHeaders.ContentType, ContentType.Application.Json.toString())
+        setBody(JSONObject().toString())
+      }.response.run {
+        Assert.assertEquals(HttpStatusCode.BadRequest, status())
+        Assert.assertEquals(JSONObject(mapOf("save" to "parameter is empty")).toJSONString(), content)
+      }
+
+      // error empty parameter
+      handleRequest(HttpMethod.Post, "/upsert-dai-go") {
+        addHeader(HttpHeaders.Authorization, "Bearer test")
+        addHeader(HttpHeaders.ContentType, ContentType.Application.Json.toString())
+        setBody(JSONObject().apply {
+          put("word", "")
+        }.toString())
+      }.response.run {
+        Assert.assertEquals(HttpStatusCode.BadRequest, status())
+        Assert.assertEquals(JSONObject(mapOf("save" to "parameter is empty")).toJSONString(), content)
+      }
+      handleRequest(HttpMethod.Post, "/upsert-dai-go") {
+        addHeader(HttpHeaders.Authorization, "Bearer test")
+        addHeader(HttpHeaders.ContentType, ContentType.Application.Json.toString())
+        setBody(JSONObject().apply {
+          put("dai_go", "")
+        }.toString())
+      }.response.run {
+        Assert.assertEquals(HttpStatusCode.BadRequest, status())
+        Assert.assertEquals(JSONObject(mapOf("save" to "parameter is empty")).toJSONString(), content)
+      }
+      handleRequest(HttpMethod.Post, "/upsert-dai-go") {
+        addHeader(HttpHeaders.Authorization, "Bearer test")
+        addHeader(HttpHeaders.ContentType, ContentType.Application.Json.toString())
+        setBody(JSONObject().apply {
+          put("word", "")
+          put("dai_go", "")
+        }.toString())
+      }.response.run {
+        Assert.assertEquals(HttpStatusCode.BadRequest, status())
+        Assert.assertEquals(JSONObject(mapOf("save" to "parameter is empty")).toJSONString(), content)
+      }
+
+      // success insert
+      val target = "大好物"
+      handleRequest(HttpMethod.Get, "/get-dai-go?target=$target"){
+        addHeader(HttpHeaders.Authorization, "Bearer test")
+      }.response.run {
+        Assert.assertEquals(HttpStatusCode.OK, status())
+        Assert.assertEquals(JSONObject(mapOf("text" to "DK")).toJSONString(), content)
+
+        handleRequest(HttpMethod.Post, "/upsert-dai-go") {
+          addHeader(HttpHeaders.Authorization, "Bearer test")
+          addHeader(HttpHeaders.ContentType, ContentType.Application.Json.toString())
+          setBody(JSONObject().apply {
+            put("word", target)
+            put("dai_go", "DKB")
+          }.toString())
+        }.response.run {
+          Assert.assertEquals(HttpStatusCode.OK, status())
+          Assert.assertEquals(JSONObject(mapOf("save" to "success")).toJSONString(), content)
+
+          Thread.sleep(2000)
+          handleRequest(HttpMethod.Get, "/get-dai-go?target=$target"){
+            addHeader(HttpHeaders.Authorization, "Bearer test")
+          }.response.run {
+            Assert.assertEquals(HttpStatusCode.OK, status())
+            Assert.assertEquals(JSONObject(mapOf("text" to "DKB")).toJSONString(), content)
+          }
+        }
+      }
+
+      // success update
+      handleRequest(HttpMethod.Post, "/upsert-dai-go") {
+        addHeader(HttpHeaders.Authorization, "Bearer test")
+        addHeader(HttpHeaders.ContentType, ContentType.Application.Json.toString())
+        setBody(JSONObject().apply {
+          put("word", target)
+          put("dai_go", "DKB2")
+        }.toString())
+      }.response.run {
+        Assert.assertEquals(HttpStatusCode.OK, status())
+        Assert.assertEquals(JSONObject(mapOf("save" to "success")).toJSONString(), content)
+
+        Thread.sleep(2000)
+        handleRequest(HttpMethod.Get, "/get-dai-go?target=$target"){
+          addHeader(HttpHeaders.Authorization, "Bearer test")
+        }.response.run {
+          Assert.assertEquals(HttpStatusCode.OK, status())
+          Assert.assertEquals(JSONObject(mapOf("text" to "DKB2")).toJSONString(), content)
+        }
+      }
+    }
+  }
 }
