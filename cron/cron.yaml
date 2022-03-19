@@ -1,0 +1,6 @@
+cron:
+  - description: "インスタンス定期監視"
+    target: default
+    url: /health
+    schedule: every 5 mins
+    timezone: Asia/Tokyo
