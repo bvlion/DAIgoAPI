@@ -42,7 +42,7 @@ jobs:
       run: npm install -g firebase-tools
 
     - name: build
-      run: firebase emulators:exec "./gradlew clean test stage" --only firestore
+      run: firebase emulators:exec "./gradlew clean test" --only firestore
 
     - name: Test Report
       uses: JamesIves/github-pages-deploy-action@4.0.0
