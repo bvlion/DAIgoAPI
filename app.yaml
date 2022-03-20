@@ -2,7 +2,7 @@ includes:
   - secret.yaml
 
 runtime: java11
-entrypoint: 'java -Xmx128m -jar *.jar'
+entrypoint: 'java -Xmx80m -jar *.jar'
 
 automatic_scaling:
   min_idle_instances: automatic
