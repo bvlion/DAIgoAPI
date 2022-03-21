@@ -35,7 +35,8 @@ fun Application.module() {
     }
   }
 
-  val firestore = firestore(environment.config.property("firestore.database_url").getString())
+  val databaseUrl = environment.config.property("firestore.database_url").getString()
+  val firestore = firestore(databaseUrl)
   setOriginalWords(firestore)
 
   routing {
@@ -56,6 +57,17 @@ fun Application.module() {
           return@post
         }
         call.respond(save(firestore, param!!, log))
+      }
+
+      get("/get-samples") {
+        call.respond(samples)
+      }
+
+      post("/update-samples") {
+        if (databaseUrl.isNotEmpty()) {
+          setSampleWords(firestore)
+        }
+        call.respond(samples)
       }
     }
 

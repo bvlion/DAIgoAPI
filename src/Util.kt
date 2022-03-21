@@ -3,7 +3,7 @@ package net.ambitious.daigoapi
 import com.atilika.kuromoji.ipadic.Tokenizer
 
 fun createDaiGo(target: String): String {
-  originalWords[target]?.let {
+  words[target]?.let {
     return it
   }
   val tokens = Tokenizer().tokenize(target)
