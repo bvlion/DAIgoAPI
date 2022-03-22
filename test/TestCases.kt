@@ -17,7 +17,7 @@ class TestCases {
     engine = TestApplicationEngine(applicationEngineEnvironment {
       config = MapApplicationConfig(
         "app.auth_header" to "test",
-        "firestore.database_url" to ""
+        "firestore.admin_sdk" to ""
       )
       log = LoggerFactory.getLogger("ktor.test")
     }).apply {
