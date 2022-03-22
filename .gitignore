@@ -6,6 +6,5 @@
 *.ipr
 *.iws
 .DS_Store
-secret.yaml
 *.log
 firebase-adminsdk.json

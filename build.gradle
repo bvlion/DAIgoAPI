@@ -6,7 +6,6 @@ buildscript {
     
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.10"
-        classpath "com.google.cloud.tools:appengine-gradle-plugin:2.4.2"
         classpath "gradle.plugin.com.github.johnrengelman:shadow:7.1.2"
     }
 }
@@ -15,7 +14,6 @@ apply from: 'ext.gradle'
 apply plugin: 'com.github.johnrengelman.shadow'
 apply plugin: 'kotlin'
 apply plugin: 'application'
-apply plugin: 'com.google.cloud.tools.appengine'
 
 group 'net.ambitious.daigoapi'
 version '1.0.0'
@@ -25,7 +23,6 @@ sourceSets {
     main.kotlin.srcDirs = main.java.srcDirs = ['src']
     test.kotlin.srcDirs = test.java.srcDirs = ['test']
     main.resources.srcDirs = ['resources']
-    test.resources.srcDirs = ['testresources']
 }
 
 repositories {
@@ -36,19 +33,6 @@ repositories {
 shadowJar {
     manifest {
         attributes 'Main-Class': 'net.ambitious.daigoapi.ApplicationKt'
-    }
-}
-
-appengine {
-    stage {
-        setAppEngineDirectory(".")
-        artifact = "build/libs/${project.name}-${project.version}-all.jar" as Object
-    }
-    deploy {
-        def globalConfiguration = rootProject.extensions.getByName("ext")
-
-        projectId = globalConfiguration["projectId"]
-        version = globalConfiguration["versionCode"]
     }
 }
 
@@ -73,14 +57,6 @@ static String captureVersion(Dependency dependency) {
 
 kotlin.experimental.coroutines = 'enable'
 
-task mustFilesCopy(type: Copy) {
-    into 'build/staged-app'
-    from 'secret.yaml'
-    from 'firebase-adminsdk.json'
-}
-
 task stage {
     dependsOn assemble
 }
-
-appengineDeploy.dependsOn mustFilesCopy

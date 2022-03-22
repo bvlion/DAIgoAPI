@@ -27,24 +27,15 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-gradle-
 
-    - name: Set Up GCP Auth
-      uses: google-github-actions/setup-gcloud@master
-      with:
-        project_id: ${{ secrets.GCP_PROJECT_ID }}
-        service_account_key: ${{ secrets.GCP_SA_KEY }}
-        export_default_credentials: true
+    - name: create fatJar
+      run: ./gradlew clean stage
 
-    - name: Setup secrets
+    - name: Heroku Deploy
+      env:
+        HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
       run: |
-        echo "${{ secrets.FIREBASE_ADMINSDK_JSON }}" | base64 -d > firebase-adminsdk.json
-        echo "${{ secrets.SECRET_YAML }}" | base64 -d > secret.yaml
-
-        VERSION=$(echo ${{ github.ref }} | sed -e "s#refs/tags/##g" | sed -e 's/\./-/g')
-        sed -i -e "s/version_code/$VERSION/g" ext.gradle
-        sed -i -e "s/project_id/${{ secrets.GCP_PROJECT_ID }}/g" ext.gradle
-
-    - name: appengineDeploy
-      run: ./gradlew clean appengineDeploy
+        heroku plugins:install java
+        heroku deploy:jar build/libs/*-all.jar -a ${{ secrets.HEROKU_APP_NAME }}
 
     - name: Slack Notification
       uses: 8398a7/action-slack@v3
