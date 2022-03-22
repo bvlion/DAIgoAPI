@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">8.089s</div>
+<div class="counter">8.213s</div>
 <p>duration</p>
 </div>
 </td>
@@ -82,27 +82,27 @@
 </thead>
 <tr>
 <td class="success">getDaigo</td>
-<td class="success">0.321s</td>
+<td class="success">0.303s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">getSamples</td>
-<td class="success">2.909s</td>
+<td class="success">3.040s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">health</td>
-<td class="success">0.060s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">updateSamples</td>
 <td class="success">0.073s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
+<td class="success">updateSamples</td>
+<td class="success">0.107s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
 <td class="success">upsertDaigo</td>
-<td class="success">4.726s</td>
+<td class="success">4.690s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -110,17 +110,17 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>2022-03-21 00:59:15.557 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
-2022-03-21 00:59:15.569 [Test worker] INFO  ktor.test - Application started in 0.063 seconds.
-2022-03-21 00:59:18.159 [Test worker] INFO  ktor.test - Application stopping: io.ktor.application.Application@ef7c238
-2022-03-21 00:59:18.160 [Test worker] INFO  ktor.test - Application stopped: io.ktor.application.Application@ef7c238
-2022-03-21 00:59:18.167 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
-2022-03-21 00:59:18.167 [Test worker] INFO  ktor.test - Application started in 0.001 seconds.
-2022-03-21 00:59:18.225 [Test worker] INFO  ktor.test - Application stopping: io.ktor.application.Application@58f821b0
-2022-03-21 00:59:18.225 [Test worker] INFO  ktor.test - Application stopped: io.ktor.application.Application@58f821b0
-2022-03-21 00:59:18.227 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
-2022-03-21 00:59:18.227 [Test worker] INFO  ktor.test - Application started in 0.001 seconds.
-2022-03-21 00:59:18.290 [DefaultDispatcher-worker-3 @request#17] DEBUG ktor.test - Conversion failed, null returned
+<pre>2022-03-22 11:10:53.192 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
+2022-03-22 11:10:53.203 [Test worker] INFO  ktor.test - Application started in 0.071 seconds.
+2022-03-22 11:10:55.880 [Test worker] INFO  ktor.test - Application stopping: io.ktor.application.Application@79b1fa84
+2022-03-22 11:10:55.882 [Test worker] INFO  ktor.test - Application stopped: io.ktor.application.Application@79b1fa84
+2022-03-22 11:10:55.889 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
+2022-03-22 11:10:55.889 [Test worker] INFO  ktor.test - Application started in 0.001 seconds.
+2022-03-22 11:10:55.957 [Test worker] INFO  ktor.test - Application stopping: io.ktor.application.Application@79abc081
+2022-03-22 11:10:55.958 [Test worker] INFO  ktor.test - Application stopped: io.ktor.application.Application@79abc081
+2022-03-22 11:10:55.964 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
+2022-03-22 11:10:55.964 [Test worker] INFO  ktor.test - Application started in 0.003 seconds.
+2022-03-22 11:10:56.032 [DefaultDispatcher-worker-2 @request#17] DEBUG ktor.test - Conversion failed, null returned
 io.ktor.features.UnsupportedMediaTypeException: Content type */* is not supported
 	at io.ktor.features.ContentNegotiation$Feature$install$3.invokeSuspend(ContentNegotiation.kt:222)
 	at io.ktor.features.ContentNegotiation$Feature$install$3.invoke(ContentNegotiation.kt)
@@ -131,7 +131,7 @@ io.ktor.features.UnsupportedMediaTypeException: Content type */* is not supporte
 	at io.ktor.util.pipeline.Pipeline.execute(Pipeline.kt:78)
 	at io.ktor.request.ApplicationReceiveFunctionsKt.receive(ApplicationReceiveFunctions.kt:116)
 	at io.ktor.request.ApplicationReceiveFunctionsKt.receiveOrNull(ApplicationReceiveFunctions.kt:135)
-	at net.ambitious.daigoapi.ApplicationKt$module$5$1$2.invokeSuspend(Application.kt:84)
+	at net.ambitious.daigoapi.ApplicationKt$module$5$1$2.invokeSuspend(Application.kt:91)
 	at net.ambitious.daigoapi.ApplicationKt$module$5$1$2.invoke(Application.kt)
 	at net.ambitious.daigoapi.ApplicationKt$module$5$1$2.invoke(Application.kt)
 	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:248)
@@ -183,7 +183,7 @@ io.ktor.features.UnsupportedMediaTypeException: Content type */* is not supporte
 	at ???(Coroutine boundary.?(?)
 	at io.ktor.request.ApplicationReceiveFunctionsKt.receive(ApplicationReceiveFunctions.kt:116)
 	at io.ktor.request.ApplicationReceiveFunctionsKt.receiveOrNull(ApplicationReceiveFunctions.kt:135)
-	at net.ambitious.daigoapi.ApplicationKt$module$5$1$2.invokeSuspend(Application.kt:84)
+	at net.ambitious.daigoapi.ApplicationKt$module$5$1$2.invokeSuspend(Application.kt:91)
 	at io.ktor.routing.Routing.executeResult(Routing.kt:154)
 	at io.ktor.routing.Routing$Feature$install$1.invokeSuspend(Routing.kt:107)
 	at io.ktor.features.ContentNegotiation$Feature$install$1.invokeSuspend(ContentNegotiation.kt:145)
@@ -204,7 +204,7 @@ Caused by: io.ktor.features.UnsupportedMediaTypeException: Content type */* is n
 	at io.ktor.util.pipeline.Pipeline.execute(Pipeline.kt:78)
 	at io.ktor.request.ApplicationReceiveFunctionsKt.receive(ApplicationReceiveFunctions.kt:116)
 	at io.ktor.request.ApplicationReceiveFunctionsKt.receiveOrNull(ApplicationReceiveFunctions.kt:135)
-	at net.ambitious.daigoapi.ApplicationKt$module$5$1$2.invokeSuspend(Application.kt:84)
+	at net.ambitious.daigoapi.ApplicationKt$module$5$1$2.invokeSuspend(Application.kt:91)
 	at net.ambitious.daigoapi.ApplicationKt$module$5$1$2.invoke(Application.kt)
 	at net.ambitious.daigoapi.ApplicationKt$module$5$1$2.invoke(Application.kt)
 	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:248)
@@ -261,26 +261,26 @@ Caused by: io.ktor.features.UnsupportedMediaTypeException: Content type */* is n
 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:665)
 接頭詞,名詞接続,*,*,*,*,大,ダイ,ダイ
 名詞,一般,*,*,*,*,好物,コウブツ,コーブツ
-2022-03-21 00:59:22.948 [Test worker] INFO  ktor.test - Application stopping: io.ktor.application.Application@2316c18f
-2022-03-21 00:59:22.949 [Test worker] INFO  ktor.test - Application stopped: io.ktor.application.Application@2316c18f
-2022-03-21 00:59:22.953 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
-2022-03-21 00:59:22.953 [Test worker] INFO  ktor.test - Application started in 0.001 seconds.
-2022-03-21 00:59:23.024 [Test worker] INFO  ktor.test - Application stopping: io.ktor.application.Application@1dffebff
-2022-03-21 00:59:23.025 [Test worker] INFO  ktor.test - Application stopped: io.ktor.application.Application@1dffebff
-2022-03-21 00:59:23.026 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
-2022-03-21 00:59:23.026 [Test worker] INFO  ktor.test - Application started in 0.0 seconds.
+2022-03-22 11:11:00.650 [Test worker] INFO  ktor.test - Application stopping: io.ktor.application.Application@4dedfcf3
+2022-03-22 11:11:00.650 [Test worker] INFO  ktor.test - Application stopped: io.ktor.application.Application@4dedfcf3
+2022-03-22 11:11:00.652 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
+2022-03-22 11:11:00.652 [Test worker] INFO  ktor.test - Application started in 0.0 seconds.
+2022-03-22 11:11:00.753 [Test worker] INFO  ktor.test - Application stopping: io.ktor.application.Application@751ae825
+2022-03-22 11:11:00.753 [Test worker] INFO  ktor.test - Application stopped: io.ktor.application.Application@751ae825
+2022-03-22 11:11:00.760 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
+2022-03-22 11:11:00.760 [Test worker] INFO  ktor.test - Application started in 0.001 seconds.
 名詞,サ変接続,*,*,*,*,努力,ドリョク,ドリョク
 名詞,形容動詞語幹,*,*,*,*,大事,ダイジ,ダイジ
-2022-03-21 00:59:23.345 [Test worker] INFO  ktor.test - Application stopping: io.ktor.application.Application@10eec0be
-2022-03-21 00:59:23.345 [Test worker] INFO  ktor.test - Application stopped: io.ktor.application.Application@10eec0be
+2022-03-22 11:11:01.055 [Test worker] INFO  ktor.test - Application stopping: io.ktor.application.Application@5cbdb88e
+2022-03-22 11:11:01.055 [Test worker] INFO  ktor.test - Application stopped: io.ktor.application.Application@5cbdb88e
 </pre>
 </span>
 </div>
 <div id="tab2" class="tab">
 <h2>Standard error</h2>
 <span class="code">
-<pre>Mar 21, 2022 12:59:22 AM io.grpc.internal.ManagedChannelOrphanWrapper$ManagedChannelReference cleanQueue
-SEVERE: *~*~*~ Channel ManagedChannelImpl{logId=1, target=localhost:8081} was not shutdown properly!!! ~*~*~*
+<pre>Mar 22, 2022 11:11:00 AM io.grpc.internal.ManagedChannelOrphanWrapper$ManagedChannelReference cleanQueue
+SEVERE: *~*~*~ Channel ManagedChannelImpl{logId=5, target=localhost:8081} was not shutdown properly!!! ~*~*~*
     Make sure to call shutdown()/shutdownNow() and wait until awaitTermination() returns true.
 java.lang.RuntimeException: ManagedChannel allocation site
 	at io.grpc.internal.ManagedChannelOrphanWrapper$ManagedChannelReference.&lt;init&gt;(ManagedChannelOrphanWrapper.java:93)
@@ -307,7 +307,7 @@ java.lang.RuntimeException: ManagedChannel allocation site
 	at com.google.cloud.firestore.FirestoreOptions$DefaultFirestoreFactory.create(FirestoreOptions.java:64)
 	at com.google.cloud.ServiceOptions.getService(ServiceOptions.java:540)
 	at net.ambitious.daigoapi.FirestoreKt.firestore(Firestore.kt:25)
-	at net.ambitious.daigoapi.ApplicationKt.module(Application.kt:39)
+	at net.ambitious.daigoapi.ApplicationKt.module(Application.kt:46)
 	at TestCases.setUp(TestCases.kt:25)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -362,8 +362,8 @@ java.lang.RuntimeException: ManagedChannel allocation site
 	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)
 	at java.base/java.lang.Thread.run(Thread.java:829)
 
-Mar 21, 2022 12:59:22 AM io.grpc.internal.ManagedChannelOrphanWrapper$ManagedChannelReference cleanQueue
-SEVERE: *~*~*~ Channel ManagedChannelImpl{logId=5, target=localhost:8081} was not shutdown properly!!! ~*~*~*
+Mar 22, 2022 11:11:00 AM io.grpc.internal.ManagedChannelOrphanWrapper$ManagedChannelReference cleanQueue
+SEVERE: *~*~*~ Channel ManagedChannelImpl{logId=1, target=localhost:8081} was not shutdown properly!!! ~*~*~*
     Make sure to call shutdown()/shutdownNow() and wait until awaitTermination() returns true.
 java.lang.RuntimeException: ManagedChannel allocation site
 	at io.grpc.internal.ManagedChannelOrphanWrapper$ManagedChannelReference.&lt;init&gt;(ManagedChannelOrphanWrapper.java:93)
@@ -390,7 +390,7 @@ java.lang.RuntimeException: ManagedChannel allocation site
 	at com.google.cloud.firestore.FirestoreOptions$DefaultFirestoreFactory.create(FirestoreOptions.java:64)
 	at com.google.cloud.ServiceOptions.getService(ServiceOptions.java:540)
 	at net.ambitious.daigoapi.FirestoreKt.firestore(Firestore.kt:25)
-	at net.ambitious.daigoapi.ApplicationKt.module(Application.kt:39)
+	at net.ambitious.daigoapi.ApplicationKt.module(Application.kt:46)
 	at TestCases.setUp(TestCases.kt:25)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -456,7 +456,7 @@ java.lang.RuntimeException: ManagedChannel allocation site
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.1.1</a> at Mar 21, 2022, 12:59:23 AM</p>
+<a href="http://www.gradle.org">Gradle 7.1.1</a> at Mar 22, 2022, 11:11:01 AM</p>
 </div>
 </div>
 </body>
