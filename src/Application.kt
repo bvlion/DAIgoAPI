@@ -10,6 +10,7 @@ import io.ktor.response.*
 import io.ktor.routing.*
 import io.ktor.server.engine.*
 import io.ktor.server.netty.*
+import java.util.*
 
 @Suppress("unused")
 fun Application.module() {
@@ -35,8 +36,14 @@ fun Application.module() {
     }
   }
 
-  val databaseUrl = environment.config.property("firestore.database_url").getString()
-  val firestore = firestore(databaseUrl)
+  val credential = environment.config.property("firestore.admin_sdk").getString().let {
+    if (it.isEmpty()) {
+      null
+    } else {
+      Base64.getDecoder().decode(it)
+    }
+  }
+  val firestore = firestore(credential)
   setOriginalWords(firestore)
 
   routing {
@@ -64,7 +71,7 @@ fun Application.module() {
       }
 
       post("/update-samples") {
-        if (databaseUrl.isNotEmpty()) {
+        if (credential != null) {
           setSampleWords(firestore)
         }
         call.respond(samples)

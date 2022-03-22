@@ -13,10 +13,10 @@ import com.google.firebase.FirebaseApp
 import com.google.firebase.FirebaseOptions
 import com.google.firebase.cloud.FirestoreClient
 import org.slf4j.Logger
-import java.io.FileInputStream
+import java.io.ByteArrayInputStream
 
-fun firestore(databaseUrl: String): Firestore =
-  if (databaseUrl.isEmpty()) {
+fun firestore(credentials: ByteArray?): Firestore =
+  if (credentials == null) {
     FirestoreOptions
       .newBuilder()
       .setProjectId("test")
@@ -25,8 +25,7 @@ fun firestore(databaseUrl: String): Firestore =
       .service
   } else {
     val options = FirebaseOptions.builder()
-      .setCredentials(GoogleCredentials.fromStream(FileInputStream("firebase-adminsdk.json")))
-      .setDatabaseUrl(databaseUrl)
+      .setCredentials(GoogleCredentials.fromStream(ByteArrayInputStream(credentials)))
       .build()
     FirebaseApp.initializeApp(options)
     FirestoreClient.getFirestore()
