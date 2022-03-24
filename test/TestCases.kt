@@ -42,6 +42,34 @@ class TestCases {
     }
   }
 
+  /** terms_of_use test */
+  @Test
+  fun termsOfUse() {
+    with(engine) {
+      handleRequest(HttpMethod.Get, "/terms_of_use").response.run {
+        Assert.assertEquals(HttpStatusCode.OK, status())
+        Assert.assertEquals(
+          JSONObject(mapOf(
+            "text" to "<h1 id=\"利用規約のテスト\">利用規約のテスト</h1>\n<p>これは <strong>テスト</strong> です！</p>\n"
+          )).toJSONString().replace("\\/", "/"), content)
+      }
+    }
+  }
+
+  /** privacy_policy test */
+  @Test
+  fun privacyPolicy() {
+    with(engine) {
+      handleRequest(HttpMethod.Get, "/privacy_policy").response.run {
+        Assert.assertEquals(HttpStatusCode.OK, status())
+        Assert.assertEquals(
+          JSONObject(mapOf(
+            "text" to "<h1 id=\"プライバシーポリシーのテスト\">プライバシーポリシーのテスト</h1>\n<p>これは <strong>テスト</strong> です！</p>\n"
+          )).toJSONString().replace("\\/", "/"), content)
+      }
+    }
+  }
+
   /** get daigo test */
   @Test
   fun getDaigo() {

@@ -1,5 +1,9 @@
 package net.ambitious.daigoapi
 
+import com.vladsch.flexmark.ext.toc.TocExtension
+import com.vladsch.flexmark.html.HtmlRenderer
+import com.vladsch.flexmark.parser.Parser
+import com.vladsch.flexmark.util.data.MutableDataSet
 import io.ktor.application.*
 import io.ktor.auth.*
 import io.ktor.features.*
@@ -10,6 +14,8 @@ import io.ktor.response.*
 import io.ktor.routing.*
 import io.ktor.server.engine.*
 import io.ktor.server.netty.*
+import java.io.BufferedReader
+import java.io.InputStreamReader
 import java.util.*
 
 @Suppress("unused")
@@ -81,7 +87,34 @@ fun Application.module() {
     get("/health") {
       call.respond(mapOf("status" to "ok"))
     }
+
+    get("/privacy_policy") {
+      call.respond(mapOf("text" to getHtml("/privacy_policy.md")))
+    }
+
+    get("/terms_of_use") {
+      call.respond(mapOf("text" to getHtml("/terms_of_use.md")))
+    }
   }
+}
+
+private fun getHtml(path: String): String {
+  val mdLines = arrayListOf<String>()
+  object {}.javaClass.getResourceAsStream(path)?.let { stream ->
+    BufferedReader(InputStreamReader(stream)).use {
+      mdLines.addAll(it.readLines())
+    }
+  } ?: throw java.lang.IllegalArgumentException("$path is null")
+
+  val options = MutableDataSet().apply {
+    set(Parser.EXTENSIONS, listOf(TocExtension.create()))
+  }
+
+  val parser = Parser.builder(options).build()
+  val renderer = HtmlRenderer.builder(options).build()
+
+  val document = parser.parse(mdLines.joinToString("\n"))
+  return renderer.render(document)
 }
 
 fun main(args: Array<String>) {
