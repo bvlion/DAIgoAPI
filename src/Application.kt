@@ -73,14 +73,14 @@ fun Application.module() {
       }
 
       get("/get-samples") {
-        call.respond(samples)
+        call.respond(mapOf("samples" to samples))
       }
 
       post("/update-samples") {
         if (credential != null) {
           setSampleWords(firestore)
         }
-        call.respond(samples)
+        call.respond(mapOf("samples" to samples))
       }
     }
 

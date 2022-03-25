@@ -249,7 +249,7 @@ class TestCases {
         addHeader(HttpHeaders.Authorization, "Bearer test")
       }.response.run {
         Assert.assertEquals(HttpStatusCode.OK, status())
-        Assert.assertEquals(JSONArray().apply { addAll(samples) }.toJSONString(), content)
+        Assert.assertEquals(JSONObject(mapOf("samples" to JSONArray().apply { addAll(samples) })).toJSONString(), content)
       }
     }
   }
@@ -275,7 +275,7 @@ class TestCases {
         addHeader(HttpHeaders.Authorization, "Bearer test")
       }.response.run {
         Assert.assertEquals(HttpStatusCode.OK, status())
-        Assert.assertEquals(JSONArray().apply { addAll(samples) }.toJSONString(), content)
+        Assert.assertEquals(JSONObject(mapOf("samples" to JSONArray().apply { addAll(samples) })).toJSONString(), content)
       }
     }
   }
