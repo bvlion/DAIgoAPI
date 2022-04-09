@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">9.557s</div>
+<div class="counter">8.156s</div>
 <p>duration</p>
 </div>
 </td>
@@ -82,37 +82,37 @@
 </thead>
 <tr>
 <td class="success">getDaigo</td>
-<td class="success">0.393s</td>
+<td class="success">0.311s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">getSamples</td>
-<td class="success">3.384s</td>
+<td class="success">2.583s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">health</td>
-<td class="success">0.078s</td>
+<td class="success">0.050s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">privacyPolicy</td>
-<td class="success">0.059s</td>
+<td class="success">0.035s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">termsOfUse</td>
-<td class="success">0.493s</td>
+<td class="success">0.342s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">updateSamples</td>
-<td class="success">0.102s</td>
+<td class="success">0.044s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">upsertDaigo</td>
-<td class="success">5.048s</td>
+<td class="success">4.791s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -120,21 +120,21 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>2022-03-27 11:37:26.853 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
-2022-03-27 11:37:26.869 [Test worker] INFO  ktor.test - Application started in 0.078 seconds.
-2022-03-27 11:37:29.865 [Test worker] INFO  ktor.test - Application stopping: io.ktor.application.Application@351fa1c7
-2022-03-27 11:37:29.867 [Test worker] INFO  ktor.test - Application stopped: io.ktor.application.Application@351fa1c7
-2022-03-27 11:37:29.874 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
-2022-03-27 11:37:29.875 [Test worker] INFO  ktor.test - Application started in 0.001 seconds.
-2022-03-27 11:37:29.949 [Test worker] INFO  ktor.test - Application stopping: io.ktor.application.Application@69a942b9
-2022-03-27 11:37:29.949 [Test worker] INFO  ktor.test - Application stopped: io.ktor.application.Application@69a942b9
-2022-03-27 11:37:29.953 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
-2022-03-27 11:37:29.953 [Test worker] INFO  ktor.test - Application started in 0.001 seconds.
-2022-03-27 11:37:30.444 [Test worker] INFO  ktor.test - Application stopping: io.ktor.application.Application@178afb7d
-2022-03-27 11:37:30.444 [Test worker] INFO  ktor.test - Application stopped: io.ktor.application.Application@178afb7d
-2022-03-27 11:37:30.446 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
-2022-03-27 11:37:30.447 [Test worker] INFO  ktor.test - Application started in 0.001 seconds.
-2022-03-27 11:37:30.686 [DefaultDispatcher-worker-2 @request#21] DEBUG ktor.test - Conversion failed, null returned
+<pre>2022-04-09 09:54:28.390 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
+2022-04-09 09:54:28.403 [Test worker] INFO  ktor.test - Application started in 0.065 seconds.
+2022-04-09 09:54:30.677 [Test worker] INFO  ktor.test - Application stopping: io.ktor.application.Application@45f08d41
+2022-04-09 09:54:30.678 [Test worker] INFO  ktor.test - Application stopped: io.ktor.application.Application@45f08d41
+2022-04-09 09:54:30.684 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
+2022-04-09 09:54:30.684 [Test worker] INFO  ktor.test - Application started in 0.001 seconds.
+2022-04-09 09:54:30.731 [Test worker] INFO  ktor.test - Application stopping: io.ktor.application.Application@4ca80508
+2022-04-09 09:54:30.731 [Test worker] INFO  ktor.test - Application stopped: io.ktor.application.Application@4ca80508
+2022-04-09 09:54:30.734 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
+2022-04-09 09:54:30.734 [Test worker] INFO  ktor.test - Application started in 0.0 seconds.
+2022-04-09 09:54:31.075 [Test worker] INFO  ktor.test - Application stopping: io.ktor.application.Application@4eb11925
+2022-04-09 09:54:31.075 [Test worker] INFO  ktor.test - Application stopped: io.ktor.application.Application@4eb11925
+2022-04-09 09:54:31.077 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
+2022-04-09 09:54:31.077 [Test worker] INFO  ktor.test - Application started in 0.001 seconds.
+2022-04-09 09:54:31.200 [DefaultDispatcher-worker-3 @request#21] DEBUG ktor.test - Conversion failed, null returned
 io.ktor.features.UnsupportedMediaTypeException: Content type */* is not supported
 	at io.ktor.features.ContentNegotiation$Feature$install$3.invokeSuspend(ContentNegotiation.kt:222)
 	at io.ktor.features.ContentNegotiation$Feature$install$3.invoke(ContentNegotiation.kt)
@@ -275,29 +275,29 @@ Caused by: io.ktor.features.UnsupportedMediaTypeException: Content type */* is n
 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:665)
 接頭詞,名詞接続,*,*,*,*,大,ダイ,ダイ
 名詞,一般,*,*,*,*,好物,コウブツ,コーブツ
-2022-03-27 11:37:35.491 [Test worker] INFO  ktor.test - Application stopping: io.ktor.application.Application@573a6a41
-2022-03-27 11:37:35.492 [Test worker] INFO  ktor.test - Application stopped: io.ktor.application.Application@573a6a41
-2022-03-27 11:37:35.493 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
-2022-03-27 11:37:35.494 [Test worker] INFO  ktor.test - Application started in 0.001 seconds.
-2022-03-27 11:37:35.590 [Test worker] INFO  ktor.test - Application stopping: io.ktor.application.Application@11aa4e00
-2022-03-27 11:37:35.592 [Test worker] INFO  ktor.test - Application stopped: io.ktor.application.Application@11aa4e00
-2022-03-27 11:37:35.596 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
-2022-03-27 11:37:35.596 [Test worker] INFO  ktor.test - Application started in 0.001 seconds.
-2022-03-27 11:37:35.651 [Test worker] INFO  ktor.test - Application stopping: io.ktor.application.Application@4d2bc4b3
-2022-03-27 11:37:35.651 [Test worker] INFO  ktor.test - Application stopped: io.ktor.application.Application@4d2bc4b3
-2022-03-27 11:37:35.655 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
-2022-03-27 11:37:35.655 [Test worker] INFO  ktor.test - Application started in 0.001 seconds.
+2022-04-09 09:54:35.865 [Test worker] INFO  ktor.test - Application stopping: io.ktor.application.Application@29d0aa96
+2022-04-09 09:54:35.865 [Test worker] INFO  ktor.test - Application stopped: io.ktor.application.Application@29d0aa96
+2022-04-09 09:54:35.867 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
+2022-04-09 09:54:35.867 [Test worker] INFO  ktor.test - Application started in 0.0 seconds.
+2022-04-09 09:54:35.909 [Test worker] INFO  ktor.test - Application stopping: io.ktor.application.Application@187a5af1
+2022-04-09 09:54:35.909 [Test worker] INFO  ktor.test - Application stopped: io.ktor.application.Application@187a5af1
+2022-04-09 09:54:35.911 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
+2022-04-09 09:54:35.912 [Test worker] INFO  ktor.test - Application started in 0.001 seconds.
+2022-04-09 09:54:35.942 [Test worker] INFO  ktor.test - Application stopping: io.ktor.application.Application@712b37af
+2022-04-09 09:54:35.942 [Test worker] INFO  ktor.test - Application stopped: io.ktor.application.Application@712b37af
+2022-04-09 09:54:35.946 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
+2022-04-09 09:54:35.946 [Test worker] INFO  ktor.test - Application started in 0.0 seconds.
 名詞,サ変接続,*,*,*,*,努力,ドリョク,ドリョク
 名詞,形容動詞語幹,*,*,*,*,大事,ダイジ,ダイジ
-2022-03-27 11:37:36.046 [Test worker] INFO  ktor.test - Application stopping: io.ktor.application.Application@602ee032
-2022-03-27 11:37:36.046 [Test worker] INFO  ktor.test - Application stopped: io.ktor.application.Application@602ee032
+2022-04-09 09:54:36.256 [Test worker] INFO  ktor.test - Application stopping: io.ktor.application.Application@31bdfdfb
+2022-04-09 09:54:36.256 [Test worker] INFO  ktor.test - Application stopped: io.ktor.application.Application@31bdfdfb
 </pre>
 </span>
 </div>
 <div id="tab2" class="tab">
 <h2>Standard error</h2>
 <span class="code">
-<pre>Mar 27, 2022 11:37:30 AM io.grpc.internal.ManagedChannelOrphanWrapper$ManagedChannelReference cleanQueue
+<pre>Apr 09, 2022 9:54:31 AM io.grpc.internal.ManagedChannelOrphanWrapper$ManagedChannelReference cleanQueue
 SEVERE: *~*~*~ Channel ManagedChannelImpl{logId=5, target=localhost:8081} was not shutdown properly!!! ~*~*~*
     Make sure to call shutdown()/shutdownNow() and wait until awaitTermination() returns true.
 java.lang.RuntimeException: ManagedChannel allocation site
@@ -306,15 +306,13 @@ java.lang.RuntimeException: ManagedChannel allocation site
 	at io.grpc.internal.ManagedChannelOrphanWrapper.&lt;init&gt;(ManagedChannelOrphanWrapper.java:44)
 	at io.grpc.internal.ManagedChannelImplBuilder.build(ManagedChannelImplBuilder.java:630)
 	at io.grpc.internal.AbstractManagedChannelImplBuilder.build(AbstractManagedChannelImplBuilder.java:297)
-	at com.google.api.gax.grpc.InstantiatingGrpcChannelProvider.createSingleChannel(InstantiatingGrpcChannelProvider.java:404)
-	at com.google.api.gax.grpc.InstantiatingGrpcChannelProvider.access$1900(InstantiatingGrpcChannelProvider.java:85)
-	at com.google.api.gax.grpc.InstantiatingGrpcChannelProvider$1.createSingleChannel(InstantiatingGrpcChannelProvider.java:246)
-	at com.google.api.gax.grpc.ChannelPool.&lt;init&gt;(ChannelPool.java:149)
-	at com.google.api.gax.grpc.ChannelPool.create(ChannelPool.java:96)
-	at com.google.api.gax.grpc.InstantiatingGrpcChannelProvider.createChannel(InstantiatingGrpcChannelProvider.java:256)
-	at com.google.api.gax.grpc.InstantiatingGrpcChannelProvider.getTransportChannel(InstantiatingGrpcChannelProvider.java:234)
-	at com.google.api.gax.rpc.ClientContext.create(ClientContext.java:205)
-	at com.google.api.gax.rpc.ClientContext.create(ClientContext.java:136)
+	at com.google.api.gax.grpc.InstantiatingGrpcChannelProvider.createSingleChannel(InstantiatingGrpcChannelProvider.java:388)
+	at com.google.api.gax.grpc.ChannelPool.&lt;init&gt;(ChannelPool.java:105)
+	at com.google.api.gax.grpc.ChannelPool.create(ChannelPool.java:83)
+	at com.google.api.gax.grpc.InstantiatingGrpcChannelProvider.createChannel(InstantiatingGrpcChannelProvider.java:236)
+	at com.google.api.gax.grpc.InstantiatingGrpcChannelProvider.getTransportChannel(InstantiatingGrpcChannelProvider.java:230)
+	at com.google.api.gax.rpc.ClientContext.create(ClientContext.java:201)
+	at com.google.api.gax.rpc.ClientContext.create(ClientContext.java:132)
 	at com.google.cloud.firestore.spi.v1.GrpcFirestoreRpc.&lt;init&gt;(GrpcFirestoreRpc.java:125)
 	at com.google.cloud.firestore.FirestoreOptions$DefaultFirestoreRpcFactory.create(FirestoreOptions.java:88)
 	at com.google.cloud.firestore.FirestoreOptions$DefaultFirestoreRpcFactory.create(FirestoreOptions.java:80)
@@ -380,7 +378,7 @@ java.lang.RuntimeException: ManagedChannel allocation site
 	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)
 	at java.base/java.lang.Thread.run(Thread.java:829)
 
-Mar 27, 2022 11:37:30 AM io.grpc.internal.ManagedChannelOrphanWrapper$ManagedChannelReference cleanQueue
+Apr 09, 2022 9:54:31 AM io.grpc.internal.ManagedChannelOrphanWrapper$ManagedChannelReference cleanQueue
 SEVERE: *~*~*~ Channel ManagedChannelImpl{logId=1, target=localhost:8081} was not shutdown properly!!! ~*~*~*
     Make sure to call shutdown()/shutdownNow() and wait until awaitTermination() returns true.
 java.lang.RuntimeException: ManagedChannel allocation site
@@ -389,15 +387,13 @@ java.lang.RuntimeException: ManagedChannel allocation site
 	at io.grpc.internal.ManagedChannelOrphanWrapper.&lt;init&gt;(ManagedChannelOrphanWrapper.java:44)
 	at io.grpc.internal.ManagedChannelImplBuilder.build(ManagedChannelImplBuilder.java:630)
 	at io.grpc.internal.AbstractManagedChannelImplBuilder.build(AbstractManagedChannelImplBuilder.java:297)
-	at com.google.api.gax.grpc.InstantiatingGrpcChannelProvider.createSingleChannel(InstantiatingGrpcChannelProvider.java:404)
-	at com.google.api.gax.grpc.InstantiatingGrpcChannelProvider.access$1900(InstantiatingGrpcChannelProvider.java:85)
-	at com.google.api.gax.grpc.InstantiatingGrpcChannelProvider$1.createSingleChannel(InstantiatingGrpcChannelProvider.java:246)
-	at com.google.api.gax.grpc.ChannelPool.&lt;init&gt;(ChannelPool.java:149)
-	at com.google.api.gax.grpc.ChannelPool.create(ChannelPool.java:96)
-	at com.google.api.gax.grpc.InstantiatingGrpcChannelProvider.createChannel(InstantiatingGrpcChannelProvider.java:256)
-	at com.google.api.gax.grpc.InstantiatingGrpcChannelProvider.getTransportChannel(InstantiatingGrpcChannelProvider.java:234)
-	at com.google.api.gax.rpc.ClientContext.create(ClientContext.java:205)
-	at com.google.api.gax.rpc.ClientContext.create(ClientContext.java:136)
+	at com.google.api.gax.grpc.InstantiatingGrpcChannelProvider.createSingleChannel(InstantiatingGrpcChannelProvider.java:388)
+	at com.google.api.gax.grpc.ChannelPool.&lt;init&gt;(ChannelPool.java:105)
+	at com.google.api.gax.grpc.ChannelPool.create(ChannelPool.java:83)
+	at com.google.api.gax.grpc.InstantiatingGrpcChannelProvider.createChannel(InstantiatingGrpcChannelProvider.java:236)
+	at com.google.api.gax.grpc.InstantiatingGrpcChannelProvider.getTransportChannel(InstantiatingGrpcChannelProvider.java:230)
+	at com.google.api.gax.rpc.ClientContext.create(ClientContext.java:201)
+	at com.google.api.gax.rpc.ClientContext.create(ClientContext.java:132)
 	at com.google.cloud.firestore.spi.v1.GrpcFirestoreRpc.&lt;init&gt;(GrpcFirestoreRpc.java:125)
 	at com.google.cloud.firestore.FirestoreOptions$DefaultFirestoreRpcFactory.create(FirestoreOptions.java:88)
 	at com.google.cloud.firestore.FirestoreOptions$DefaultFirestoreRpcFactory.create(FirestoreOptions.java:80)
@@ -463,7 +459,7 @@ java.lang.RuntimeException: ManagedChannel allocation site
 	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)
 	at java.base/java.lang.Thread.run(Thread.java:829)
 
-Mar 27, 2022 11:37:35 AM io.grpc.internal.ManagedChannelOrphanWrapper$ManagedChannelReference cleanQueue
+Apr 09, 2022 9:54:35 AM io.grpc.internal.ManagedChannelOrphanWrapper$ManagedChannelReference cleanQueue
 SEVERE: *~*~*~ Channel ManagedChannelImpl{logId=9, target=localhost:8081} was not shutdown properly!!! ~*~*~*
     Make sure to call shutdown()/shutdownNow() and wait until awaitTermination() returns true.
 java.lang.RuntimeException: ManagedChannel allocation site
@@ -472,15 +468,13 @@ java.lang.RuntimeException: ManagedChannel allocation site
 	at io.grpc.internal.ManagedChannelOrphanWrapper.&lt;init&gt;(ManagedChannelOrphanWrapper.java:44)
 	at io.grpc.internal.ManagedChannelImplBuilder.build(ManagedChannelImplBuilder.java:630)
 	at io.grpc.internal.AbstractManagedChannelImplBuilder.build(AbstractManagedChannelImplBuilder.java:297)
-	at com.google.api.gax.grpc.InstantiatingGrpcChannelProvider.createSingleChannel(InstantiatingGrpcChannelProvider.java:404)
-	at com.google.api.gax.grpc.InstantiatingGrpcChannelProvider.access$1900(InstantiatingGrpcChannelProvider.java:85)
-	at com.google.api.gax.grpc.InstantiatingGrpcChannelProvider$1.createSingleChannel(InstantiatingGrpcChannelProvider.java:246)
-	at com.google.api.gax.grpc.ChannelPool.&lt;init&gt;(ChannelPool.java:149)
-	at com.google.api.gax.grpc.ChannelPool.create(ChannelPool.java:96)
-	at com.google.api.gax.grpc.InstantiatingGrpcChannelProvider.createChannel(InstantiatingGrpcChannelProvider.java:256)
-	at com.google.api.gax.grpc.InstantiatingGrpcChannelProvider.getTransportChannel(InstantiatingGrpcChannelProvider.java:234)
-	at com.google.api.gax.rpc.ClientContext.create(ClientContext.java:205)
-	at com.google.api.gax.rpc.ClientContext.create(ClientContext.java:136)
+	at com.google.api.gax.grpc.InstantiatingGrpcChannelProvider.createSingleChannel(InstantiatingGrpcChannelProvider.java:388)
+	at com.google.api.gax.grpc.ChannelPool.&lt;init&gt;(ChannelPool.java:105)
+	at com.google.api.gax.grpc.ChannelPool.create(ChannelPool.java:83)
+	at com.google.api.gax.grpc.InstantiatingGrpcChannelProvider.createChannel(InstantiatingGrpcChannelProvider.java:236)
+	at com.google.api.gax.grpc.InstantiatingGrpcChannelProvider.getTransportChannel(InstantiatingGrpcChannelProvider.java:230)
+	at com.google.api.gax.rpc.ClientContext.create(ClientContext.java:201)
+	at com.google.api.gax.rpc.ClientContext.create(ClientContext.java:132)
 	at com.google.cloud.firestore.spi.v1.GrpcFirestoreRpc.&lt;init&gt;(GrpcFirestoreRpc.java:125)
 	at com.google.cloud.firestore.FirestoreOptions$DefaultFirestoreRpcFactory.create(FirestoreOptions.java:88)
 	at com.google.cloud.firestore.FirestoreOptions$DefaultFirestoreRpcFactory.create(FirestoreOptions.java:80)
@@ -557,7 +551,7 @@ java.lang.RuntimeException: ManagedChannel allocation site
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.1.1</a> at Mar 27, 2022, 11:37:36 AM</p>
+<a href="http://www.gradle.org">Gradle 7.1.1</a> at Apr 9, 2022, 9:54:36 AM</p>
 </div>
 </div>
 </body>
