@@ -49,7 +49,7 @@ dependencies {
     implementation 'com.vladsch.flexmark:flexmark-all:0.64.0'
 
     testImplementation "io.ktor:ktor-server-tests:$ktor_version"
-    testImplementation "org.json:json:20211205"
+    testImplementation "org.json:json:20220320"
 }
 
 static String captureVersion(Dependency dependency) {
