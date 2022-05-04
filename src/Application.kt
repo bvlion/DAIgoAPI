@@ -4,24 +4,31 @@ import com.vladsch.flexmark.ext.toc.TocExtension
 import com.vladsch.flexmark.html.HtmlRenderer
 import com.vladsch.flexmark.parser.Parser
 import com.vladsch.flexmark.util.data.MutableDataSet
-import io.ktor.application.*
-import io.ktor.auth.*
-import io.ktor.features.*
 import io.ktor.http.*
-import io.ktor.jackson.*
-import io.ktor.request.*
-import io.ktor.response.*
-import io.ktor.routing.*
-import io.ktor.server.engine.*
+import io.ktor.serialization.jackson.*
+import io.ktor.server.application.*
+import io.ktor.server.auth.*
 import io.ktor.server.netty.*
+import io.ktor.server.plugins.callloging.*
+import io.ktor.server.plugins.contentnegotiation.*
+import io.ktor.server.plugins.statuspages.*
+import io.ktor.server.request.*
+import io.ktor.server.response.*
+import io.ktor.server.routing.*
 import java.io.BufferedReader
 import java.io.InputStreamReader
 import java.util.*
 
-@Suppress("unused")
+
+fun main(args: Array<String>) = EngineMain.main(args)
+
 fun Application.module() {
+
+  val log = log
+  val authHeader = environment.config.property("app.auth_header").getString()
+
   install(StatusPages) {
-    exception<IllegalStateException> { cause ->
+    exception<IllegalStateException> { call, cause ->
       log.warn("StatusPages Error", cause)
       call.respond(HttpStatusCode.NotFound)
     }
@@ -38,7 +45,7 @@ fun Application.module() {
   install(Authentication) {
     bearer {
       realm = "DAIgoAPI Server"
-      validate(environment.config.property("app.auth_header").getString())
+      validate(authHeader)
     }
   }
 
@@ -115,8 +122,4 @@ private fun getHtml(path: String): String {
 
   val document = parser.parse(mdLines.joinToString("\n"))
   return renderer.render(document)
-}
-
-fun main(args: Array<String>) {
-  embeddedServer(Netty, commandLineEnvironment(args)).start()
 }

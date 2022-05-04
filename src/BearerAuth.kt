@@ -1,19 +1,18 @@
 package net.ambitious.daigoapi
 
-import io.ktor.application.*
-import io.ktor.auth.*
 import io.ktor.http.auth.*
-import io.ktor.request.*
-import io.ktor.response.*
+import io.ktor.server.auth.*
+import io.ktor.server.request.*
+import io.ktor.server.response.*
 
 class BearerAuthenticationProvider internal constructor(
-  configuration: Configuration
-) : AuthenticationProvider(configuration) {
+  config: Configuration
+) : AuthenticationProvider(config) {
 
-  val realm: String = configuration.realm
-  val authenticationFunction = configuration.authenticationFunction
+  private val realm: String = config.realm
+  val authenticationFunction = config.authenticationFunction
 
-  class Configuration(name: String?) : AuthenticationProvider.Configuration(name) {
+  class Configuration(name: String?) : Config(name) {
     var authenticationFunction: AuthenticationFunction<BearerPrincipal> = {
       throw NotImplementedError(
         "Bearer auth validate function is not specified. Use bearer { validate(correctToken) } to fix."
@@ -32,19 +31,11 @@ class BearerAuthenticationProvider internal constructor(
       }
     }
   }
-}
 
-fun Authentication.Configuration.bearer(
-  name: String? = null,
-  configure: BearerAuthenticationProvider.Configuration.() -> Unit
-) {
-  val provider = BearerAuthenticationProvider(BearerAuthenticationProvider.Configuration(name).apply(configure))
-  val realm = provider.realm
-  val authenticate = provider.authenticationFunction
-
-  provider.pipeline.intercept(AuthenticationPipeline.RequestAuthentication) { context ->
+  override suspend fun onAuthenticate(context: AuthenticationContext) {
+    val call = context.call
     val credentials = call.request.bearerAuthenticationCredentials()
-    val principal = credentials?.let { authenticate(call, it) }
+    val principal = credentials?.let { authenticationFunction(call, it) }
 
     val cause = when {
       credentials == null -> AuthenticationFailedCause.NoCredentials
@@ -53,8 +44,8 @@ fun Authentication.Configuration.bearer(
     }
 
     if (cause != null) {
-      context.challenge(BearerAuthenticationChallengeKey, cause) {
-        call.respond(
+      context.challenge(BearerAuthenticationChallengeKey, cause) { challenge, localCall ->
+        localCall.respond(
           UnauthorizedResponse(
             HttpAuthHeader.Parameterized(
               "Bearer",
@@ -62,14 +53,20 @@ fun Authentication.Configuration.bearer(
             )
           )
         )
-        it.complete()
+        challenge.complete()
       }
     }
     if (principal != null) {
       context.principal(principal)
     }
   }
+}
 
+fun AuthenticationConfig.bearer(
+  name: String? = null,
+  configure: BearerAuthenticationProvider.Configuration.() -> Unit
+) {
+  val provider = BearerAuthenticationProvider(BearerAuthenticationProvider.Configuration(name).apply(configure))
   register(provider)
 }
 

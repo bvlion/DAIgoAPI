@@ -38,11 +38,14 @@ shadowJar {
 }
 
 dependencies {
-    def ktor_version = captureVersion(implementation('io.ktor:ktor-server-netty:1.6.7'))
-    implementation "io.ktor:ktor-locations:$ktor_version"
-    implementation "io.ktor:ktor-auth:$ktor_version"
-    implementation "io.ktor:ktor-jackson:$ktor_version"
-    implementation "ch.qos.logback:logback-classic:1.2.11"
+    def ktor_version = captureVersion(implementation('io.ktor:ktor-server-netty:2.0.1'))
+    implementation "io.ktor:ktor-server-locations:$ktor_version"
+    implementation "io.ktor:ktor-server-auth:$ktor_version"
+    implementation "io.ktor:ktor-server-content-negotiation:$ktor_version"
+    implementation "io.ktor:ktor-serialization-jackson:$ktor_version"
+    implementation "io.ktor:ktor-server-status-pages:$ktor_version"
+    implementation "io.ktor:ktor-server-call-logging:$ktor_version"
+    implementation 'ch.qos.logback:logback-classic:1.2.11'
     implementation 'com.atilika.kuromoji:kuromoji-ipadic:0.9.0'
     implementation 'com.google.cloud:google-cloud-firestore:3.0.21'
     implementation 'com.google.firebase:firebase-admin:8.1.0'
