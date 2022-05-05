@@ -1,5 +1,5 @@
-import io.ktor.config.*
 import io.ktor.http.*
+import io.ktor.server.config.*
 import io.ktor.server.engine.*
 import io.ktor.server.testing.*
 import net.ambitious.daigoapi.module
