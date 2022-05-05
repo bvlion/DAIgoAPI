@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">7.997s</div>
+<div class="counter">9.006s</div>
 <p>duration</p>
 </div>
 </td>
@@ -82,37 +82,37 @@
 </thead>
 <tr>
 <td class="success">getDaigo</td>
-<td class="success">0.307s</td>
+<td class="success">0.403s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">getSamples</td>
-<td class="success">2.453s</td>
+<td class="success">3.186s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">health</td>
-<td class="success">0.053s</td>
+<td class="success">0.059s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">privacyPolicy</td>
-<td class="success">0.032s</td>
+<td class="success">0.058s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">termsOfUse</td>
-<td class="success">0.361s</td>
+<td class="success">0.367s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">updateSamples</td>
-<td class="success">0.095s</td>
+<td class="success">0.142s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">upsertDaigo</td>
-<td class="success">4.696s</td>
+<td class="success">4.791s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -120,265 +120,114 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>2022-04-24 10:15:23.322 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
-2022-04-24 10:15:23.332 [Test worker] INFO  ktor.test - Application started in 0.056 seconds.
-2022-04-24 10:15:25.507 [Test worker] INFO  ktor.test - Application stopping: io.ktor.application.Application@446f1f48
-2022-04-24 10:15:25.509 [Test worker] INFO  ktor.test - Application stopped: io.ktor.application.Application@446f1f48
-2022-04-24 10:15:25.514 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
-2022-04-24 10:15:25.515 [Test worker] INFO  ktor.test - Application started in 0.001 seconds.
-2022-04-24 10:15:25.564 [Test worker] INFO  ktor.test - Application stopping: io.ktor.application.Application@471a6a56
-2022-04-24 10:15:25.564 [Test worker] INFO  ktor.test - Application stopped: io.ktor.application.Application@471a6a56
-2022-04-24 10:15:25.567 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
-2022-04-24 10:15:25.568 [Test worker] INFO  ktor.test - Application started in 0.002 seconds.
-2022-04-24 10:15:25.925 [Test worker] INFO  ktor.test - Application stopping: io.ktor.application.Application@cedd326
-2022-04-24 10:15:25.926 [Test worker] INFO  ktor.test - Application stopped: io.ktor.application.Application@cedd326
-2022-04-24 10:15:25.928 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
-2022-04-24 10:15:25.928 [Test worker] INFO  ktor.test - Application started in 0.001 seconds.
-2022-04-24 10:15:26.001 [DefaultDispatcher-worker-2 @request#21] DEBUG ktor.test - Conversion failed, null returned
-io.ktor.features.UnsupportedMediaTypeException: Content type */* is not supported
-	at io.ktor.features.ContentNegotiation$Feature$install$3.invokeSuspend(ContentNegotiation.kt:222)
-	at io.ktor.features.ContentNegotiation$Feature$install$3.invoke(ContentNegotiation.kt)
-	at io.ktor.features.ContentNegotiation$Feature$install$3.invoke(ContentNegotiation.kt)
-	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:248)
-	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:116)
-	at io.ktor.util.pipeline.SuspendFunctionGun.execute(SuspendFunctionGun.kt:136)
-	at io.ktor.util.pipeline.Pipeline.execute(Pipeline.kt:78)
-	at io.ktor.request.ApplicationReceiveFunctionsKt.receive(ApplicationReceiveFunctions.kt:116)
-	at io.ktor.request.ApplicationReceiveFunctionsKt.receiveOrNull(ApplicationReceiveFunctions.kt:135)
-	at net.ambitious.daigoapi.ApplicationKt$module$5$1$2.invokeSuspend(Application.kt:124)
+<pre>2022-05-05 00:43:31.417 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
+2022-05-05 00:43:31.450 [Test worker] INFO  ktor.test - Application auto-reloaded in 0.025 seconds.
+2022-05-05 00:43:34.148 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@231c7d24
+2022-05-05 00:43:34.150 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@231c7d24
+2022-05-05 00:43:34.164 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
+2022-05-05 00:43:34.164 [Test worker] INFO  ktor.test - Application auto-reloaded in 0.0 seconds.
+2022-05-05 00:43:34.220 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@cd4203a
+2022-05-05 00:43:34.221 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@cd4203a
+2022-05-05 00:43:34.224 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
+2022-05-05 00:43:34.224 [Test worker] INFO  ktor.test - Application auto-reloaded in 0.0 seconds.
+2022-05-05 00:43:34.583 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@5e7261aa
+2022-05-05 00:43:34.584 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@5e7261aa
+2022-05-05 00:43:34.592 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
+2022-05-05 00:43:34.592 [Test worker] INFO  ktor.test - Application auto-reloaded in 0.0 seconds.
+2022-05-05 00:43:34.673 [DefaultDispatcher-worker-3 @request#25] DEBUG ktor.test - Conversion failed, null returned
+io.ktor.server.plugins.CannotTransformContentToTypeException: Cannot transform this request's content to net.ambitious.daigoapi.SaveRequest
+	at io.ktor.server.request.ApplicationReceiveFunctionsKt.receive(ApplicationReceiveFunctions.kt:90)
+	at io.ktor.server.request.ApplicationReceiveFunctionsKt.receiveOrNull(ApplicationReceiveFunctions.kt:104)
+	at net.ambitious.daigoapi.ApplicationKt$module$5$1$2.invokeSuspend(Application.kt:127)
 	at net.ambitious.daigoapi.ApplicationKt$module$5$1$2.invoke(Application.kt)
 	at net.ambitious.daigoapi.ApplicationKt$module$5$1$2.invoke(Application.kt)
-	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:248)
-	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:116)
-	at io.ktor.util.pipeline.SuspendFunctionGun.execute(SuspendFunctionGun.kt:136)
-	at io.ktor.util.pipeline.Pipeline.execute(Pipeline.kt:78)
-	at io.ktor.routing.Routing.executeResult(Routing.kt:155)
-	at io.ktor.routing.Routing.interceptor(Routing.kt:39)
-	at io.ktor.routing.Routing$Feature$install$1.invokeSuspend(Routing.kt:107)
-	at io.ktor.routing.Routing$Feature$install$1.invoke(Routing.kt)
-	at io.ktor.routing.Routing$Feature$install$1.invoke(Routing.kt)
-	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:248)
-	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:116)
-	at io.ktor.features.ContentNegotiation$Feature$install$1.invokeSuspend(ContentNegotiation.kt:145)
-	at io.ktor.features.ContentNegotiation$Feature$install$1.invoke(ContentNegotiation.kt)
-	at io.ktor.features.ContentNegotiation$Feature$install$1.invoke(ContentNegotiation.kt)
-	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:248)
-	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:116)
-	at io.ktor.features.StatusPages$interceptCall$2.invokeSuspend(StatusPages.kt:102)
-	at io.ktor.features.StatusPages$interceptCall$2.invoke(StatusPages.kt)
-	at io.ktor.features.StatusPages$interceptCall$2.invoke(StatusPages.kt)
+	at io.ktor.server.routing.Route$buildPipeline$1$1.invokeSuspend(Route.kt:116)
+	at io.ktor.server.routing.Route$buildPipeline$1$1.invoke(Route.kt)
+	at io.ktor.server.routing.Route$buildPipeline$1$1.invoke(Route.kt)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:123)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:81)
+	at io.ktor.util.pipeline.SuspendFunctionGun.execute$ktor_utils(SuspendFunctionGun.kt:101)
+	at io.ktor.util.pipeline.Pipeline.execute(Pipeline.kt:77)
+	at io.ktor.server.routing.Routing$executeResult$$inlined$execute$1.invokeSuspend(Pipeline.kt:478)
+	at io.ktor.server.routing.Routing$executeResult$$inlined$execute$1.invoke(Pipeline.kt)
+	at io.ktor.server.routing.Routing$executeResult$$inlined$execute$1.invoke(Pipeline.kt)
+	at io.ktor.util.debug.ContextUtilsKt.initContextInDebugMode(ContextUtils.kt:17)
+	at io.ktor.server.routing.Routing.executeResult(Routing.kt:174)
+	at io.ktor.server.routing.Routing.interceptor(Routing.kt:49)
+	at io.ktor.server.routing.Routing$Plugin$install$1.invokeSuspend(Routing.kt:124)
+	at io.ktor.server.routing.Routing$Plugin$install$1.invoke(Routing.kt)
+	at io.ktor.server.routing.Routing$Plugin$install$1.invoke(Routing.kt)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:123)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:81)
+	at io.ktor.server.engine.BaseApplicationEngineKt$installDefaultTransformationChecker$1.invokeSuspend(BaseApplicationEngine.kt:122)
+	at io.ktor.server.engine.BaseApplicationEngineKt$installDefaultTransformationChecker$1.invoke(BaseApplicationEngine.kt)
+	at io.ktor.server.engine.BaseApplicationEngineKt$installDefaultTransformationChecker$1.invoke(BaseApplicationEngine.kt)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:123)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:81)
+	at io.ktor.server.application.hooks.CallFailed$install$1$1.invokeSuspend(CommonHooks.kt:41)
+	at io.ktor.server.application.hooks.CallFailed$install$1$1.invoke(CommonHooks.kt)
+	at io.ktor.server.application.hooks.CallFailed$install$1$1.invoke(CommonHooks.kt)
 	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndispatchedOrReturn(Undispatched.kt:89)
 	at kotlinx.coroutines.CoroutineScopeKt.coroutineScope(CoroutineScope.kt:264)
-	at io.ktor.features.StatusPages.interceptCall(StatusPages.kt:101)
-	at io.ktor.features.StatusPages.access$interceptCall(StatusPages.kt:18)
-	at io.ktor.features.StatusPages$Feature$install$2.invokeSuspend(StatusPages.kt:142)
-	at io.ktor.features.StatusPages$Feature$install$2.invoke(StatusPages.kt)
-	at io.ktor.features.StatusPages$Feature$install$2.invoke(StatusPages.kt)
-	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:248)
-	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:116)
-	at io.ktor.features.CallLogging$Feature$install$2.invokeSuspend(CallLogging.kt:188)
-	at io.ktor.features.CallLogging$Feature$install$2.invoke(CallLogging.kt)
-	at io.ktor.features.CallLogging$Feature$install$2.invoke(CallLogging.kt)
-	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:248)
-	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:116)
-	at io.ktor.util.pipeline.SuspendFunctionGun.execute(SuspendFunctionGun.kt:136)
-	at io.ktor.util.pipeline.Pipeline.execute(Pipeline.kt:78)
-	at io.ktor.server.testing.TestApplicationEngine$callInterceptor$1.invokeSuspend(TestApplicationEngine.kt:296)
-	at io.ktor.server.testing.TestApplicationEngine$callInterceptor$1.invoke(TestApplicationEngine.kt)
-	at io.ktor.server.testing.TestApplicationEngine$callInterceptor$1.invoke(TestApplicationEngine.kt)
-	at io.ktor.server.testing.TestApplicationEngine$2.invokeSuspend(TestApplicationEngine.kt:50)
+	at io.ktor.server.application.hooks.CallFailed$install$1.invokeSuspend(CommonHooks.kt:40)
+	at io.ktor.server.application.hooks.CallFailed$install$1.invoke(CommonHooks.kt)
+	at io.ktor.server.application.hooks.CallFailed$install$1.invoke(CommonHooks.kt)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:123)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:81)
+	at io.ktor.util.pipeline.SuspendFunctionGun.execute$ktor_utils(SuspendFunctionGun.kt:101)
+	at io.ktor.util.pipeline.Pipeline.execute(Pipeline.kt:77)
+	at io.ktor.server.testing.TestApplicationEngine$3$invokeSuspend$$inlined$execute$1.invokeSuspend(Pipeline.kt:478)
+	at io.ktor.server.testing.TestApplicationEngine$3$invokeSuspend$$inlined$execute$1.invoke(Pipeline.kt)
+	at io.ktor.server.testing.TestApplicationEngine$3$invokeSuspend$$inlined$execute$1.invoke(Pipeline.kt)
+	at io.ktor.util.debug.ContextUtilsKt.initContextInDebugMode(ContextUtils.kt:17)
+	at io.ktor.server.testing.TestApplicationEngine$3.invokeSuspend(TestApplicationEngine.kt:277)
+	at io.ktor.server.testing.TestApplicationEngine$3.invoke(TestApplicationEngine.kt)
+	at io.ktor.server.testing.TestApplicationEngine$3.invoke(TestApplicationEngine.kt)
+	at io.ktor.server.testing.TestApplicationEngine$2.invokeSuspend(TestApplicationEngine.kt:80)
 	at io.ktor.server.testing.TestApplicationEngine$2.invoke(TestApplicationEngine.kt)
 	at io.ktor.server.testing.TestApplicationEngine$2.invoke(TestApplicationEngine.kt)
-	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:248)
-	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:116)
-	at io.ktor.util.pipeline.SuspendFunctionGun.execute(SuspendFunctionGun.kt:136)
-	at io.ktor.util.pipeline.Pipeline.execute(Pipeline.kt:78)
-	at io.ktor.server.testing.TestApplicationEngine$handleRequest$pipelineJob$1.invokeSuspend(TestApplicationEngine.kt:295)
-	at ???(Coroutine boundary.?(?)
-	at io.ktor.request.ApplicationReceiveFunctionsKt.receive(ApplicationReceiveFunctions.kt:116)
-	at io.ktor.request.ApplicationReceiveFunctionsKt.receiveOrNull(ApplicationReceiveFunctions.kt:135)
-	at net.ambitious.daigoapi.ApplicationKt$module$5$1$2.invokeSuspend(Application.kt:124)
-	at io.ktor.routing.Routing.executeResult(Routing.kt:154)
-	at io.ktor.routing.Routing$Feature$install$1.invokeSuspend(Routing.kt:107)
-	at io.ktor.features.ContentNegotiation$Feature$install$1.invokeSuspend(ContentNegotiation.kt:145)
-	at io.ktor.features.StatusPages$interceptCall$2.invokeSuspend(StatusPages.kt:102)
-	at io.ktor.features.StatusPages.interceptCall(StatusPages.kt:101)
-	at io.ktor.features.StatusPages$Feature$install$2.invokeSuspend(StatusPages.kt:142)
-	at io.ktor.features.CallLogging$Feature$install$2.invokeSuspend(CallLogging.kt:188)
-	at io.ktor.server.testing.TestApplicationEngine$callInterceptor$1.invokeSuspend(TestApplicationEngine.kt:296)
-	at io.ktor.server.testing.TestApplicationEngine$2.invokeSuspend(TestApplicationEngine.kt:50)
-	at io.ktor.server.testing.TestApplicationEngine$handleRequest$pipelineJob$1.invokeSuspend(TestApplicationEngine.kt:295)
-Caused by: io.ktor.features.UnsupportedMediaTypeException: Content type */* is not supported
-	at io.ktor.features.ContentNegotiation$Feature$install$3.invokeSuspend(ContentNegotiation.kt:222)
-	at io.ktor.features.ContentNegotiation$Feature$install$3.invoke(ContentNegotiation.kt)
-	at io.ktor.features.ContentNegotiation$Feature$install$3.invoke(ContentNegotiation.kt)
-	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:248)
-	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:116)
-	at io.ktor.util.pipeline.SuspendFunctionGun.execute(SuspendFunctionGun.kt:136)
-	at io.ktor.util.pipeline.Pipeline.execute(Pipeline.kt:78)
-	at io.ktor.request.ApplicationReceiveFunctionsKt.receive(ApplicationReceiveFunctions.kt:116)
-	at io.ktor.request.ApplicationReceiveFunctionsKt.receiveOrNull(ApplicationReceiveFunctions.kt:135)
-	at net.ambitious.daigoapi.ApplicationKt$module$5$1$2.invokeSuspend(Application.kt:124)
-	at net.ambitious.daigoapi.ApplicationKt$module$5$1$2.invoke(Application.kt)
-	at net.ambitious.daigoapi.ApplicationKt$module$5$1$2.invoke(Application.kt)
-	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:248)
-	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:116)
-	at io.ktor.util.pipeline.SuspendFunctionGun.execute(SuspendFunctionGun.kt:136)
-	at io.ktor.util.pipeline.Pipeline.execute(Pipeline.kt:78)
-	at io.ktor.routing.Routing.executeResult(Routing.kt:155)
-	at io.ktor.routing.Routing.interceptor(Routing.kt:39)
-	at io.ktor.routing.Routing$Feature$install$1.invokeSuspend(Routing.kt:107)
-	at io.ktor.routing.Routing$Feature$install$1.invoke(Routing.kt)
-	at io.ktor.routing.Routing$Feature$install$1.invoke(Routing.kt)
-	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:248)
-	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:116)
-	at io.ktor.features.ContentNegotiation$Feature$install$1.invokeSuspend(ContentNegotiation.kt:145)
-	at io.ktor.features.ContentNegotiation$Feature$install$1.invoke(ContentNegotiation.kt)
-	at io.ktor.features.ContentNegotiation$Feature$install$1.invoke(ContentNegotiation.kt)
-	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:248)
-	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:116)
-	at io.ktor.features.StatusPages$interceptCall$2.invokeSuspend(StatusPages.kt:102)
-	at io.ktor.features.StatusPages$interceptCall$2.invoke(StatusPages.kt)
-	at io.ktor.features.StatusPages$interceptCall$2.invoke(StatusPages.kt)
-	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndispatchedOrReturn(Undispatched.kt:89)
-	at kotlinx.coroutines.CoroutineScopeKt.coroutineScope(CoroutineScope.kt:264)
-	at io.ktor.features.StatusPages.interceptCall(StatusPages.kt:101)
-	at io.ktor.features.StatusPages.access$interceptCall(StatusPages.kt:18)
-	at io.ktor.features.StatusPages$Feature$install$2.invokeSuspend(StatusPages.kt:142)
-	at io.ktor.features.StatusPages$Feature$install$2.invoke(StatusPages.kt)
-	at io.ktor.features.StatusPages$Feature$install$2.invoke(StatusPages.kt)
-	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:248)
-	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:116)
-	at io.ktor.features.CallLogging$Feature$install$2.invokeSuspend(CallLogging.kt:188)
-	at io.ktor.features.CallLogging$Feature$install$2.invoke(CallLogging.kt)
-	at io.ktor.features.CallLogging$Feature$install$2.invoke(CallLogging.kt)
-	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:248)
-	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:116)
-	at io.ktor.util.pipeline.SuspendFunctionGun.execute(SuspendFunctionGun.kt:136)
-	at io.ktor.util.pipeline.Pipeline.execute(Pipeline.kt:78)
-	at io.ktor.server.testing.TestApplicationEngine$callInterceptor$1.invokeSuspend(TestApplicationEngine.kt:296)
-	at io.ktor.server.testing.TestApplicationEngine$callInterceptor$1.invoke(TestApplicationEngine.kt)
-	at io.ktor.server.testing.TestApplicationEngine$callInterceptor$1.invoke(TestApplicationEngine.kt)
-	at io.ktor.server.testing.TestApplicationEngine$2.invokeSuspend(TestApplicationEngine.kt:50)
-	at io.ktor.server.testing.TestApplicationEngine$2.invoke(TestApplicationEngine.kt)
-	at io.ktor.server.testing.TestApplicationEngine$2.invoke(TestApplicationEngine.kt)
-	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:248)
-	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:116)
-	at io.ktor.util.pipeline.SuspendFunctionGun.execute(SuspendFunctionGun.kt:136)
-	at io.ktor.util.pipeline.Pipeline.execute(Pipeline.kt:78)
-	at io.ktor.server.testing.TestApplicationEngine$handleRequest$pipelineJob$1.invokeSuspend(TestApplicationEngine.kt:295)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:123)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:81)
+	at io.ktor.util.pipeline.SuspendFunctionGun.execute$ktor_utils(SuspendFunctionGun.kt:101)
+	at io.ktor.util.pipeline.Pipeline.execute(Pipeline.kt:77)
+	at io.ktor.server.testing.TestApplicationEngine$handleRequest$pipelineJob$1$invokeSuspend$$inlined$execute$1.invokeSuspend(Pipeline.kt:478)
+	at io.ktor.server.testing.TestApplicationEngine$handleRequest$pipelineJob$1$invokeSuspend$$inlined$execute$1.invoke(Pipeline.kt)
+	at io.ktor.server.testing.TestApplicationEngine$handleRequest$pipelineJob$1$invokeSuspend$$inlined$execute$1.invoke(Pipeline.kt)
+	at io.ktor.util.debug.ContextUtilsKt.initContextInDebugMode(ContextUtils.kt:17)
+	at io.ktor.server.testing.TestApplicationEngine$handleRequest$pipelineJob$1.invokeSuspend(TestApplicationEngine.kt:276)
 	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
 	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:106)
-	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:571)
-	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:750)
-	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:678)
-	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:665)
+	at kotlinx.coroutines.internal.LimitedDispatcher.run(LimitedDispatcher.kt:42)
+	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:95)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:570)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:749)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:677)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:664)
 接頭詞,名詞接続,*,*,*,*,大,ダイ,ダイ
 名詞,一般,*,*,*,*,好物,コウブツ,コーブツ
-2022-04-24 10:15:30.618 [Test worker] INFO  ktor.test - Application stopping: io.ktor.application.Application@6267e124
-2022-04-24 10:15:30.619 [Test worker] INFO  ktor.test - Application stopped: io.ktor.application.Application@6267e124
-2022-04-24 10:15:30.625 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
-2022-04-24 10:15:30.625 [Test worker] INFO  ktor.test - Application started in 0.001 seconds.
-2022-04-24 10:15:30.717 [Test worker] INFO  ktor.test - Application stopping: io.ktor.application.Application@3b9a00d7
-2022-04-24 10:15:30.717 [Test worker] INFO  ktor.test - Application stopped: io.ktor.application.Application@3b9a00d7
-2022-04-24 10:15:30.719 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
-2022-04-24 10:15:30.719 [Test worker] INFO  ktor.test - Application started in 0.0 seconds.
-2022-04-24 10:15:30.749 [Test worker] INFO  ktor.test - Application stopping: io.ktor.application.Application@5cd0712
-2022-04-24 10:15:30.749 [Test worker] INFO  ktor.test - Application stopped: io.ktor.application.Application@5cd0712
-2022-04-24 10:15:30.752 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
-2022-04-24 10:15:30.752 [Test worker] INFO  ktor.test - Application started in 0.0 seconds.
+2022-05-05 00:43:39.378 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@35f81f54
+2022-05-05 00:43:39.378 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@35f81f54
+2022-05-05 00:43:39.383 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
+2022-05-05 00:43:39.383 [Test worker] INFO  ktor.test - Application auto-reloaded in 0.0 seconds.
+2022-05-05 00:43:39.515 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@1b780c88
+2022-05-05 00:43:39.516 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@1b780c88
+2022-05-05 00:43:39.525 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
+2022-05-05 00:43:39.525 [Test worker] INFO  ktor.test - Application auto-reloaded in 0.0 seconds.
+2022-05-05 00:43:39.578 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@40812f1c
+2022-05-05 00:43:39.579 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@40812f1c
+2022-05-05 00:43:39.585 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
+2022-05-05 00:43:39.585 [Test worker] INFO  ktor.test - Application auto-reloaded in 0.0 seconds.
 名詞,サ変接続,*,*,*,*,努力,ドリョク,ドリョク
 名詞,形容動詞語幹,*,*,*,*,大事,ダイジ,ダイジ
-2022-04-24 10:15:31.057 [Test worker] INFO  ktor.test - Application stopping: io.ktor.application.Application@560a8c6
-2022-04-24 10:15:31.058 [Test worker] INFO  ktor.test - Application stopped: io.ktor.application.Application@560a8c6
+2022-05-05 00:43:39.980 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@7b31378b
+2022-05-05 00:43:39.980 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@7b31378b
 </pre>
 </span>
 </div>
 <div id="tab2" class="tab">
 <h2>Standard error</h2>
 <span class="code">
-<pre>Apr 24, 2022 10:15:30 AM io.grpc.internal.ManagedChannelOrphanWrapper$ManagedChannelReference cleanQueue
-SEVERE: *~*~*~ Channel ManagedChannelImpl{logId=5, target=localhost:8081} was not shutdown properly!!! ~*~*~*
-    Make sure to call shutdown()/shutdownNow() and wait until awaitTermination() returns true.
-java.lang.RuntimeException: ManagedChannel allocation site
-	at io.grpc.internal.ManagedChannelOrphanWrapper$ManagedChannelReference.&lt;init&gt;(ManagedChannelOrphanWrapper.java:93)
-	at io.grpc.internal.ManagedChannelOrphanWrapper.&lt;init&gt;(ManagedChannelOrphanWrapper.java:53)
-	at io.grpc.internal.ManagedChannelOrphanWrapper.&lt;init&gt;(ManagedChannelOrphanWrapper.java:44)
-	at io.grpc.internal.ManagedChannelImplBuilder.build(ManagedChannelImplBuilder.java:630)
-	at io.grpc.internal.AbstractManagedChannelImplBuilder.build(AbstractManagedChannelImplBuilder.java:297)
-	at com.google.api.gax.grpc.InstantiatingGrpcChannelProvider.createSingleChannel(InstantiatingGrpcChannelProvider.java:388)
-	at com.google.api.gax.grpc.ChannelPool.&lt;init&gt;(ChannelPool.java:105)
-	at com.google.api.gax.grpc.ChannelPool.create(ChannelPool.java:83)
-	at com.google.api.gax.grpc.InstantiatingGrpcChannelProvider.createChannel(InstantiatingGrpcChannelProvider.java:236)
-	at com.google.api.gax.grpc.InstantiatingGrpcChannelProvider.getTransportChannel(InstantiatingGrpcChannelProvider.java:230)
-	at com.google.api.gax.rpc.ClientContext.create(ClientContext.java:201)
-	at com.google.api.gax.rpc.ClientContext.create(ClientContext.java:132)
-	at com.google.cloud.firestore.spi.v1.GrpcFirestoreRpc.&lt;init&gt;(GrpcFirestoreRpc.java:125)
-	at com.google.cloud.firestore.FirestoreOptions$DefaultFirestoreRpcFactory.create(FirestoreOptions.java:88)
-	at com.google.cloud.firestore.FirestoreOptions$DefaultFirestoreRpcFactory.create(FirestoreOptions.java:80)
-	at com.google.cloud.ServiceOptions.getRpc(ServiceOptions.java:560)
-	at com.google.cloud.firestore.FirestoreOptions.getFirestoreRpc(FirestoreOptions.java:358)
-	at com.google.cloud.firestore.FirestoreImpl.&lt;init&gt;(FirestoreImpl.java:79)
-	at com.google.cloud.firestore.FirestoreOptions$DefaultFirestoreFactory.create(FirestoreOptions.java:71)
-	at com.google.cloud.firestore.FirestoreOptions$DefaultFirestoreFactory.create(FirestoreOptions.java:64)
-	at com.google.cloud.ServiceOptions.getService(ServiceOptions.java:540)
-	at net.ambitious.daigoapi.FirestoreKt.firestore(Firestore.kt:25)
-	at net.ambitious.daigoapi.ApplicationKt.module(Application.kt:52)
-	at TestCases.setUp(TestCases.kt:25)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-	at org.junit.internal.runners.statements.RunBefores.invokeMethod(RunBefores.java:33)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
-	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
-	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)
-	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
-	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
-	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:121)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:182)
-	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:164)
-	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:414)
-	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
-	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:48)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)
-	at java.base/java.lang.Thread.run(Thread.java:829)
-
-Apr 24, 2022 10:15:30 AM io.grpc.internal.ManagedChannelOrphanWrapper$ManagedChannelReference cleanQueue
+<pre>May 05, 2022 12:43:39 AM io.grpc.internal.ManagedChannelOrphanWrapper$ManagedChannelReference cleanQueue
 SEVERE: *~*~*~ Channel ManagedChannelImpl{logId=1, target=localhost:8081} was not shutdown properly!!! ~*~*~*
     Make sure to call shutdown()/shutdownNow() and wait until awaitTermination() returns true.
 java.lang.RuntimeException: ManagedChannel allocation site
@@ -404,7 +253,7 @@ java.lang.RuntimeException: ManagedChannel allocation site
 	at com.google.cloud.firestore.FirestoreOptions$DefaultFirestoreFactory.create(FirestoreOptions.java:64)
 	at com.google.cloud.ServiceOptions.getService(ServiceOptions.java:540)
 	at net.ambitious.daigoapi.FirestoreKt.firestore(Firestore.kt:25)
-	at net.ambitious.daigoapi.ApplicationKt.module(Application.kt:52)
+	at net.ambitious.daigoapi.ApplicationKt.module(Application.kt:59)
 	at TestCases.setUp(TestCases.kt:25)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -459,7 +308,7 @@ java.lang.RuntimeException: ManagedChannel allocation site
 	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)
 	at java.base/java.lang.Thread.run(Thread.java:829)
 
-Apr 24, 2022 10:15:30 AM io.grpc.internal.ManagedChannelOrphanWrapper$ManagedChannelReference cleanQueue
+May 05, 2022 12:43:39 AM io.grpc.internal.ManagedChannelOrphanWrapper$ManagedChannelReference cleanQueue
 SEVERE: *~*~*~ Channel ManagedChannelImpl{logId=9, target=localhost:8081} was not shutdown properly!!! ~*~*~*
     Make sure to call shutdown()/shutdownNow() and wait until awaitTermination() returns true.
 java.lang.RuntimeException: ManagedChannel allocation site
@@ -485,7 +334,169 @@ java.lang.RuntimeException: ManagedChannel allocation site
 	at com.google.cloud.firestore.FirestoreOptions$DefaultFirestoreFactory.create(FirestoreOptions.java:64)
 	at com.google.cloud.ServiceOptions.getService(ServiceOptions.java:540)
 	at net.ambitious.daigoapi.FirestoreKt.firestore(Firestore.kt:25)
-	at net.ambitious.daigoapi.ApplicationKt.module(Application.kt:52)
+	at net.ambitious.daigoapi.ApplicationKt.module(Application.kt:59)
+	at TestCases.setUp(TestCases.kt:25)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.RunBefores.invokeMethod(RunBefores.java:33)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:121)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:182)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:164)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:414)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:48)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+May 05, 2022 12:43:39 AM io.grpc.internal.ManagedChannelOrphanWrapper$ManagedChannelReference cleanQueue
+SEVERE: *~*~*~ Channel ManagedChannelImpl{logId=5, target=localhost:8081} was not shutdown properly!!! ~*~*~*
+    Make sure to call shutdown()/shutdownNow() and wait until awaitTermination() returns true.
+java.lang.RuntimeException: ManagedChannel allocation site
+	at io.grpc.internal.ManagedChannelOrphanWrapper$ManagedChannelReference.&lt;init&gt;(ManagedChannelOrphanWrapper.java:93)
+	at io.grpc.internal.ManagedChannelOrphanWrapper.&lt;init&gt;(ManagedChannelOrphanWrapper.java:53)
+	at io.grpc.internal.ManagedChannelOrphanWrapper.&lt;init&gt;(ManagedChannelOrphanWrapper.java:44)
+	at io.grpc.internal.ManagedChannelImplBuilder.build(ManagedChannelImplBuilder.java:630)
+	at io.grpc.internal.AbstractManagedChannelImplBuilder.build(AbstractManagedChannelImplBuilder.java:297)
+	at com.google.api.gax.grpc.InstantiatingGrpcChannelProvider.createSingleChannel(InstantiatingGrpcChannelProvider.java:388)
+	at com.google.api.gax.grpc.ChannelPool.&lt;init&gt;(ChannelPool.java:105)
+	at com.google.api.gax.grpc.ChannelPool.create(ChannelPool.java:83)
+	at com.google.api.gax.grpc.InstantiatingGrpcChannelProvider.createChannel(InstantiatingGrpcChannelProvider.java:236)
+	at com.google.api.gax.grpc.InstantiatingGrpcChannelProvider.getTransportChannel(InstantiatingGrpcChannelProvider.java:230)
+	at com.google.api.gax.rpc.ClientContext.create(ClientContext.java:201)
+	at com.google.api.gax.rpc.ClientContext.create(ClientContext.java:132)
+	at com.google.cloud.firestore.spi.v1.GrpcFirestoreRpc.&lt;init&gt;(GrpcFirestoreRpc.java:125)
+	at com.google.cloud.firestore.FirestoreOptions$DefaultFirestoreRpcFactory.create(FirestoreOptions.java:88)
+	at com.google.cloud.firestore.FirestoreOptions$DefaultFirestoreRpcFactory.create(FirestoreOptions.java:80)
+	at com.google.cloud.ServiceOptions.getRpc(ServiceOptions.java:560)
+	at com.google.cloud.firestore.FirestoreOptions.getFirestoreRpc(FirestoreOptions.java:358)
+	at com.google.cloud.firestore.FirestoreImpl.&lt;init&gt;(FirestoreImpl.java:79)
+	at com.google.cloud.firestore.FirestoreOptions$DefaultFirestoreFactory.create(FirestoreOptions.java:71)
+	at com.google.cloud.firestore.FirestoreOptions$DefaultFirestoreFactory.create(FirestoreOptions.java:64)
+	at com.google.cloud.ServiceOptions.getService(ServiceOptions.java:540)
+	at net.ambitious.daigoapi.FirestoreKt.firestore(Firestore.kt:25)
+	at net.ambitious.daigoapi.ApplicationKt.module(Application.kt:59)
+	at TestCases.setUp(TestCases.kt:25)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.RunBefores.invokeMethod(RunBefores.java:33)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:121)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:182)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:164)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:414)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:48)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+May 05, 2022 12:43:39 AM io.grpc.internal.ManagedChannelOrphanWrapper$ManagedChannelReference cleanQueue
+SEVERE: *~*~*~ Channel ManagedChannelImpl{logId=17, target=localhost:8081} was not shutdown properly!!! ~*~*~*
+    Make sure to call shutdown()/shutdownNow() and wait until awaitTermination() returns true.
+java.lang.RuntimeException: ManagedChannel allocation site
+	at io.grpc.internal.ManagedChannelOrphanWrapper$ManagedChannelReference.&lt;init&gt;(ManagedChannelOrphanWrapper.java:93)
+	at io.grpc.internal.ManagedChannelOrphanWrapper.&lt;init&gt;(ManagedChannelOrphanWrapper.java:53)
+	at io.grpc.internal.ManagedChannelOrphanWrapper.&lt;init&gt;(ManagedChannelOrphanWrapper.java:44)
+	at io.grpc.internal.ManagedChannelImplBuilder.build(ManagedChannelImplBuilder.java:630)
+	at io.grpc.internal.AbstractManagedChannelImplBuilder.build(AbstractManagedChannelImplBuilder.java:297)
+	at com.google.api.gax.grpc.InstantiatingGrpcChannelProvider.createSingleChannel(InstantiatingGrpcChannelProvider.java:388)
+	at com.google.api.gax.grpc.ChannelPool.&lt;init&gt;(ChannelPool.java:105)
+	at com.google.api.gax.grpc.ChannelPool.create(ChannelPool.java:83)
+	at com.google.api.gax.grpc.InstantiatingGrpcChannelProvider.createChannel(InstantiatingGrpcChannelProvider.java:236)
+	at com.google.api.gax.grpc.InstantiatingGrpcChannelProvider.getTransportChannel(InstantiatingGrpcChannelProvider.java:230)
+	at com.google.api.gax.rpc.ClientContext.create(ClientContext.java:201)
+	at com.google.api.gax.rpc.ClientContext.create(ClientContext.java:132)
+	at com.google.cloud.firestore.spi.v1.GrpcFirestoreRpc.&lt;init&gt;(GrpcFirestoreRpc.java:125)
+	at com.google.cloud.firestore.FirestoreOptions$DefaultFirestoreRpcFactory.create(FirestoreOptions.java:88)
+	at com.google.cloud.firestore.FirestoreOptions$DefaultFirestoreRpcFactory.create(FirestoreOptions.java:80)
+	at com.google.cloud.ServiceOptions.getRpc(ServiceOptions.java:560)
+	at com.google.cloud.firestore.FirestoreOptions.getFirestoreRpc(FirestoreOptions.java:358)
+	at com.google.cloud.firestore.FirestoreImpl.&lt;init&gt;(FirestoreImpl.java:79)
+	at com.google.cloud.firestore.FirestoreOptions$DefaultFirestoreFactory.create(FirestoreOptions.java:71)
+	at com.google.cloud.firestore.FirestoreOptions$DefaultFirestoreFactory.create(FirestoreOptions.java:64)
+	at com.google.cloud.ServiceOptions.getService(ServiceOptions.java:540)
+	at net.ambitious.daigoapi.FirestoreKt.firestore(Firestore.kt:25)
+	at net.ambitious.daigoapi.ApplicationKt.module(Application.kt:59)
 	at TestCases.setUp(TestCases.kt:25)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -551,7 +562,7 @@ java.lang.RuntimeException: ManagedChannel allocation site
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.1.1</a> at Apr 24, 2022, 10:15:31 AM</p>
+<a href="http://www.gradle.org">Gradle 7.1.1</a> at May 5, 2022, 12:43:40 AM</p>
 </div>
 </div>
 </body>
