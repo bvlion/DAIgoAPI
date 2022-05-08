@@ -63,11 +63,13 @@ fun setOriginalWords(db: Firestore) {
 }
 
 fun setSampleWords(db: Firestore) {
-  sampleWords.clear()
-  getDocument(db, "sample").get().get()
-    .data?.map { mapOf(it.key to it.value.toString()) }?.forEach {
+  val data = getDocument(db, "sample").get().get().data
+  if (data != null) {
+    sampleWords.clear()
+    data.map { mapOf(it.key to it.value.toString()) }.forEach {
       sampleWords.addAll(it.values)
-    } ?: throw IllegalStateException()
+    }
+  }
 }
 
 private fun getDocument(db: Firestore, document: String = "words"): DocumentReference =
@@ -81,6 +83,14 @@ data class SaveRequest(
 val words: Map<String, String>
   get() = originalWords
 private val originalWords = hashMapOf<String, String>()
+
 val samples: List<String>
   get() = sampleWords
-private val sampleWords = arrayListOf("努力大事")
+private val sampleWords = arrayListOf(
+  "努力大事",
+  "DAIGO大誤算",
+  "グイグイヨシコイ",
+  "上昇志向",
+  "負ける気がしない"
+)
+

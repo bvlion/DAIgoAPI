@@ -58,6 +58,7 @@ fun Application.module() {
   }
   val firestore = firestore(credential)
   setOriginalWords(firestore)
+  setSampleWords(firestore)
 
   routing {
     authenticate {
@@ -84,9 +85,7 @@ fun Application.module() {
       }
 
       post("/update-samples") {
-        if (credential != null) {
-          setSampleWords(firestore)
-        }
+        setSampleWords(firestore)
         call.respond(mapOf("samples" to samples))
       }
     }
