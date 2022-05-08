@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">9.006s</div>
+<div class="counter">7.963s</div>
 <p>duration</p>
 </div>
 </td>
@@ -82,37 +82,37 @@
 </thead>
 <tr>
 <td class="success">getDaigo</td>
-<td class="success">0.403s</td>
+<td class="success">0.313s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">getSamples</td>
-<td class="success">3.186s</td>
+<td class="success">2.459s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">health</td>
-<td class="success">0.059s</td>
+<td class="success">0.057s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">privacyPolicy</td>
-<td class="success">0.058s</td>
+<td class="success">0.052s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">termsOfUse</td>
-<td class="success">0.367s</td>
+<td class="success">0.352s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">updateSamples</td>
-<td class="success">0.142s</td>
+<td class="success">0.125s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">upsertDaigo</td>
-<td class="success">4.791s</td>
+<td class="success">4.605s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -120,25 +120,25 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>2022-05-05 00:43:31.417 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
-2022-05-05 00:43:31.450 [Test worker] INFO  ktor.test - Application auto-reloaded in 0.025 seconds.
-2022-05-05 00:43:34.148 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@231c7d24
-2022-05-05 00:43:34.150 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@231c7d24
-2022-05-05 00:43:34.164 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
-2022-05-05 00:43:34.164 [Test worker] INFO  ktor.test - Application auto-reloaded in 0.0 seconds.
-2022-05-05 00:43:34.220 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@cd4203a
-2022-05-05 00:43:34.221 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@cd4203a
-2022-05-05 00:43:34.224 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
-2022-05-05 00:43:34.224 [Test worker] INFO  ktor.test - Application auto-reloaded in 0.0 seconds.
-2022-05-05 00:43:34.583 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@5e7261aa
-2022-05-05 00:43:34.584 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@5e7261aa
-2022-05-05 00:43:34.592 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
-2022-05-05 00:43:34.592 [Test worker] INFO  ktor.test - Application auto-reloaded in 0.0 seconds.
-2022-05-05 00:43:34.673 [DefaultDispatcher-worker-3 @request#25] DEBUG ktor.test - Conversion failed, null returned
+<pre>2022-05-08 01:08:28.510 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
+2022-05-08 01:08:28.534 [Test worker] INFO  ktor.test - Application auto-reloaded in 0.016 seconds.
+2022-05-08 01:08:30.654 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@233c8b9f
+2022-05-08 01:08:30.659 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@233c8b9f
+2022-05-08 01:08:30.669 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
+2022-05-08 01:08:30.669 [Test worker] INFO  ktor.test - Application auto-reloaded in 0.0 seconds.
+2022-05-08 01:08:30.721 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@1291c0b9
+2022-05-08 01:08:30.723 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@1291c0b9
+2022-05-08 01:08:30.725 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
+2022-05-08 01:08:30.726 [Test worker] INFO  ktor.test - Application auto-reloaded in 0.0 seconds.
+2022-05-08 01:08:31.067 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@3babc0a6
+2022-05-08 01:08:31.068 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@3babc0a6
+2022-05-08 01:08:31.078 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
+2022-05-08 01:08:31.078 [Test worker] INFO  ktor.test - Application auto-reloaded in 0.0 seconds.
+2022-05-08 01:08:31.140 [DefaultDispatcher-worker-4 @request#25] DEBUG ktor.test - Conversion failed, null returned
 io.ktor.server.plugins.CannotTransformContentToTypeException: Cannot transform this request's content to net.ambitious.daigoapi.SaveRequest
 	at io.ktor.server.request.ApplicationReceiveFunctionsKt.receive(ApplicationReceiveFunctions.kt:90)
 	at io.ktor.server.request.ApplicationReceiveFunctionsKt.receiveOrNull(ApplicationReceiveFunctions.kt:104)
-	at net.ambitious.daigoapi.ApplicationKt$module$5$1$2.invokeSuspend(Application.kt:127)
+	at net.ambitious.daigoapi.ApplicationKt$module$5$1$2.invokeSuspend(Application.kt:126)
 	at net.ambitious.daigoapi.ApplicationKt$module$5$1$2.invoke(Application.kt)
 	at net.ambitious.daigoapi.ApplicationKt$module$5$1$2.invoke(Application.kt)
 	at io.ktor.server.routing.Route$buildPipeline$1$1.invokeSuspend(Route.kt:116)
@@ -205,110 +205,29 @@ io.ktor.server.plugins.CannotTransformContentToTypeException: Cannot transform t
 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:664)
 接頭詞,名詞接続,*,*,*,*,大,ダイ,ダイ
 名詞,一般,*,*,*,*,好物,コウブツ,コーブツ
-2022-05-05 00:43:39.378 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@35f81f54
-2022-05-05 00:43:39.378 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@35f81f54
-2022-05-05 00:43:39.383 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
-2022-05-05 00:43:39.383 [Test worker] INFO  ktor.test - Application auto-reloaded in 0.0 seconds.
-2022-05-05 00:43:39.515 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@1b780c88
-2022-05-05 00:43:39.516 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@1b780c88
-2022-05-05 00:43:39.525 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
-2022-05-05 00:43:39.525 [Test worker] INFO  ktor.test - Application auto-reloaded in 0.0 seconds.
-2022-05-05 00:43:39.578 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@40812f1c
-2022-05-05 00:43:39.579 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@40812f1c
-2022-05-05 00:43:39.585 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
-2022-05-05 00:43:39.585 [Test worker] INFO  ktor.test - Application auto-reloaded in 0.0 seconds.
+2022-05-08 01:08:35.675 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@1625d991
+2022-05-08 01:08:35.675 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@1625d991
+2022-05-08 01:08:35.683 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
+2022-05-08 01:08:35.683 [Test worker] INFO  ktor.test - Application auto-reloaded in 0.0 seconds.
+2022-05-08 01:08:35.797 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@298f9380
+2022-05-08 01:08:35.798 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@298f9380
+2022-05-08 01:08:35.809 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
+2022-05-08 01:08:35.809 [Test worker] INFO  ktor.test - Application auto-reloaded in 0.0 seconds.
+2022-05-08 01:08:35.848 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@3b845225
+2022-05-08 01:08:35.848 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@3b845225
+2022-05-08 01:08:35.861 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
+2022-05-08 01:08:35.861 [Test worker] INFO  ktor.test - Application auto-reloaded in 0.0 seconds.
 名詞,サ変接続,*,*,*,*,努力,ドリョク,ドリョク
 名詞,形容動詞語幹,*,*,*,*,大事,ダイジ,ダイジ
-2022-05-05 00:43:39.980 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@7b31378b
-2022-05-05 00:43:39.980 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@7b31378b
+2022-05-08 01:08:36.170 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@7670abc9
+2022-05-08 01:08:36.171 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@7670abc9
 </pre>
 </span>
 </div>
 <div id="tab2" class="tab">
 <h2>Standard error</h2>
 <span class="code">
-<pre>May 05, 2022 12:43:39 AM io.grpc.internal.ManagedChannelOrphanWrapper$ManagedChannelReference cleanQueue
-SEVERE: *~*~*~ Channel ManagedChannelImpl{logId=1, target=localhost:8081} was not shutdown properly!!! ~*~*~*
-    Make sure to call shutdown()/shutdownNow() and wait until awaitTermination() returns true.
-java.lang.RuntimeException: ManagedChannel allocation site
-	at io.grpc.internal.ManagedChannelOrphanWrapper$ManagedChannelReference.&lt;init&gt;(ManagedChannelOrphanWrapper.java:93)
-	at io.grpc.internal.ManagedChannelOrphanWrapper.&lt;init&gt;(ManagedChannelOrphanWrapper.java:53)
-	at io.grpc.internal.ManagedChannelOrphanWrapper.&lt;init&gt;(ManagedChannelOrphanWrapper.java:44)
-	at io.grpc.internal.ManagedChannelImplBuilder.build(ManagedChannelImplBuilder.java:630)
-	at io.grpc.internal.AbstractManagedChannelImplBuilder.build(AbstractManagedChannelImplBuilder.java:297)
-	at com.google.api.gax.grpc.InstantiatingGrpcChannelProvider.createSingleChannel(InstantiatingGrpcChannelProvider.java:388)
-	at com.google.api.gax.grpc.ChannelPool.&lt;init&gt;(ChannelPool.java:105)
-	at com.google.api.gax.grpc.ChannelPool.create(ChannelPool.java:83)
-	at com.google.api.gax.grpc.InstantiatingGrpcChannelProvider.createChannel(InstantiatingGrpcChannelProvider.java:236)
-	at com.google.api.gax.grpc.InstantiatingGrpcChannelProvider.getTransportChannel(InstantiatingGrpcChannelProvider.java:230)
-	at com.google.api.gax.rpc.ClientContext.create(ClientContext.java:201)
-	at com.google.api.gax.rpc.ClientContext.create(ClientContext.java:132)
-	at com.google.cloud.firestore.spi.v1.GrpcFirestoreRpc.&lt;init&gt;(GrpcFirestoreRpc.java:125)
-	at com.google.cloud.firestore.FirestoreOptions$DefaultFirestoreRpcFactory.create(FirestoreOptions.java:88)
-	at com.google.cloud.firestore.FirestoreOptions$DefaultFirestoreRpcFactory.create(FirestoreOptions.java:80)
-	at com.google.cloud.ServiceOptions.getRpc(ServiceOptions.java:560)
-	at com.google.cloud.firestore.FirestoreOptions.getFirestoreRpc(FirestoreOptions.java:358)
-	at com.google.cloud.firestore.FirestoreImpl.&lt;init&gt;(FirestoreImpl.java:79)
-	at com.google.cloud.firestore.FirestoreOptions$DefaultFirestoreFactory.create(FirestoreOptions.java:71)
-	at com.google.cloud.firestore.FirestoreOptions$DefaultFirestoreFactory.create(FirestoreOptions.java:64)
-	at com.google.cloud.ServiceOptions.getService(ServiceOptions.java:540)
-	at net.ambitious.daigoapi.FirestoreKt.firestore(Firestore.kt:25)
-	at net.ambitious.daigoapi.ApplicationKt.module(Application.kt:59)
-	at TestCases.setUp(TestCases.kt:25)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-	at org.junit.internal.runners.statements.RunBefores.invokeMethod(RunBefores.java:33)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
-	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
-	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)
-	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
-	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
-	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:121)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:182)
-	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:164)
-	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:414)
-	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
-	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:48)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)
-	at java.base/java.lang.Thread.run(Thread.java:829)
-
-May 05, 2022 12:43:39 AM io.grpc.internal.ManagedChannelOrphanWrapper$ManagedChannelReference cleanQueue
+<pre>May 08, 2022 1:08:35 AM io.grpc.internal.ManagedChannelOrphanWrapper$ManagedChannelReference cleanQueue
 SEVERE: *~*~*~ Channel ManagedChannelImpl{logId=9, target=localhost:8081} was not shutdown properly!!! ~*~*~*
     Make sure to call shutdown()/shutdownNow() and wait until awaitTermination() returns true.
 java.lang.RuntimeException: ManagedChannel allocation site
@@ -389,7 +308,7 @@ java.lang.RuntimeException: ManagedChannel allocation site
 	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)
 	at java.base/java.lang.Thread.run(Thread.java:829)
 
-May 05, 2022 12:43:39 AM io.grpc.internal.ManagedChannelOrphanWrapper$ManagedChannelReference cleanQueue
+May 08, 2022 1:08:35 AM io.grpc.internal.ManagedChannelOrphanWrapper$ManagedChannelReference cleanQueue
 SEVERE: *~*~*~ Channel ManagedChannelImpl{logId=5, target=localhost:8081} was not shutdown properly!!! ~*~*~*
     Make sure to call shutdown()/shutdownNow() and wait until awaitTermination() returns true.
 java.lang.RuntimeException: ManagedChannel allocation site
@@ -470,8 +389,8 @@ java.lang.RuntimeException: ManagedChannel allocation site
 	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)
 	at java.base/java.lang.Thread.run(Thread.java:829)
 
-May 05, 2022 12:43:39 AM io.grpc.internal.ManagedChannelOrphanWrapper$ManagedChannelReference cleanQueue
-SEVERE: *~*~*~ Channel ManagedChannelImpl{logId=17, target=localhost:8081} was not shutdown properly!!! ~*~*~*
+May 08, 2022 1:08:35 AM io.grpc.internal.ManagedChannelOrphanWrapper$ManagedChannelReference cleanQueue
+SEVERE: *~*~*~ Channel ManagedChannelImpl{logId=1, target=localhost:8081} was not shutdown properly!!! ~*~*~*
     Make sure to call shutdown()/shutdownNow() and wait until awaitTermination() returns true.
 java.lang.RuntimeException: ManagedChannel allocation site
 	at io.grpc.internal.ManagedChannelOrphanWrapper$ManagedChannelReference.&lt;init&gt;(ManagedChannelOrphanWrapper.java:93)
@@ -562,7 +481,7 @@ java.lang.RuntimeException: ManagedChannel allocation site
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.1.1</a> at May 5, 2022, 12:43:40 AM</p>
+<a href="http://www.gradle.org">Gradle 7.1.1</a> at May 8, 2022, 1:08:36 AM</p>
 </div>
 </div>
 </body>
