@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">8.445s</div>
+<div class="counter">9.237s</div>
 <p>duration</p>
 </div>
 </td>
@@ -82,37 +82,37 @@
 </thead>
 <tr>
 <td class="success">getDaigo</td>
-<td class="success">0.357s</td>
+<td class="success">0.405s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">getSamples</td>
-<td class="success">2.743s</td>
+<td class="success">3.250s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">health</td>
-<td class="success">0.069s</td>
+<td class="success">0.091s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">privacyPolicy</td>
-<td class="success">0.056s</td>
+<td class="success">0.055s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">termsOfUse</td>
-<td class="success">0.401s</td>
+<td class="success">0.474s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">updateSamples</td>
-<td class="success">0.067s</td>
+<td class="success">0.167s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">upsertDaigo</td>
-<td class="success">4.752s</td>
+<td class="success">4.795s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -120,21 +120,21 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>2022-05-28 12:39:10.282 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
-2022-05-28 12:39:10.305 [Test worker] INFO  ktor.test - Application auto-reloaded in 0.017 seconds.
-2022-05-28 12:39:12.667 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@18a9f455
-2022-05-28 12:39:12.670 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@18a9f455
-2022-05-28 12:39:12.690 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
-2022-05-28 12:39:12.691 [Test worker] INFO  ktor.test - Application auto-reloaded in 0.0 seconds.
-2022-05-28 12:39:12.751 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@605dadb
-2022-05-28 12:39:12.751 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@605dadb
-2022-05-28 12:39:12.759 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
-2022-05-28 12:39:12.759 [Test worker] INFO  ktor.test - Application auto-reloaded in 0.0 seconds.
-2022-05-28 12:39:13.154 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@aac73f2
-2022-05-28 12:39:13.154 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@aac73f2
-2022-05-28 12:39:13.160 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
-2022-05-28 12:39:13.160 [Test worker] INFO  ktor.test - Application auto-reloaded in 0.0 seconds.
-2022-05-28 12:39:13.302 [DefaultDispatcher-worker-2 @request#25] DEBUG ktor.test - Conversion failed, null returned
+<pre>2022-05-28 12:39:52.317 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
+2022-05-28 12:39:52.333 [Test worker] INFO  ktor.test - Application started in 0.132 seconds.
+2022-05-28 12:39:55.181 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@62035955
+2022-05-28 12:39:55.192 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@62035955
+2022-05-28 12:39:55.202 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
+2022-05-28 12:39:55.203 [Test worker] INFO  ktor.test - Application started in 0.001 seconds.
+2022-05-28 12:39:55.287 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@5a6813d1
+2022-05-28 12:39:55.287 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@5a6813d1
+2022-05-28 12:39:55.294 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
+2022-05-28 12:39:55.294 [Test worker] INFO  ktor.test - Application started in 0.001 seconds.
+2022-05-28 12:39:55.760 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@3dd43006
+2022-05-28 12:39:55.760 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@3dd43006
+2022-05-28 12:39:55.768 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
+2022-05-28 12:39:55.768 [Test worker] INFO  ktor.test - Application started in 0.001 seconds.
+2022-05-28 12:39:55.843 [DefaultDispatcher-worker-3 @request#25] DEBUG ktor.test - Conversion failed, null returned
 io.ktor.server.plugins.CannotTransformContentToTypeException: Cannot transform this request's content to net.ambitious.daigoapi.SaveRequest
 	at io.ktor.server.request.ApplicationReceiveFunctionsKt.receive(ApplicationReceiveFunctions.kt:90)
 	at io.ktor.server.request.ApplicationReceiveFunctionsKt.receiveOrNull(ApplicationReceiveFunctions.kt:104)
@@ -205,30 +205,30 @@ io.ktor.server.plugins.CannotTransformContentToTypeException: Cannot transform t
 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:664)
 接頭詞,名詞接続,*,*,*,*,大,ダイ,ダイ
 名詞,一般,*,*,*,*,好物,コウブツ,コーブツ
-2022-05-28 12:39:17.904 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@4c292a4c
-2022-05-28 12:39:17.905 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@4c292a4c
-2022-05-28 12:39:17.911 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
-2022-05-28 12:39:17.912 [Test worker] INFO  ktor.test - Application auto-reloaded in 0.0 seconds.
-2022-05-28 12:39:17.971 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@2f7aefce
-2022-05-28 12:39:17.971 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@2f7aefce
-2022-05-28 12:39:17.978 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
-2022-05-28 12:39:17.978 [Test worker] INFO  ktor.test - Application auto-reloaded in 0.0 seconds.
-2022-05-28 12:39:18.028 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@1b422a14
-2022-05-28 12:39:18.028 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@1b422a14
-2022-05-28 12:39:18.034 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
-2022-05-28 12:39:18.034 [Test worker] INFO  ktor.test - Application auto-reloaded in 0.0 seconds.
+2022-05-28 12:40:00.559 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@832f0a5
+2022-05-28 12:40:00.560 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@832f0a5
+2022-05-28 12:40:00.563 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
+2022-05-28 12:40:00.563 [Test worker] INFO  ktor.test - Application started in 0.001 seconds.
+2022-05-28 12:40:00.726 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@646a201b
+2022-05-28 12:40:00.727 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@646a201b
+2022-05-28 12:40:00.730 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
+2022-05-28 12:40:00.731 [Test worker] INFO  ktor.test - Application started in 0.001 seconds.
+2022-05-28 12:40:00.778 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@76287edf
+2022-05-28 12:40:00.779 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@76287edf
+2022-05-28 12:40:00.790 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
+2022-05-28 12:40:00.791 [Test worker] INFO  ktor.test - Application started in 0.001 seconds.
 名詞,サ変接続,*,*,*,*,努力,ドリョク,ドリョク
 名詞,形容動詞語幹,*,*,*,*,大事,ダイジ,ダイジ
-2022-05-28 12:39:18.388 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@49ae677b
-2022-05-28 12:39:18.389 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@49ae677b
+2022-05-28 12:40:01.187 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@799663c6
+2022-05-28 12:40:01.188 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@799663c6
 </pre>
 </span>
 </div>
 <div id="tab2" class="tab">
 <h2>Standard error</h2>
 <span class="code">
-<pre>May 28, 2022 12:39:13 PM io.grpc.internal.ManagedChannelOrphanWrapper$ManagedChannelReference cleanQueue
-SEVERE: *~*~*~ Channel ManagedChannelImpl{logId=5, target=localhost:8081} was not shutdown properly!!! ~*~*~*
+<pre>May 28, 2022 12:40:00 PM io.grpc.internal.ManagedChannelOrphanWrapper$ManagedChannelReference cleanQueue
+SEVERE: *~*~*~ Channel ManagedChannelImpl{logId=1, target=localhost:8081} was not shutdown properly!!! ~*~*~*
     Make sure to call shutdown()/shutdownNow() and wait until awaitTermination() returns true.
 java.lang.RuntimeException: ManagedChannel allocation site
 	at io.grpc.internal.ManagedChannelOrphanWrapper$ManagedChannelReference.&lt;init&gt;(ManagedChannelOrphanWrapper.java:93)
@@ -308,7 +308,7 @@ java.lang.RuntimeException: ManagedChannel allocation site
 	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)
 	at java.base/java.lang.Thread.run(Thread.java:829)
 
-May 28, 2022 12:39:17 PM io.grpc.internal.ManagedChannelOrphanWrapper$ManagedChannelReference cleanQueue
+May 28, 2022 12:40:00 PM io.grpc.internal.ManagedChannelOrphanWrapper$ManagedChannelReference cleanQueue
 SEVERE: *~*~*~ Channel ManagedChannelImpl{logId=9, target=localhost:8081} was not shutdown properly!!! ~*~*~*
     Make sure to call shutdown()/shutdownNow() and wait until awaitTermination() returns true.
 java.lang.RuntimeException: ManagedChannel allocation site
@@ -389,8 +389,8 @@ java.lang.RuntimeException: ManagedChannel allocation site
 	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)
 	at java.base/java.lang.Thread.run(Thread.java:829)
 
-May 28, 2022 12:39:17 PM io.grpc.internal.ManagedChannelOrphanWrapper$ManagedChannelReference cleanQueue
-SEVERE: *~*~*~ Channel ManagedChannelImpl{logId=13, target=localhost:8081} was not shutdown properly!!! ~*~*~*
+May 28, 2022 12:40:00 PM io.grpc.internal.ManagedChannelOrphanWrapper$ManagedChannelReference cleanQueue
+SEVERE: *~*~*~ Channel ManagedChannelImpl{logId=5, target=localhost:8081} was not shutdown properly!!! ~*~*~*
     Make sure to call shutdown()/shutdownNow() and wait until awaitTermination() returns true.
 java.lang.RuntimeException: ManagedChannel allocation site
 	at io.grpc.internal.ManagedChannelOrphanWrapper$ManagedChannelReference.&lt;init&gt;(ManagedChannelOrphanWrapper.java:93)
@@ -481,7 +481,7 @@ java.lang.RuntimeException: ManagedChannel allocation site
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.1.1</a> at May 28, 2022, 12:39:18 PM</p>
+<a href="http://www.gradle.org">Gradle 7.1.1</a> at May 28, 2022, 12:40:01 PM</p>
 </div>
 </div>
 </body>
