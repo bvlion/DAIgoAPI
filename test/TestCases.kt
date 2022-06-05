@@ -45,13 +45,19 @@ class TestCases {
   /** terms_of_use test */
   @Test
   fun termsOfUse() {
+    val termsOfUseContent = "<h1 id=\"利用規約のテスト\">利用規約のテスト</h1>\n<p>これは <strong>テスト</strong> です！</p>\n"
     with(engine) {
       handleRequest(HttpMethod.Get, "/terms_of_use").response.run {
         Assert.assertEquals(HttpStatusCode.OK, status())
         Assert.assertEquals(
-          JSONObject(mapOf(
-            "text" to "<h1 id=\"利用規約のテスト\">利用規約のテスト</h1>\n<p>これは <strong>テスト</strong> です！</p>\n"
-          )).toJSONString().replace("\\/", "/"), content)
+          JSONObject(mapOf("text" to termsOfUseContent)).toJSONString().replace("\\/", "/"),
+          content
+        )
+      }
+
+      handleRequest(HttpMethod.Get, "/view/terms_of_use").response.run {
+        Assert.assertEquals(HttpStatusCode.OK, status())
+        Assert.assertEquals("<title>利用規約</title>$termsOfUseContent", content)
       }
     }
   }
@@ -59,13 +65,19 @@ class TestCases {
   /** privacy_policy test */
   @Test
   fun privacyPolicy() {
+    val privacyPolicyContent = "<h1 id=\"プライバシーポリシーのテスト\">プライバシーポリシーのテスト</h1>\n<p>これは <strong>テスト</strong> です！</p>\n"
     with(engine) {
       handleRequest(HttpMethod.Get, "/privacy_policy").response.run {
         Assert.assertEquals(HttpStatusCode.OK, status())
         Assert.assertEquals(
-          JSONObject(mapOf(
-            "text" to "<h1 id=\"プライバシーポリシーのテスト\">プライバシーポリシーのテスト</h1>\n<p>これは <strong>テスト</strong> です！</p>\n"
-          )).toJSONString().replace("\\/", "/"), content)
+          JSONObject(mapOf("text" to privacyPolicyContent)).toJSONString().replace("\\/", "/"),
+          content
+        )
+      }
+
+      handleRequest(HttpMethod.Get, "/view/privacy_policy").response.run {
+        Assert.assertEquals(HttpStatusCode.OK, status())
+        Assert.assertEquals("<title>プライバシーポリシー</title>$privacyPolicyContent", content)
       }
     }
   }

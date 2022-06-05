@@ -8,6 +8,7 @@ import io.ktor.http.*
 import io.ktor.serialization.jackson.*
 import io.ktor.server.application.*
 import io.ktor.server.auth.*
+import io.ktor.server.http.content.*
 import io.ktor.server.netty.*
 import io.ktor.server.plugins.callloging.*
 import io.ktor.server.plugins.contentnegotiation.*
@@ -46,6 +47,12 @@ fun Application.module() {
     bearer {
       realm = "DAIgoAPI Server"
       validate(authHeader)
+    }
+  }
+
+  install(Routing) {
+    static {
+      resources("/html")
     }
   }
 
@@ -101,17 +108,24 @@ fun Application.module() {
     get("/terms_of_use") {
       call.respond(mapOf("text" to getHtml("/terms_of_use.md")))
     }
+
+    get("/view/privacy_policy") {
+      call.respondText(
+        getResourceText("/rules.html").format("プライバシーポリシー", getHtml("/privacy_policy.md")),
+        ContentType.Text.Html
+      )
+    }
+
+    get("/view/terms_of_use") {
+      call.respondText(
+        getResourceText("/rules.html").format("利用規約", getHtml("/terms_of_use.md")),
+        ContentType.Text.Html
+      )
+    }
   }
 }
 
 private fun getHtml(path: String): String {
-  val mdLines = arrayListOf<String>()
-  object {}.javaClass.getResourceAsStream(path)?.let { stream ->
-    BufferedReader(InputStreamReader(stream)).use {
-      mdLines.addAll(it.readLines())
-    }
-  } ?: throw java.lang.IllegalArgumentException("$path is null")
-
   val options = MutableDataSet().apply {
     set(Parser.EXTENSIONS, listOf(TocExtension.create()))
   }
@@ -119,6 +133,16 @@ private fun getHtml(path: String): String {
   val parser = Parser.builder(options).build()
   val renderer = HtmlRenderer.builder(options).build()
 
-  val document = parser.parse(mdLines.joinToString("\n"))
+  val document = parser.parse(getResourceText(path))
   return renderer.render(document)
+}
+
+private fun getResourceText(path: String): String {
+  val lines = arrayListOf<String>()
+  object {}.javaClass.getResourceAsStream(path)?.let { stream ->
+    BufferedReader(InputStreamReader(stream)).use {
+      lines.addAll(it.readLines())
+    }
+  } ?: throw java.lang.IllegalArgumentException("$path is null")
+  return lines.joinToString("\n")
 }
