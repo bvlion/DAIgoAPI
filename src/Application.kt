@@ -52,7 +52,7 @@ fun Application.module() {
 
   install(Routing) {
     static {
-      resources("/html")
+      resources("/web")
     }
   }
 
