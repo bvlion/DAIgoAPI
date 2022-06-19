@@ -5,7 +5,7 @@ buildscript {
     }
     
     dependencies {
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.21"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.7.0"
         classpath "gradle.plugin.com.github.johnrengelman:shadow:7.1.2"
     }
 }
@@ -58,8 +58,6 @@ dependencies {
 static String captureVersion(Dependency dependency) {
     return dependency.version
 }
-
-kotlin.experimental.coroutines = 'enable'
 
 task stage {
     dependsOn assemble
