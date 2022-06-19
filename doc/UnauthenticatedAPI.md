@@ -69,7 +69,7 @@ http://127.0.0.1:8080/privacy_policy
 
 Content | Parameter | Description
 :--|:--|:--
-text | `<h1>test</h1>` | terms of use
+text | `<h1>test</h1>` | privacy policy
 
 ```
 {
