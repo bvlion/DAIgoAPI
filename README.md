@@ -32,6 +32,7 @@ firebase emulators:exec "./gradlew clean test" --only firestore
 
 - [Authenticated API](/doc/AuthenticatedAPI.md)
 - [Unauthenticated API](/doc/UnauthenticatedAPI.md)
+- [Unauthenticated Web](/doc/UnauthenticatedWEB.md)
 
 ## Test result
 
