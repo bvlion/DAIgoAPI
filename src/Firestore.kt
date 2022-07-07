@@ -93,4 +93,3 @@ private val sampleWords = arrayListOf(
   "上昇志向",
   "負ける気がしない"
 )
-
