@@ -29,6 +29,11 @@ sourceSets {
 repositories {
     gradlePluginPortal()
     google()
+    mavenCentral()
+}
+
+configurations {
+    ktlint
 }
 
 shadowJar {
@@ -53,6 +58,11 @@ dependencies {
 
     testImplementation "io.ktor:ktor-server-tests:$ktor_version"
     testImplementation "org.json:json:20220320"
+    ktlint("com.pinterest:ktlint:0.45.2") {
+        attributes {
+            attribute(Bundling.BUNDLING_ATTRIBUTE, getObjects().named(Bundling, Bundling.EXTERNAL))
+        }
+    }
 }
 
 static String captureVersion(Dependency dependency) {
@@ -61,4 +71,19 @@ static String captureVersion(Dependency dependency) {
 
 task stage {
     dependsOn assemble
+}
+
+task ktlint(type: JavaExec, group: "verification") {
+    description = "Check Kotlin code style."
+    classpath = configurations.ktlint
+    main = "com.pinterest.ktlint.Main"
+    args "src/**/*.kt"
+}
+check.dependsOn ktlint
+
+task ktlintFormat(type: JavaExec, group: "formatting") {
+    description = "Fix Kotlin code style deviations."
+    classpath = configurations.ktlint
+    main = "com.pinterest.ktlint.Main"
+    args "-F", "src/**/*.kt"
 }
