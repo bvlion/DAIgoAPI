@@ -58,7 +58,7 @@ dependencies {
 
     testImplementation "io.ktor:ktor-server-tests:$ktor_version"
     testImplementation "org.json:json:20220320"
-    ktlint("com.pinterest:ktlint:0.45.2") {
+    ktlint("com.pinterest:ktlint:0.46.1") {
         attributes {
             attribute(Bundling.BUNDLING_ATTRIBUTE, getObjects().named(Bundling, Bundling.EXTERNAL))
         }
