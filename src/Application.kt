@@ -121,6 +121,29 @@ fun Application.module() {
         ContentType.Text.Html
       )
     }
+
+    get("/app/rules") {
+      val query = call.request.queryParameters
+      val backColor = query["backColor"]
+      val textColor = query["textColor"]
+      val isPrivacyPolicy = query["isPrivacyPolicy"]
+      try {
+        call.respondText(
+          getResourceText("/rules_app.html").format(
+            textColor!!,
+            backColor!!,
+            getHtml(if (isPrivacyPolicy!!.equals("true")) {
+              "/privacy_policy.md"
+            } else {
+              "/terms_of_use.md"
+            })
+          ),
+          ContentType.Text.Html
+        )
+      } catch (_: Exception) {
+        call.respond(HttpStatusCode.NotFound)
+      }
+    }
   }
 }
 
