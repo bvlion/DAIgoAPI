@@ -124,15 +124,15 @@ fun Application.module() {
 
     get("/app/rules") {
       val query = call.request.queryParameters
-      val backColor = query["backColor"]
       val textColor = query["textColor"]
+      val backColor = query["backColor"]
       val isPrivacyPolicy = query["isPrivacyPolicy"]
       try {
         call.respondText(
           getResourceText("/rules_app.html").format(
             textColor!!,
             backColor!!,
-            getHtml(if (isPrivacyPolicy!!.equals("true")) {
+            getHtml(if (isPrivacyPolicy!! == "true") {
               "/privacy_policy.md"
             } else {
               "/terms_of_use.md"
