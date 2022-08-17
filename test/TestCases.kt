@@ -45,19 +45,18 @@ class TestCases {
   /** terms_of_use test */
   @Test
   fun termsOfUse() {
-    val termsOfUseContent = "<h1 id=\"利用規約のテスト\">利用規約のテスト</h1>\n<p>これは <strong>テスト</strong> です！</p>\n"
     with(engine) {
       handleRequest(HttpMethod.Get, "/terms_of_use").response.run {
         Assert.assertEquals(HttpStatusCode.OK, status())
         Assert.assertEquals(
-          JSONObject(mapOf("text" to termsOfUseContent)).toJSONString().replace("\\/", "/"),
+          JSONObject(mapOf("text" to TERMS_OF_USE_CONTENT)).toJSONString().replace("\\/", "/"),
           content
         )
       }
 
       handleRequest(HttpMethod.Get, "/view/terms_of_use").response.run {
         Assert.assertEquals(HttpStatusCode.OK, status())
-        Assert.assertEquals("<title>利用規約</title>$termsOfUseContent", content)
+        Assert.assertEquals("<title>利用規約</title>$TERMS_OF_USE_CONTENT", content)
       }
     }
   }
@@ -65,19 +64,59 @@ class TestCases {
   /** privacy_policy test */
   @Test
   fun privacyPolicy() {
-    val privacyPolicyContent = "<h1 id=\"プライバシーポリシーのテスト\">プライバシーポリシーのテスト</h1>\n<p>これは <strong>テスト</strong> です！</p>\n"
     with(engine) {
       handleRequest(HttpMethod.Get, "/privacy_policy").response.run {
         Assert.assertEquals(HttpStatusCode.OK, status())
         Assert.assertEquals(
-          JSONObject(mapOf("text" to privacyPolicyContent)).toJSONString().replace("\\/", "/"),
+          JSONObject(mapOf("text" to PRIVACY_POLICY_CONTENT)).toJSONString().replace("\\/", "/"),
           content
         )
       }
 
       handleRequest(HttpMethod.Get, "/view/privacy_policy").response.run {
         Assert.assertEquals(HttpStatusCode.OK, status())
-        Assert.assertEquals("<title>プライバシーポリシー</title>$privacyPolicyContent", content)
+        Assert.assertEquals("<title>プライバシーポリシー</title>$PRIVACY_POLICY_CONTENT", content)
+      }
+    }
+  }
+
+  /** app rules test */
+  @Test
+  fun appRules() {
+    with(engine) {
+      // error not enough parameters
+      handleRequest(HttpMethod.Get, "/app/rules").response.run {
+        Assert.assertEquals(HttpStatusCode.NotFound, status())
+      }
+      handleRequest(HttpMethod.Get, "/app/rules?isPrivacyPolicy=true").response.run {
+        Assert.assertEquals(HttpStatusCode.NotFound, status())
+      }
+      handleRequest(HttpMethod.Get, "/app/rules?backColor=%23FFFFFF").response.run {
+        Assert.assertEquals(HttpStatusCode.NotFound, status())
+      }
+      handleRequest(HttpMethod.Get, "/app/rules?textColor=%23000000").response.run {
+        Assert.assertEquals(HttpStatusCode.NotFound, status())
+      }
+      handleRequest(HttpMethod.Get, "/app/rules?backColor=%23FFFFFF&textColor=%23000000").response.run {
+        Assert.assertEquals(HttpStatusCode.NotFound, status())
+      }
+      handleRequest(HttpMethod.Get, "/app/rules?textColor=%23000000&isPrivacyPolicy=true").response.run {
+        Assert.assertEquals(HttpStatusCode.NotFound, status())
+      }
+      handleRequest(HttpMethod.Get, "/app/rules?backColor=%23FFFFFF&isPrivacyPolicy=true").response.run {
+        Assert.assertEquals(HttpStatusCode.NotFound, status())
+      }
+      
+      // show privacy policy
+      handleRequest(HttpMethod.Get, "/app/rules?backColor=%23FFFFFF&textColor=%23000000&isPrivacyPolicy=true").response.run {
+        Assert.assertEquals(HttpStatusCode.OK, status())
+        Assert.assertEquals("#000000<title>#FFFFFF</title>$PRIVACY_POLICY_CONTENT", content)
+      }
+
+      // show terms of use
+      handleRequest(HttpMethod.Get, "/app/rules?backColor=%23FFFFFF&textColor=%23000000&isPrivacyPolicy=false").response.run {
+        Assert.assertEquals(HttpStatusCode.OK, status())
+        Assert.assertEquals("#000000<title>#FFFFFF</title>$TERMS_OF_USE_CONTENT", content)
       }
     }
   }
@@ -290,5 +329,10 @@ class TestCases {
         Assert.assertEquals(JSONObject(mapOf("samples" to JSONArray().apply { addAll(samples) })).toJSONString(), content)
       }
     }
+  }
+
+  companion object {
+    private const val TERMS_OF_USE_CONTENT = "<h1 id=\"利用規約のテスト\">利用規約のテスト</h1>\n<p>これは <strong>テスト</strong> です！</p>\n"
+    private const val PRIVACY_POLICY_CONTENT = "<h1 id=\"プライバシーポリシーのテスト\">プライバシーポリシーのテスト</h1>\n<p>これは <strong>テスト</strong> です！</p>\n"
   }
 }

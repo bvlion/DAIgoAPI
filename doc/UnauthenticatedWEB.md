@@ -82,3 +82,44 @@ html | `<!DOCTYPE HTML>` | privacy policy
 </body>
 </html>
 ```
+
+## get /app/rules
+
+Return rules html for app
+
+### request
+
+Content | Parameter | Description
+:--|:--|:--
+backColor | #FFFFFF | html's background color
+textColor | #000000 | html's text color
+isPrivacyPolicy | true | if true show PrivacyPolicy else TermsOfUse
+
+```
+http://127.0.0.1:8080/app/rules?backColor=%23FFFFFF&textColor=%23000000&isPrivacyPolicy=true
+```
+
+### response
+
+Content | Parameter | Description
+:--|:--|:--
+html | `<!DOCTYPE HTML>` | rules
+
+```
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css" rel="stylesheet" type="text/css" media="all" />
+  <style>.small { font-size: 70%% !important;  color: #000000; }</style>
+</head>
+<body style="background-color: #FFFFFF;">
+<div class="container main">
+  <div class="markdown-body"><h1 id="土台だけ用意">土台だけ用意</h1>
+<p>プライバシーポリシー</p>
+</div>
+</div>
+</body>
+</html>
+```
