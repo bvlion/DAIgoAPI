@@ -30,12 +30,33 @@ jobs:
     - name: create fatJar
       run: ./gradlew clean stage
 
-    - name: Heroku Deploy
-      env:
-        HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-      run: |
-        heroku plugins:install java
-        heroku deploy:jar build/libs/*-all.jar -a ${{ secrets.HEROKU_APP_NAME }}
+    - name: Upload artifact for deployment job
+      uses: actions/upload-artifact@v2
+      with:
+        name: java-app
+        path: '${{ github.workspace }}/build/libs/*-all.jar'
+
+  deploy:
+    runs-on: windows-latest
+    needs: build
+    environment:
+      name: 'Production'
+      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
+
+    steps:
+    - name: Download artifact from build job
+      uses: actions/download-artifact@v2
+      with:
+        name: java-app
+
+    - name: Deploy to Azure Web App
+      id: deploy-to-webapp
+      uses: azure/webapps-deploy@v2
+      with:
+        app-name: 'dai-go'
+        slot-name: 'Production'
+        publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_BC17FEBFE37A442BBA8AD0CF6F08A83F }}
+        package: '*.jar'
 
     - name: Slack Notification
       uses: 8398a7/action-slack@v3
