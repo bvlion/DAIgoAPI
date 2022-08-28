@@ -16,80 +16,81 @@ import org.slf4j.Logger
 import java.io.ByteArrayInputStream
 
 fun firestore(credentials: ByteArray?): Firestore =
-  if (credentials == null) {
-    FirestoreOptions
-      .newBuilder()
-      .setProjectId("test")
-      .setEmulatorHost("localhost:8081")
-      .build()
-      .service
-  } else {
-    val options = FirebaseOptions.builder()
-      .setCredentials(GoogleCredentials.fromStream(ByteArrayInputStream(credentials)))
-      .build()
-    FirebaseApp.initializeApp(options)
-    FirestoreClient.getFirestore()
-  }
+    if (credentials == null) {
+        FirestoreOptions
+            .newBuilder()
+            .setProjectId("test")
+            .setEmulatorHost("localhost:8081")
+            .build()
+            .service
+    } else {
+        val options = FirebaseOptions.builder()
+            .setCredentials(GoogleCredentials.fromStream(ByteArrayInputStream(credentials)))
+            .build()
+        FirebaseApp.initializeApp(options)
+        FirestoreClient.getFirestore()
+    }
 
 fun save(db: Firestore, saveRequest: SaveRequest, log: Logger): Map<String, String> {
-  ApiFutures.addCallback(
-    getDocument(db)
-      .set(
-        mapOf(saveRequest.word to saveRequest.daiGo),
-        SetOptions.merge()
-      ), object : ApiFutureCallback<WriteResult> {
+    ApiFutures.addCallback(
+        getDocument(db)
+            .set(
+                mapOf(saveRequest.word to saveRequest.daiGo),
+                SetOptions.merge()
+            ),
+        object : ApiFutureCallback<WriteResult> {
 
-      override fun onFailure(t: Throwable?) {
-        log.warn("firestore save error", t)
-      }
+            override fun onFailure(t: Throwable?) {
+                log.warn("firestore save error", t)
+            }
 
-      override fun onSuccess(result: WriteResult?) {
-        originalWords.clear()
-        setOriginalWords(db)
-      }
+            override fun onSuccess(result: WriteResult?) {
+                originalWords.clear()
+                setOriginalWords(db)
+            }
+        }
+    ) {
+        it.run()
+    }
 
-      }) {
-    it.run()
-  }
-
-  return mapOf("save" to "success")
+    return mapOf("save" to "success")
 }
 
 fun setOriginalWords(db: Firestore) {
-  getDocument(db).get().get()
-    .data?.map { mapOf(it.key to it.value.toString()) }?.forEach {
-      originalWords.putAll(it)
-    }
+    getDocument(db).get().get()
+        .data?.map { mapOf(it.key to it.value.toString()) }?.forEach {
+            originalWords.putAll(it)
+        }
 }
 
 fun setSampleWords(db: Firestore) {
-  val data = getDocument(db, "sample").get().get().data
-  if (data != null) {
-    sampleWords.clear()
-    data.map { mapOf(it.key to it.value.toString()) }.forEach {
-      sampleWords.addAll(it.values)
+    val data = getDocument(db, "sample").get().get().data
+    if (data != null) {
+        sampleWords.clear()
+        data.map { mapOf(it.key to it.value.toString()) }.forEach {
+            sampleWords.addAll(it.values)
+        }
     }
-  }
 }
 
 private fun getDocument(db: Firestore, document: String = "words"): DocumentReference =
-  db.collection("list").document(document)
+    db.collection("list").document(document)
 
 data class SaveRequest(
-  @JsonAlias("word") val word: String?,
-  @JsonAlias("dai_go") val daiGo: String?
+    @JsonAlias("word") val word: String?,
+    @JsonAlias("dai_go") val daiGo: String?
 )
 
 val words: Map<String, String>
-  get() = originalWords
+    get() = originalWords
 private val originalWords = hashMapOf<String, String>()
 
 val samples: List<String>
-  get() = sampleWords
+    get() = sampleWords
 private val sampleWords = arrayListOf(
-  "努力大事",
-  "DAIGO大誤算",
-  "グイグイヨシコイ",
-  "上昇志向",
-  "負ける気がしない"
+    "努力大事",
+    "DAIGO大誤算",
+    "グイグイヨシコイ",
+    "上昇志向",
+    "負ける気がしない"
 )

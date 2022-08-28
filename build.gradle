@@ -58,7 +58,7 @@ dependencies {
 
     testImplementation "io.ktor:ktor-server-tests:$ktor_version"
     testImplementation "org.json:json:20220320"
-    ktlint("com.pinterest:ktlint:0.46.1") {
+    ktlint('com.pinterest:ktlint:0.47.0') {
         attributes {
             attribute(Bundling.BUNDLING_ATTRIBUTE, getObjects().named(Bundling, Bundling.EXTERNAL))
         }
@@ -76,14 +76,14 @@ task stage {
 task ktlint(type: JavaExec, group: "verification") {
     description = "Check Kotlin code style."
     classpath = configurations.ktlint
-    main = "com.pinterest.ktlint.Main"
-    args "src/**/*.kt"
+    mainClass.set("com.pinterest.ktlint.Main")
+    args "src/*.kt"
 }
 check.dependsOn ktlint
 
 task ktlintFormat(type: JavaExec, group: "formatting") {
     description = "Fix Kotlin code style deviations."
     classpath = configurations.ktlint
-    main = "com.pinterest.ktlint.Main"
-    args "-F", "src/**/*.kt"
+    mainClass.set("com.pinterest.ktlint.Main")
+    args "-F", "src/*.kt"
 }
