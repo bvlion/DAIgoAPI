@@ -1,4 +1,0 @@
-ext {
-  versionCode = 'version_code'
-  projectId = 'project_id'
-}
