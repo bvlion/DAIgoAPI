@@ -9,7 +9,6 @@ buildscript {
         classpath "gradle.plugin.com.github.johnrengelman:shadow:7.1.2"
     }
 }
-apply from: 'ext.gradle'
 
 apply plugin: 'com.github.johnrengelman.shadow'
 apply plugin: 'kotlin'
