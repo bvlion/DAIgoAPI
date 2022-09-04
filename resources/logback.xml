@@ -8,6 +8,5 @@
         <appender-ref ref="STDOUT"/>
     </root>
     <logger name="io.netty" level="INFO"/>
-    <logger name="com.zaxxer.hikari" level="INFO"/>
     <logger name="io.grpc" level="INFO"/>
 </configuration>
