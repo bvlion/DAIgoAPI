@@ -5,9 +5,11 @@ import com.vladsch.flexmark.html.HtmlRenderer
 import com.vladsch.flexmark.parser.Parser
 import com.vladsch.flexmark.util.data.MutableDataSet
 import io.ktor.http.ContentType
+import io.ktor.http.HttpHeaders
 import io.ktor.http.HttpStatusCode
 import io.ktor.serialization.jackson.jackson
 import io.ktor.server.application.Application
+import io.ktor.server.application.ApplicationCallPipeline
 import io.ktor.server.application.call
 import io.ktor.server.application.install
 import io.ktor.server.application.log
@@ -19,6 +21,7 @@ import io.ktor.server.netty.EngineMain
 import io.ktor.server.plugins.callloging.CallLogging
 import io.ktor.server.plugins.contentnegotiation.ContentNegotiation
 import io.ktor.server.plugins.statuspages.StatusPages
+import io.ktor.server.request.header
 import io.ktor.server.request.path
 import io.ktor.server.request.receiveOrNull
 import io.ktor.server.response.respond
@@ -36,6 +39,7 @@ fun main(args: Array<String>) = EngineMain.main(args)
 fun Application.module() {
     val log = log
     val authHeader = environment.config.property("app.auth_header").getString()
+    val allowHeaderHost = environment.config.property("app.allow_header_host").getString()
 
     install(StatusPages) {
         exception<IllegalStateException> { call, cause ->
@@ -77,6 +81,16 @@ fun Application.module() {
     setSampleWords(firestore)
 
     routing {
+        intercept(ApplicationCallPipeline.Plugins) {
+            if (allowHeaderHost.isNotEmpty()) {
+                val hosts = call.request.header(HttpHeaders.XForwardedHost)
+                    ?.split(",")
+                    ?.map { it.trim() } ?: throw IllegalStateException("target host is null")
+                if (hosts.none { it == allowHeaderHost }) {
+                    throw IllegalStateException("target host [$allowHeaderHost], different hosts [${hosts.joinToString()}]")
+                }
+            }
+        }
         authenticate {
             get("/get-dai-go") {
                 val target = call.request.queryParameters["target"]

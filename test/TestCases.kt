@@ -17,6 +17,7 @@ class TestCases {
     engine = TestApplicationEngine(applicationEngineEnvironment {
       config = MapApplicationConfig(
         "app.auth_header" to "test",
+        "app.allow_header_host" to "test",
         "firestore.admin_sdk" to ""
       )
       log = LoggerFactory.getLogger("ktor.test")
@@ -35,7 +36,12 @@ class TestCases {
   @Test
   fun health() {
     with(engine) {
+      // error no set header
       handleRequest(HttpMethod.Get, "/health").response.run {
+        Assert.assertEquals(HttpStatusCode.NotFound, status())
+      }
+
+      headerAddedHandleRequest(HttpMethod.Get, "/health").response.run {
         Assert.assertEquals(HttpStatusCode.OK, status())
         Assert.assertEquals(JSONObject(mapOf("status" to "ok")).toJSONString(), content)
       }
@@ -46,7 +52,7 @@ class TestCases {
   @Test
   fun termsOfUse() {
     with(engine) {
-      handleRequest(HttpMethod.Get, "/terms_of_use").response.run {
+      headerAddedHandleRequest(HttpMethod.Get, "/terms_of_use").response.run {
         Assert.assertEquals(HttpStatusCode.OK, status())
         Assert.assertEquals(
           JSONObject(mapOf("text" to TERMS_OF_USE_CONTENT)).toJSONString().replace("\\/", "/"),
@@ -54,7 +60,7 @@ class TestCases {
         )
       }
 
-      handleRequest(HttpMethod.Get, "/view/terms_of_use").response.run {
+      headerAddedHandleRequest(HttpMethod.Get, "/view/terms_of_use").response.run {
         Assert.assertEquals(HttpStatusCode.OK, status())
         Assert.assertEquals("<title>利用規約</title>$TERMS_OF_USE_CONTENT", content)
       }
@@ -65,7 +71,7 @@ class TestCases {
   @Test
   fun privacyPolicy() {
     with(engine) {
-      handleRequest(HttpMethod.Get, "/privacy_policy").response.run {
+      headerAddedHandleRequest(HttpMethod.Get, "/privacy_policy").response.run {
         Assert.assertEquals(HttpStatusCode.OK, status())
         Assert.assertEquals(
           JSONObject(mapOf("text" to PRIVACY_POLICY_CONTENT)).toJSONString().replace("\\/", "/"),
@@ -73,7 +79,7 @@ class TestCases {
         )
       }
 
-      handleRequest(HttpMethod.Get, "/view/privacy_policy").response.run {
+      headerAddedHandleRequest(HttpMethod.Get, "/view/privacy_policy").response.run {
         Assert.assertEquals(HttpStatusCode.OK, status())
         Assert.assertEquals("<title>プライバシーポリシー</title>$PRIVACY_POLICY_CONTENT", content)
       }
@@ -85,36 +91,36 @@ class TestCases {
   fun appRules() {
     with(engine) {
       // error not enough parameters
-      handleRequest(HttpMethod.Get, "/app/rules").response.run {
+      headerAddedHandleRequest(HttpMethod.Get, "/app/rules").response.run {
         Assert.assertEquals(HttpStatusCode.NotFound, status())
       }
-      handleRequest(HttpMethod.Get, "/app/rules?isPrivacyPolicy=true").response.run {
+      headerAddedHandleRequest(HttpMethod.Get, "/app/rules?isPrivacyPolicy=true").response.run {
         Assert.assertEquals(HttpStatusCode.NotFound, status())
       }
-      handleRequest(HttpMethod.Get, "/app/rules?backColor=%23FFFFFF").response.run {
+      headerAddedHandleRequest(HttpMethod.Get, "/app/rules?backColor=%23FFFFFF").response.run {
         Assert.assertEquals(HttpStatusCode.NotFound, status())
       }
-      handleRequest(HttpMethod.Get, "/app/rules?textColor=%23000000").response.run {
+      headerAddedHandleRequest(HttpMethod.Get, "/app/rules?textColor=%23000000").response.run {
         Assert.assertEquals(HttpStatusCode.NotFound, status())
       }
-      handleRequest(HttpMethod.Get, "/app/rules?backColor=%23FFFFFF&textColor=%23000000").response.run {
+      headerAddedHandleRequest(HttpMethod.Get, "/app/rules?backColor=%23FFFFFF&textColor=%23000000").response.run {
         Assert.assertEquals(HttpStatusCode.NotFound, status())
       }
-      handleRequest(HttpMethod.Get, "/app/rules?textColor=%23000000&isPrivacyPolicy=true").response.run {
+      headerAddedHandleRequest(HttpMethod.Get, "/app/rules?textColor=%23000000&isPrivacyPolicy=true").response.run {
         Assert.assertEquals(HttpStatusCode.NotFound, status())
       }
-      handleRequest(HttpMethod.Get, "/app/rules?backColor=%23FFFFFF&isPrivacyPolicy=true").response.run {
+      headerAddedHandleRequest(HttpMethod.Get, "/app/rules?backColor=%23FFFFFF&isPrivacyPolicy=true").response.run {
         Assert.assertEquals(HttpStatusCode.NotFound, status())
       }
       
       // show privacy policy
-      handleRequest(HttpMethod.Get, "/app/rules?backColor=%23FFFFFF&textColor=%23000000&isPrivacyPolicy=true").response.run {
+      headerAddedHandleRequest(HttpMethod.Get, "/app/rules?backColor=%23FFFFFF&textColor=%23000000&isPrivacyPolicy=true").response.run {
         Assert.assertEquals(HttpStatusCode.OK, status())
         Assert.assertEquals("#000000<title>#FFFFFF</title>$PRIVACY_POLICY_CONTENT", content)
       }
 
       // show terms of use
-      handleRequest(HttpMethod.Get, "/app/rules?backColor=%23FFFFFF&textColor=%23000000&isPrivacyPolicy=false").response.run {
+      headerAddedHandleRequest(HttpMethod.Get, "/app/rules?backColor=%23FFFFFF&textColor=%23000000&isPrivacyPolicy=false").response.run {
         Assert.assertEquals(HttpStatusCode.OK, status())
         Assert.assertEquals("#000000<title>#FFFFFF</title>$TERMS_OF_USE_CONTENT", content)
       }
@@ -126,24 +132,24 @@ class TestCases {
   fun getDaigo() {
     with(engine) {
       // error no auth
-      handleRequest(HttpMethod.Get, "/get-dai-go").response.run {
+      headerAddedHandleRequest(HttpMethod.Get, "/get-dai-go").response.run {
         Assert.assertEquals(HttpStatusCode.Unauthorized, status())
       }
 
       // error auth
-      handleRequest(HttpMethod.Get, "/get-dai-go") {
+      headerAddedHandleRequest(HttpMethod.Get, "/get-dai-go") {
         addHeader(HttpHeaders.Authorization, "Bearer test2")
       }.response.run {
         Assert.assertEquals(HttpStatusCode.Unauthorized, status())
       }
-      handleRequest(HttpMethod.Get, "/get-dai-go?target=努力大事") {
+      headerAddedHandleRequest(HttpMethod.Get, "/get-dai-go?target=努力大事") {
         addHeader(HttpHeaders.Authorization, "Bearer test2")
       }.response.run {
         Assert.assertEquals(HttpStatusCode.Unauthorized, status())
       }
 
       // error no parameter
-      handleRequest(HttpMethod.Get, "/get-dai-go") {
+      headerAddedHandleRequest(HttpMethod.Get, "/get-dai-go") {
         addHeader(HttpHeaders.Authorization, "Bearer test")
       }.response.run {
         Assert.assertEquals(HttpStatusCode.BadRequest, status())
@@ -151,7 +157,7 @@ class TestCases {
       }
 
       // success
-      handleRequest(HttpMethod.Get, "/get-dai-go?target=努力大事") {
+      headerAddedHandleRequest(HttpMethod.Get, "/get-dai-go?target=努力大事") {
         addHeader(HttpHeaders.Authorization, "Bearer test")
       }.response.run {
         Assert.assertEquals(HttpStatusCode.OK, status())
@@ -165,19 +171,19 @@ class TestCases {
   fun upsertDaigo() {
     with(engine) {
       // error no auth
-      handleRequest(HttpMethod.Post, "/upsert-dai-go").response.run {
+      headerAddedHandleRequest(HttpMethod.Post, "/upsert-dai-go").response.run {
         Assert.assertEquals(HttpStatusCode.Unauthorized, status())
       }
 
       // error auth
-      handleRequest(HttpMethod.Post, "/upsert-dai-go") {
+      headerAddedHandleRequest(HttpMethod.Post, "/upsert-dai-go") {
         addHeader(HttpHeaders.Authorization, "Bearer test2")
       }.response.run {
         Assert.assertEquals(HttpStatusCode.Unauthorized, status())
       }
 
       // error header
-      handleRequest(HttpMethod.Post, "/upsert-dai-go") {
+      headerAddedHandleRequest(HttpMethod.Post, "/upsert-dai-go") {
         addHeader(HttpHeaders.Authorization, "Bearer test")
       }.response.run {
         Assert.assertEquals(HttpStatusCode.BadRequest, status())
@@ -185,7 +191,7 @@ class TestCases {
       }
 
       // error no parameter
-      handleRequest(HttpMethod.Post, "/upsert-dai-go") {
+      headerAddedHandleRequest(HttpMethod.Post, "/upsert-dai-go") {
         addHeader(HttpHeaders.Authorization, "Bearer test")
         addHeader(HttpHeaders.ContentType, ContentType.Application.Json.toString())
         setBody(JSONObject().toString())
@@ -195,7 +201,7 @@ class TestCases {
       }
 
       // error empty parameter
-      handleRequest(HttpMethod.Post, "/upsert-dai-go") {
+      headerAddedHandleRequest(HttpMethod.Post, "/upsert-dai-go") {
         addHeader(HttpHeaders.Authorization, "Bearer test")
         addHeader(HttpHeaders.ContentType, ContentType.Application.Json.toString())
         setBody(JSONObject().apply {
@@ -205,7 +211,7 @@ class TestCases {
         Assert.assertEquals(HttpStatusCode.BadRequest, status())
         Assert.assertEquals(JSONObject(mapOf("save" to "parameter is empty")).toJSONString(), content)
       }
-      handleRequest(HttpMethod.Post, "/upsert-dai-go") {
+      headerAddedHandleRequest(HttpMethod.Post, "/upsert-dai-go") {
         addHeader(HttpHeaders.Authorization, "Bearer test")
         addHeader(HttpHeaders.ContentType, ContentType.Application.Json.toString())
         setBody(JSONObject().apply {
@@ -215,7 +221,7 @@ class TestCases {
         Assert.assertEquals(HttpStatusCode.BadRequest, status())
         Assert.assertEquals(JSONObject(mapOf("save" to "parameter is empty")).toJSONString(), content)
       }
-      handleRequest(HttpMethod.Post, "/upsert-dai-go") {
+      headerAddedHandleRequest(HttpMethod.Post, "/upsert-dai-go") {
         addHeader(HttpHeaders.Authorization, "Bearer test")
         addHeader(HttpHeaders.ContentType, ContentType.Application.Json.toString())
         setBody(JSONObject().apply {
@@ -229,13 +235,13 @@ class TestCases {
 
       // success insert
       val target = "大好物"
-      handleRequest(HttpMethod.Get, "/get-dai-go?target=$target") {
+      headerAddedHandleRequest(HttpMethod.Get, "/get-dai-go?target=$target") {
         addHeader(HttpHeaders.Authorization, "Bearer test")
       }.response.run {
         Assert.assertEquals(HttpStatusCode.OK, status())
         Assert.assertEquals(JSONObject(mapOf("text" to "DK")).toJSONString(), content)
 
-        handleRequest(HttpMethod.Post, "/upsert-dai-go") {
+        headerAddedHandleRequest(HttpMethod.Post, "/upsert-dai-go") {
           addHeader(HttpHeaders.Authorization, "Bearer test")
           addHeader(HttpHeaders.ContentType, ContentType.Application.Json.toString())
           setBody(JSONObject().apply {
@@ -247,7 +253,7 @@ class TestCases {
           Assert.assertEquals(JSONObject(mapOf("save" to "success")).toJSONString(), content)
 
           Thread.sleep(2000)
-          handleRequest(HttpMethod.Get, "/get-dai-go?target=$target") {
+          headerAddedHandleRequest(HttpMethod.Get, "/get-dai-go?target=$target") {
             addHeader(HttpHeaders.Authorization, "Bearer test")
           }.response.run {
             Assert.assertEquals(HttpStatusCode.OK, status())
@@ -257,7 +263,7 @@ class TestCases {
       }
 
       // success update
-      handleRequest(HttpMethod.Post, "/upsert-dai-go") {
+      headerAddedHandleRequest(HttpMethod.Post, "/upsert-dai-go") {
         addHeader(HttpHeaders.Authorization, "Bearer test")
         addHeader(HttpHeaders.ContentType, ContentType.Application.Json.toString())
         setBody(JSONObject().apply {
@@ -269,7 +275,7 @@ class TestCases {
         Assert.assertEquals(JSONObject(mapOf("save" to "success")).toJSONString(), content)
 
         Thread.sleep(2000)
-        handleRequest(HttpMethod.Get, "/get-dai-go?target=$target") {
+        headerAddedHandleRequest(HttpMethod.Get, "/get-dai-go?target=$target") {
           addHeader(HttpHeaders.Authorization, "Bearer test")
         }.response.run {
           Assert.assertEquals(HttpStatusCode.OK, status())
@@ -284,19 +290,19 @@ class TestCases {
   fun getSamples() {
     with(engine) {
       // error no auth
-      handleRequest(HttpMethod.Get, "/get-samples").response.run {
+      headerAddedHandleRequest(HttpMethod.Get, "/get-samples").response.run {
         Assert.assertEquals(HttpStatusCode.Unauthorized, status())
       }
 
       // error auth
-      handleRequest(HttpMethod.Get, "/get-samples") {
+      headerAddedHandleRequest(HttpMethod.Get, "/get-samples") {
         addHeader(HttpHeaders.Authorization, "Bearer test2")
       }.response.run {
         Assert.assertEquals(HttpStatusCode.Unauthorized, status())
       }
 
       // success
-      handleRequest(HttpMethod.Get, "/get-samples") {
+      headerAddedHandleRequest(HttpMethod.Get, "/get-samples") {
         addHeader(HttpHeaders.Authorization, "Bearer test")
       }.response.run {
         Assert.assertEquals(HttpStatusCode.OK, status())
@@ -310,19 +316,19 @@ class TestCases {
   fun updateSamples() {
     with(engine) {
       // error no auth
-      handleRequest(HttpMethod.Post, "/update-samples").response.run {
+      headerAddedHandleRequest(HttpMethod.Post, "/update-samples").response.run {
         Assert.assertEquals(HttpStatusCode.Unauthorized, status())
       }
 
       // error auth
-      handleRequest(HttpMethod.Post, "/update-samples") {
+      headerAddedHandleRequest(HttpMethod.Post, "/update-samples") {
         addHeader(HttpHeaders.Authorization, "Bearer test2")
       }.response.run {
         Assert.assertEquals(HttpStatusCode.Unauthorized, status())
       }
 
       // success
-      handleRequest(HttpMethod.Post, "/update-samples") {
+      headerAddedHandleRequest(HttpMethod.Post, "/update-samples") {
         addHeader(HttpHeaders.Authorization, "Bearer test")
       }.response.run {
         Assert.assertEquals(HttpStatusCode.OK, status())
@@ -331,6 +337,16 @@ class TestCases {
     }
   }
 
+  private fun TestApplicationEngine.headerAddedHandleRequest(
+    method: HttpMethod,
+    uri: String,
+    setup: TestApplicationRequest.() -> Unit = {}
+  ): TestApplicationCall = handleRequest {
+    this.uri = uri
+    this.method = method
+    this.addHeader(HttpHeaders.XForwardedHost, "https://test.com, test")
+    setup()
+  }
   companion object {
     private const val TERMS_OF_USE_CONTENT = "<h1 id=\"利用規約のテスト\">利用規約のテスト</h1>\n<p>これは <strong>テスト</strong> です！</p>\n"
     private const val PRIVACY_POLICY_CONTENT = "<h1 id=\"プライバシーポリシーのテスト\">プライバシーポリシーのテスト</h1>\n<p>これは <strong>テスト</strong> です！</p>\n"
