@@ -1,11 +1,25 @@
 <configuration>
+    <property file="./application.properties" />
+    <property name="TIME_ZONE" value="Asia/Tokyo" />
+
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
             <pattern>%d{YYYY-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
         </encoder>
     </appender>
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_OUT_DIR}/log/dai-go-api.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_OUT_DIR}/log/dai-go-api.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{YYYY-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
     <root level="trace">
-        <appender-ref ref="STDOUT"/>
+        <appender-ref ref="STDOUT" />
+        <appender-ref ref="FILE" />
     </root>
     <logger name="io.netty" level="INFO"/>
     <logger name="io.grpc" level="INFO"/>

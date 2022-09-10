@@ -1,14 +1,15 @@
 package net.ambitious.daigoapi
 
 import com.atilika.kuromoji.ipadic.Tokenizer
+import org.slf4j.Logger
 
-fun createDaiGo(target: String): String {
+fun createDaiGo(target: String, log: Logger): String {
     words[target]?.let {
         return it
     }
     val tokens = Tokenizer().tokenize(target)
     return tokens.joinToString("") {
-        println(it.allFeatures)
+        log.info(it.allFeatures)
 
         // 助詞、助動詞、記号を除く
         if (listOf("助詞", "助動詞", "記号").contains(it.partOfSpeechLevel1)) {

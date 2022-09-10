@@ -24,6 +24,7 @@ import io.ktor.server.plugins.statuspages.StatusPages
 import io.ktor.server.request.header
 import io.ktor.server.request.path
 import io.ktor.server.request.receiveOrNull
+import io.ktor.server.request.uri
 import io.ktor.server.response.respond
 import io.ktor.server.response.respondText
 import io.ktor.server.routing.Routing
@@ -34,7 +35,13 @@ import java.io.BufferedReader
 import java.io.InputStreamReader
 import java.util.*
 
-fun main(args: Array<String>) = EngineMain.main(args)
+fun main(args: Array<String>) {
+    val logOutDir = "LOG_OUT_DIR"
+    if (System.getProperty(logOutDir).isNullOrEmpty()) {
+        System.setProperty(logOutDir, ".")
+    }
+    EngineMain.main(args)
+}
 
 fun Application.module() {
     val log = log
@@ -82,6 +89,9 @@ fun Application.module() {
 
     routing {
         intercept(ApplicationCallPipeline.Plugins) {
+            if (call.request.uri != "/health") {
+                log.info(call.request.uri)
+            }
             if (allowHeaderHost.isNotEmpty()) {
                 val hosts = call.request.header(HttpHeaders.XForwardedHost)
                     ?.split(",")
@@ -98,7 +108,7 @@ fun Application.module() {
                     call.respond(HttpStatusCode.BadRequest, mapOf("text" to "target is empty"))
                     return@get
                 }
-                call.respond(mapOf("text" to createDaiGo(target)))
+                call.respond(mapOf("text" to createDaiGo(target, log)))
             }
 
             post("/upsert-dai-go") {
