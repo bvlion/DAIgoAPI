@@ -47,7 +47,9 @@ jobs:
         name: java-app
 
     - name: Set ssh key
-      run: echo ${{ secrets.ID_RSA }} | base64 -d > id_rsa
+      run: |
+        echo ${{ secrets.ID_RSA }} | base64 -d > id_rsa
+        chmod 600 id_rsa
 
     - name: Deploy to Server
       run: |
