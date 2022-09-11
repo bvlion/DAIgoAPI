@@ -51,8 +51,8 @@ jobs:
 
     - name: Deploy to Server
       run: |
-        scp -i id_rsa -p -P ${{ secrets.SERVER_PORT }} *-all.jar ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }}:${{ secrets.SERVER_DIR }}
-        ssh -i id_rsa -p ${{ secrets.SERVER_PORT }} ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} "${{ secrets.RESTART_COMMAND }}"
+        scp -o "StrictHostKeyChecking=no" -o "UserKnownHostsFile=/dev/null" -i id_rsa -p -P ${{ secrets.SERVER_PORT }} *-all.jar ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }}:${{ secrets.SERVER_DIR }}
+        ssh -o "StrictHostKeyChecking=no" -o "UserKnownHostsFile=/dev/null" -i id_rsa -p ${{ secrets.SERVER_PORT }} ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} "${{ secrets.RESTART_COMMAND }}"
 
     - name: Slack Notification
       uses: 8398a7/action-slack@v3
