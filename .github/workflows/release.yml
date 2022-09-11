@@ -37,7 +37,7 @@ jobs:
         path: '${{ github.workspace }}/build/libs/*-all.jar'
 
   deploy:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     needs: build
 
     steps:
