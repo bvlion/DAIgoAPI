@@ -39,9 +39,6 @@ jobs:
   deploy:
     runs-on: windows-latest
     needs: build
-    environment:
-      name: 'Production'
-      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
 
     steps:
     - name: Download artifact from build job
@@ -49,14 +46,13 @@ jobs:
       with:
         name: java-app
 
-    - name: Deploy to Azure Web App
-      id: deploy-to-webapp
-      uses: azure/webapps-deploy@v2
-      with:
-        app-name: 'dai-go'
-        slot-name: 'Production'
-        publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_BC17FEBFE37A442BBA8AD0CF6F08A83F }}
-        package: '*.jar'
+    - name: Set ssh key
+      run: echo ${{ secrets.ID_RSA }} | base64 -d > id_rsa
+
+    - name: Deploy to Server
+      run:
+        - scp -i id_rsa -p -P ${{ secrets.SERVER_PORT }} *-all.jar ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }}:${{ secrets.SERVER_DIR }}
+        - ssh -i id_rsa -p ${{ secrets.SERVER_PORT }} ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} "${{ secrets.RESTART_COMMAND }}"
 
     - name: Slack Notification
       uses: 8398a7/action-slack@v3
