@@ -63,13 +63,26 @@ fun setOriginalWords(db: Firestore) {
         }
 }
 
-fun setSampleWords(db: Firestore) {
-    val data = getDocument(db, "sample").get().get().data
-    if (data != null) {
+fun setWords(db: Firestore) {
+    val samples = getDocument(db, "sample").get().get().data
+    if (samples != null) {
         sampleWords.clear()
-        data.map { mapOf(it.key to it.value.toString()) }.forEach {
+        samples.map { mapOf(it.key to it.value.toString()) }.forEach {
             sampleWords.addAll(it.values)
         }
+    }
+    val notExists = getDocument(db, "notExists").get().get().data
+    if (notExists != null) {
+        notExistWords.clear()
+        notExistWords.addAll(
+            notExists
+                .map { it.key.toInt() to it.value }
+                .sortedBy { it.first }
+                .map { it.second as Map<*, *> }
+                .flatMap { map ->
+                    map.map { it.key.toString() to it.value.toString() }
+                }
+        )
     }
 }
 
@@ -84,6 +97,15 @@ data class SaveRequest(
 val words: Map<String, String>
     get() = originalWords
 private val originalWords = hashMapOf<String, String>()
+
+val notExists: List<Pair<String, String>>
+    get() = notExistWords
+private val notExistWords = arrayListOf(
+    "からあげ" to "K",
+    "から揚げ" to "K",
+    "唐揚げ" to "K",
+    "唐揚" to "K"
+)
 
 val samples: List<String>
     get() = sampleWords

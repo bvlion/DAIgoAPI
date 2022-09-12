@@ -7,7 +7,14 @@ fun createDaiGo(target: String, log: Logger): String {
     words[target]?.let {
         return it
     }
-    val tokens = Tokenizer().tokenize(target)
+
+    // kuromoji に存在しない値をアルファベットに置換
+    var checkWord = target
+    notExists.forEach { (k, v) ->
+        checkWord = checkWord.replace(k, v)
+    }
+
+    val tokens = Tokenizer().tokenize(checkWord)
     return tokens.joinToString("") {
         log.info(it.allFeatures)
 

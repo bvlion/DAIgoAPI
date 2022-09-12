@@ -85,7 +85,7 @@ fun Application.module() {
     }
     val firestore = firestore(credential)
     setOriginalWords(firestore)
-    setSampleWords(firestore)
+    setWords(firestore)
 
     routing {
         intercept(ApplicationCallPipeline.Plugins) {
@@ -125,8 +125,13 @@ fun Application.module() {
             }
 
             post("/update-samples") {
-                setSampleWords(firestore)
-                call.respond(mapOf("samples" to samples))
+                setWords(firestore)
+                call.respond(
+                    mapOf(
+                        "notExists" to notExists,
+                        "samples" to samples
+                    )
+                )
             }
         }
 

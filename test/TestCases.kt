@@ -3,6 +3,7 @@ import io.ktor.server.config.*
 import io.ktor.server.engine.*
 import io.ktor.server.testing.*
 import net.ambitious.daigoapi.module
+import net.ambitious.daigoapi.notExists
 import net.ambitious.daigoapi.samples
 import org.json.simple.JSONArray
 import org.json.simple.JSONObject
@@ -332,7 +333,10 @@ class TestCases {
         addHeader(HttpHeaders.Authorization, "Bearer test")
       }.response.run {
         Assert.assertEquals(HttpStatusCode.OK, status())
-        Assert.assertEquals(JSONObject(mapOf("samples" to JSONArray().apply { addAll(samples) })).toJSONString(), content)
+        Assert.assertEquals(JSONObject(mapOf(
+          "samples" to JSONArray().apply { addAll(samples) },
+          "notExists" to JSONArray().apply { addAll(notExists.map { JSONObject(mapOf("first" to it.first, "second" to it.second)) }) },
+        )).toJSONString(), content)
       }
     }
   }
