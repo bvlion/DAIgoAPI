@@ -33,6 +33,8 @@ import io.ktor.server.routing.post
 import io.ktor.server.routing.routing
 import java.io.BufferedReader
 import java.io.InputStreamReader
+import java.net.URLDecoder
+import java.nio.charset.Charset
 import java.util.*
 
 fun main(args: Array<String>) {
@@ -90,7 +92,7 @@ fun Application.module() {
     routing {
         intercept(ApplicationCallPipeline.Plugins) {
             if (call.request.uri != "/health") {
-                log.info(call.request.uri)
+                log.info(URLDecoder.decode(call.request.uri, Charset.defaultCharset()))
             }
             if (allowHeaderHost.isNotEmpty()) {
                 val hosts = call.request.header(HttpHeaders.XForwardedHost)
