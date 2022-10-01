@@ -56,7 +56,7 @@ dependencies {
     implementation 'com.vladsch.flexmark:flexmark-all:0.64.0'
 
     testImplementation "io.ktor:ktor-server-tests:$ktor_version"
-    testImplementation "org.json:json:20220320"
+    testImplementation "org.json:json:20220924"
     ktlint('com.pinterest:ktlint:0.47.0') {
         attributes {
             attribute(Bundling.BUNDLING_ATTRIBUTE, getObjects().named(Bundling, Bundling.EXTERNAL))
