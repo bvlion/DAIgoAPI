@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">9.856s</div>
+<div class="counter">10.063s</div>
 <p>duration</p>
 </div>
 </td>
@@ -82,42 +82,42 @@
 </thead>
 <tr>
 <td class="success">appRules</td>
-<td class="success">0.128s</td>
+<td class="success">0.122s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">getDaigo</td>
-<td class="success">0.375s</td>
+<td class="success">0.394s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">getSamples</td>
-<td class="success">3.667s</td>
+<td class="success">3.892s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">health</td>
-<td class="success">0.137s</td>
+<td class="success">0.127s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">privacyPolicy</td>
-<td class="success">0.073s</td>
+<td class="success">0.088s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">termsOfUse</td>
-<td class="success">0.422s</td>
+<td class="success">0.409s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">updateSamples</td>
-<td class="success">0.177s</td>
+<td class="success">0.204s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">upsertDaigo</td>
-<td class="success">4.877s</td>
+<td class="success">4.827s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -125,41 +125,41 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>09:17:55,132 |-INFO in ch.qos.logback.classic.LoggerContext[default] - This is logback-classic version 1.4.0
-09:17:55,178 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
-09:17:55,207 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [file:/home/runner/work/DAIgoAPI/DAIgoAPI/build/resources/main/logback.xml]
-09:17:55,392 |-ERROR in ch.qos.logback.core.model.processor.PropertyModelHandler - Could not find properties file [./application.properties].
-09:17:55,394 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [STDOUT]
-09:17:55,394 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
-09:17:55,412 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
-09:17:55,453 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [FILE]
-09:17:55,453 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
-09:17:55,463 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@826980270 - No compression will be used
-09:17:55,465 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@826980270 - Will use the pattern LOG_OUT_DIR_IS_UNDEFINED/log/dai-go-api.%d{yyyy-MM-dd}.log for the active file
-09:17:55,469 |-INFO in c.q.l.core.rolling.DefaultTimeBasedFileNamingAndTriggeringPolicy - The date pattern is 'yyyy-MM-dd' from file name pattern 'LOG_OUT_DIR_IS_UNDEFINED/log/dai-go-api.%d{yyyy-MM-dd}.log'.
-09:17:55,469 |-INFO in c.q.l.core.rolling.DefaultTimeBasedFileNamingAndTriggeringPolicy - Roll-over at midnight.
-09:17:55,477 |-INFO in c.q.l.core.rolling.DefaultTimeBasedFileNamingAndTriggeringPolicy - Setting initial period to Mon Oct 10 09:17:55 UTC 2022
-09:17:55,478 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
-09:17:55,488 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE] - Active log file name: LOG_OUT_DIR_IS_UNDEFINED/log/dai-go-api.log
-09:17:55,488 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE] - File property is set to [LOG_OUT_DIR_IS_UNDEFINED/log/dai-go-api.log]
-09:17:55,495 |-INFO in ch.qos.logback.classic.model.processor.RootLoggerModelHandler - Setting level of ROOT logger to TRACE
-09:17:55,502 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [STDOUT] to Logger[ROOT]
-09:17:55,502 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [FILE] to Logger[ROOT]
-09:17:55,503 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [io.netty] to INFO
-09:17:55,503 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [io.grpc] to INFO
-09:17:55,503 |-INFO in ch.qos.logback.core.model.processor.DefaultProcessor@3e0e757a - End of configuration.
-09:17:55,504 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@2b4dfe54 - Registering current configuration as safe fallback point
+<pre>09:18:00,362 |-INFO in ch.qos.logback.classic.LoggerContext[default] - This is logback-classic version 1.4.3
+09:18:00,408 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
+09:18:00,438 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [file:/home/runner/work/DAIgoAPI/DAIgoAPI/build/resources/main/logback.xml]
+09:18:00,631 |-ERROR in ch.qos.logback.core.model.processor.PropertyModelHandler - Could not find properties file [./application.properties].
+09:18:00,633 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [STDOUT]
+09:18:00,633 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+09:18:00,665 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+09:18:00,709 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [FILE]
+09:18:00,709 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
+09:18:00,723 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@216939332 - No compression will be used
+09:18:00,724 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@216939332 - Will use the pattern LOG_OUT_DIR_IS_UNDEFINED/log/dai-go-api.%d{yyyy-MM-dd}.log for the active file
+09:18:00,729 |-INFO in c.q.l.core.rolling.DefaultTimeBasedFileNamingAndTriggeringPolicy - The date pattern is 'yyyy-MM-dd' from file name pattern 'LOG_OUT_DIR_IS_UNDEFINED/log/dai-go-api.%d{yyyy-MM-dd}.log'.
+09:18:00,729 |-INFO in c.q.l.core.rolling.DefaultTimeBasedFileNamingAndTriggeringPolicy - Roll-over at midnight.
+09:18:00,738 |-INFO in c.q.l.core.rolling.DefaultTimeBasedFileNamingAndTriggeringPolicy - Setting initial period to Mon Oct 10 09:18:00 UTC 2022
+09:18:00,740 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+09:18:00,760 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE] - Active log file name: LOG_OUT_DIR_IS_UNDEFINED/log/dai-go-api.log
+09:18:00,760 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE] - File property is set to [LOG_OUT_DIR_IS_UNDEFINED/log/dai-go-api.log]
+09:18:00,765 |-INFO in ch.qos.logback.classic.model.processor.RootLoggerModelHandler - Setting level of ROOT logger to TRACE
+09:18:00,776 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [STDOUT] to Logger[ROOT]
+09:18:00,776 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [FILE] to Logger[ROOT]
+09:18:00,777 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [io.netty] to INFO
+09:18:00,777 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [io.grpc] to INFO
+09:18:00,777 |-INFO in ch.qos.logback.core.model.processor.DefaultProcessor@a1bb490 - End of configuration.
+09:18:00,778 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@3e26cb32 - Registering current configuration as safe fallback point
 
-2022-10-10 18:17:55.774 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
-2022-10-10 18:17:55.785 [Test worker] INFO  ktor.test - Application started in 0.193 seconds.
-2022-10-10 18:17:58.506 [DefaultDispatcher-worker-1 @request#2] INFO  ktor.test - /get-samples
-2022-10-10 18:17:58.555 [DefaultDispatcher-worker-3 @request#4] INFO  ktor.test - /get-samples
-2022-10-10 18:17:58.570 [DefaultDispatcher-worker-2 @request#6] INFO  ktor.test - /get-samples
-2022-10-10 18:17:58.700 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@4be0b87d
-2022-10-10 18:17:58.711 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@4be0b87d
-2022-10-10 18:17:58.734 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
-2022-10-10 18:17:58.735 [Test worker] INFO  ktor.test - Application started in 0.004 seconds.
-2022-10-10 18:17:58.836 [DefaultDispatcher-worker-4 @request#11] WARN  ktor.test - StatusPages Error
+2022-10-10 18:18:01.042 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
+2022-10-10 18:18:01.057 [Test worker] INFO  ktor.test - Application started in 0.199 seconds.
+2022-10-10 18:18:04.012 [DefaultDispatcher-worker-2 @request#2] INFO  ktor.test - /get-samples
+2022-10-10 18:18:04.040 [DefaultDispatcher-worker-3 @request#4] INFO  ktor.test - /get-samples
+2022-10-10 18:18:04.045 [DefaultDispatcher-worker-1 @request#6] INFO  ktor.test - /get-samples
+2022-10-10 18:18:04.159 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@4039b2ac
+2022-10-10 18:18:04.168 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@4039b2ac
+2022-10-10 18:18:04.187 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
+2022-10-10 18:18:04.188 [Test worker] INFO  ktor.test - Application started in 0.001 seconds.
+2022-10-10 18:18:04.250 [DefaultDispatcher-worker-1 @request#11] WARN  ktor.test - StatusPages Error
 java.lang.IllegalStateException: target host is null
 	at net.ambitious.daigoapi.ApplicationKt$module$6$1.invokeSuspend(Application.kt:100)
 	at net.ambitious.daigoapi.ApplicationKt$module$6$1.invoke(Application.kt)
@@ -179,7 +179,7 @@ java.lang.IllegalStateException: target host is null
 	at io.ktor.server.routing.Routing$Plugin$install$1.invoke(Routing.kt)
 	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:123)
 	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:81)
-	at io.ktor.server.engine.BaseApplicationEngineKt$installDefaultTransformationChecker$1.invokeSuspend(BaseApplicationEngine.kt:122)
+	at io.ktor.server.engine.BaseApplicationEngineKt$installDefaultTransformationChecker$1.invokeSuspend(BaseApplicationEngine.kt:123)
 	at io.ktor.server.engine.BaseApplicationEngineKt$installDefaultTransformationChecker$1.invoke(BaseApplicationEngine.kt)
 	at io.ktor.server.engine.BaseApplicationEngineKt$installDefaultTransformationChecker$1.invoke(BaseApplicationEngine.kt)
 	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:123)
@@ -200,10 +200,10 @@ java.lang.IllegalStateException: target host is null
 	at io.ktor.server.testing.TestApplicationEngine$3$invokeSuspend$$inlined$execute$1.invoke(Pipeline.kt)
 	at io.ktor.server.testing.TestApplicationEngine$3$invokeSuspend$$inlined$execute$1.invoke(Pipeline.kt)
 	at io.ktor.util.debug.ContextUtilsKt.initContextInDebugMode(ContextUtils.kt:17)
-	at io.ktor.server.testing.TestApplicationEngine$3.invokeSuspend(TestApplicationEngine.kt:297)
+	at io.ktor.server.testing.TestApplicationEngine$3.invokeSuspend(TestApplicationEngine.kt:310)
 	at io.ktor.server.testing.TestApplicationEngine$3.invoke(TestApplicationEngine.kt)
 	at io.ktor.server.testing.TestApplicationEngine$3.invoke(TestApplicationEngine.kt)
-	at io.ktor.server.testing.TestApplicationEngine$2.invokeSuspend(TestApplicationEngine.kt:86)
+	at io.ktor.server.testing.TestApplicationEngine$2.invokeSuspend(TestApplicationEngine.kt:90)
 	at io.ktor.server.testing.TestApplicationEngine$2.invoke(TestApplicationEngine.kt)
 	at io.ktor.server.testing.TestApplicationEngine$2.invoke(TestApplicationEngine.kt)
 	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:123)
@@ -214,21 +214,21 @@ java.lang.IllegalStateException: target host is null
 	at io.ktor.server.testing.TestApplicationEngine$handleRequestNonBlocking$2$invokeSuspend$$inlined$execute$1.invoke(Pipeline.kt)
 	at io.ktor.server.testing.TestApplicationEngine$handleRequestNonBlocking$2$invokeSuspend$$inlined$execute$1.invoke(Pipeline.kt)
 	at io.ktor.util.debug.ContextUtilsKt.initContextInDebugMode(ContextUtils.kt:17)
-	at io.ktor.server.testing.TestApplicationEngine$handleRequestNonBlocking$2.invokeSuspend(TestApplicationEngine.kt:296)
+	at io.ktor.server.testing.TestApplicationEngine$handleRequestNonBlocking$2.invokeSuspend(TestApplicationEngine.kt:309)
 	at ???(Coroutine boundary.?(?)
 	at io.ktor.util.pipeline.PipelineKt$execute$2.invokeSuspend(Pipeline.kt:478)
 	at io.ktor.server.routing.Routing.executeResult(Routing.kt:172)
 	at io.ktor.server.routing.Routing$Plugin$install$1.invokeSuspend(Routing.kt:124)
-	at io.ktor.server.engine.BaseApplicationEngineKt$installDefaultTransformationChecker$1.invokeSuspend(BaseApplicationEngine.kt:122)
+	at io.ktor.server.engine.BaseApplicationEngineKt$installDefaultTransformationChecker$1.invokeSuspend(BaseApplicationEngine.kt:123)
 	at io.ktor.server.application.hooks.CallFailed$install$1$1.invokeSuspend(CommonHooks.kt:43)
 	at io.ktor.server.application.hooks.CallFailed$install$1.invokeSuspend(CommonHooks.kt:42)
 	at io.ktor.util.pipeline.PipelineKt$execute$2.invokeSuspend(Pipeline.kt:478)
-	at io.ktor.server.testing.TestApplicationEngine$3.invokeSuspend(TestApplicationEngine.kt:297)
-	at io.ktor.server.testing.TestApplicationEngine$2.invokeSuspend(TestApplicationEngine.kt:86)
+	at io.ktor.server.testing.TestApplicationEngine$3.invokeSuspend(TestApplicationEngine.kt:310)
+	at io.ktor.server.testing.TestApplicationEngine$2.invokeSuspend(TestApplicationEngine.kt:90)
 	at io.ktor.util.pipeline.PipelineKt$execute$2.invokeSuspend(Pipeline.kt:478)
-	at io.ktor.server.testing.TestApplicationEngine$handleRequestNonBlocking$2.invokeSuspend(TestApplicationEngine.kt:296)
-	at io.ktor.server.testing.TestApplicationEngine.handleRequestNonBlocking$ktor_server_test_host(TestApplicationEngine.kt:211)
-	at io.ktor.server.testing.TestApplicationEngine$handleRequest$callJob$1.invokeSuspend(TestApplicationEngine.kt:190)
+	at io.ktor.server.testing.TestApplicationEngine$handleRequestNonBlocking$2.invokeSuspend(TestApplicationEngine.kt:309)
+	at io.ktor.server.testing.TestApplicationEngine.handleRequestNonBlocking$ktor_server_test_host(TestApplicationEngine.kt:224)
+	at io.ktor.server.testing.TestApplicationEngine$handleRequest$callJob$1.invokeSuspend(TestApplicationEngine.kt:203)
 Caused by: java.lang.IllegalStateException: target host is null
 	at net.ambitious.daigoapi.ApplicationKt$module$6$1.invokeSuspend(Application.kt:100)
 	at net.ambitious.daigoapi.ApplicationKt$module$6$1.invoke(Application.kt)
@@ -248,7 +248,7 @@ Caused by: java.lang.IllegalStateException: target host is null
 	at io.ktor.server.routing.Routing$Plugin$install$1.invoke(Routing.kt)
 	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:123)
 	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:81)
-	at io.ktor.server.engine.BaseApplicationEngineKt$installDefaultTransformationChecker$1.invokeSuspend(BaseApplicationEngine.kt:122)
+	at io.ktor.server.engine.BaseApplicationEngineKt$installDefaultTransformationChecker$1.invokeSuspend(BaseApplicationEngine.kt:123)
 	at io.ktor.server.engine.BaseApplicationEngineKt$installDefaultTransformationChecker$1.invoke(BaseApplicationEngine.kt)
 	at io.ktor.server.engine.BaseApplicationEngineKt$installDefaultTransformationChecker$1.invoke(BaseApplicationEngine.kt)
 	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:123)
@@ -269,10 +269,10 @@ Caused by: java.lang.IllegalStateException: target host is null
 	at io.ktor.server.testing.TestApplicationEngine$3$invokeSuspend$$inlined$execute$1.invoke(Pipeline.kt)
 	at io.ktor.server.testing.TestApplicationEngine$3$invokeSuspend$$inlined$execute$1.invoke(Pipeline.kt)
 	at io.ktor.util.debug.ContextUtilsKt.initContextInDebugMode(ContextUtils.kt:17)
-	at io.ktor.server.testing.TestApplicationEngine$3.invokeSuspend(TestApplicationEngine.kt:297)
+	at io.ktor.server.testing.TestApplicationEngine$3.invokeSuspend(TestApplicationEngine.kt:310)
 	at io.ktor.server.testing.TestApplicationEngine$3.invoke(TestApplicationEngine.kt)
 	at io.ktor.server.testing.TestApplicationEngine$3.invoke(TestApplicationEngine.kt)
-	at io.ktor.server.testing.TestApplicationEngine$2.invokeSuspend(TestApplicationEngine.kt:86)
+	at io.ktor.server.testing.TestApplicationEngine$2.invokeSuspend(TestApplicationEngine.kt:90)
 	at io.ktor.server.testing.TestApplicationEngine$2.invoke(TestApplicationEngine.kt)
 	at io.ktor.server.testing.TestApplicationEngine$2.invoke(TestApplicationEngine.kt)
 	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:123)
@@ -283,7 +283,7 @@ Caused by: java.lang.IllegalStateException: target host is null
 	at io.ktor.server.testing.TestApplicationEngine$handleRequestNonBlocking$2$invokeSuspend$$inlined$execute$1.invoke(Pipeline.kt)
 	at io.ktor.server.testing.TestApplicationEngine$handleRequestNonBlocking$2$invokeSuspend$$inlined$execute$1.invoke(Pipeline.kt)
 	at io.ktor.util.debug.ContextUtilsKt.initContextInDebugMode(ContextUtils.kt:17)
-	at io.ktor.server.testing.TestApplicationEngine$handleRequestNonBlocking$2.invokeSuspend(TestApplicationEngine.kt:296)
+	at io.ktor.server.testing.TestApplicationEngine$handleRequestNonBlocking$2.invokeSuspend(TestApplicationEngine.kt:309)
 	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
 	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:106)
 	at kotlinx.coroutines.internal.LimitedDispatcher.run(LimitedDispatcher.kt:42)
@@ -292,20 +292,20 @@ Caused by: java.lang.IllegalStateException: target host is null
 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:750)
 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:677)
 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:664)
-2022-10-10 18:17:58.866 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@3444de66
-2022-10-10 18:17:58.866 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@3444de66
-2022-10-10 18:17:58.868 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
-2022-10-10 18:17:58.869 [Test worker] INFO  ktor.test - Application started in 0.001 seconds.
-2022-10-10 18:17:58.943 [DefaultDispatcher-worker-1 @request#18] INFO  ktor.test - /terms_of_use
-2022-10-10 18:17:59.274 [DefaultDispatcher-worker-4 @request#22] INFO  ktor.test - /view/terms_of_use
-2022-10-10 18:17:59.288 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@73d71582
-2022-10-10 18:17:59.288 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@73d71582
-2022-10-10 18:17:59.291 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
-2022-10-10 18:17:59.291 [Test worker] INFO  ktor.test - Application started in 0.001 seconds.
-2022-10-10 18:17:59.404 [DefaultDispatcher-worker-3 @request#27] INFO  ktor.test - /upsert-dai-go
-2022-10-10 18:17:59.407 [DefaultDispatcher-worker-3 @request#29] INFO  ktor.test - /upsert-dai-go
-2022-10-10 18:17:59.411 [DefaultDispatcher-worker-3 @request#31] INFO  ktor.test - /upsert-dai-go
-2022-10-10 18:17:59.434 [DefaultDispatcher-worker-3 @request#31] DEBUG ktor.test - Conversion failed, null returned
+2022-10-10 18:18:04.302 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@51e80dcb
+2022-10-10 18:18:04.303 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@51e80dcb
+2022-10-10 18:18:04.313 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
+2022-10-10 18:18:04.314 [Test worker] INFO  ktor.test - Application started in 0.001 seconds.
+2022-10-10 18:18:04.376 [DefaultDispatcher-worker-4 @request#18] INFO  ktor.test - /terms_of_use
+2022-10-10 18:18:04.707 [DefaultDispatcher-worker-2 @request#22] INFO  ktor.test - /view/terms_of_use
+2022-10-10 18:18:04.717 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@291745a
+2022-10-10 18:18:04.718 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@291745a
+2022-10-10 18:18:04.723 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
+2022-10-10 18:18:04.723 [Test worker] INFO  ktor.test - Application started in 0.0 seconds.
+2022-10-10 18:18:04.795 [DefaultDispatcher-worker-3 @request#27] INFO  ktor.test - /upsert-dai-go
+2022-10-10 18:18:04.798 [DefaultDispatcher-worker-4 @request#29] INFO  ktor.test - /upsert-dai-go
+2022-10-10 18:18:04.799 [DefaultDispatcher-worker-4 @request#31] INFO  ktor.test - /upsert-dai-go
+2022-10-10 18:18:04.823 [DefaultDispatcher-worker-4 @request#31] DEBUG ktor.test - Conversion failed, null returned
 io.ktor.server.plugins.CannotTransformContentToTypeException: Cannot transform this request's content to net.ambitious.daigoapi.SaveRequest
 	at io.ktor.server.request.ApplicationReceiveFunctionsKt.receiveNullable(ApplicationReceiveFunctions.kt:107)
 	at io.ktor.server.request.ApplicationReceiveFunctionsKt.receiveOrNull(ApplicationReceiveFunctions.kt:136)
@@ -330,7 +330,7 @@ io.ktor.server.plugins.CannotTransformContentToTypeException: Cannot transform t
 	at io.ktor.server.routing.Routing$Plugin$install$1.invoke(Routing.kt)
 	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:123)
 	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:81)
-	at io.ktor.server.engine.BaseApplicationEngineKt$installDefaultTransformationChecker$1.invokeSuspend(BaseApplicationEngine.kt:122)
+	at io.ktor.server.engine.BaseApplicationEngineKt$installDefaultTransformationChecker$1.invokeSuspend(BaseApplicationEngine.kt:123)
 	at io.ktor.server.engine.BaseApplicationEngineKt$installDefaultTransformationChecker$1.invoke(BaseApplicationEngine.kt)
 	at io.ktor.server.engine.BaseApplicationEngineKt$installDefaultTransformationChecker$1.invoke(BaseApplicationEngine.kt)
 	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:123)
@@ -351,10 +351,10 @@ io.ktor.server.plugins.CannotTransformContentToTypeException: Cannot transform t
 	at io.ktor.server.testing.TestApplicationEngine$3$invokeSuspend$$inlined$execute$1.invoke(Pipeline.kt)
 	at io.ktor.server.testing.TestApplicationEngine$3$invokeSuspend$$inlined$execute$1.invoke(Pipeline.kt)
 	at io.ktor.util.debug.ContextUtilsKt.initContextInDebugMode(ContextUtils.kt:17)
-	at io.ktor.server.testing.TestApplicationEngine$3.invokeSuspend(TestApplicationEngine.kt:297)
+	at io.ktor.server.testing.TestApplicationEngine$3.invokeSuspend(TestApplicationEngine.kt:310)
 	at io.ktor.server.testing.TestApplicationEngine$3.invoke(TestApplicationEngine.kt)
 	at io.ktor.server.testing.TestApplicationEngine$3.invoke(TestApplicationEngine.kt)
-	at io.ktor.server.testing.TestApplicationEngine$2.invokeSuspend(TestApplicationEngine.kt:86)
+	at io.ktor.server.testing.TestApplicationEngine$2.invokeSuspend(TestApplicationEngine.kt:90)
 	at io.ktor.server.testing.TestApplicationEngine$2.invoke(TestApplicationEngine.kt)
 	at io.ktor.server.testing.TestApplicationEngine$2.invoke(TestApplicationEngine.kt)
 	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:123)
@@ -365,7 +365,7 @@ io.ktor.server.plugins.CannotTransformContentToTypeException: Cannot transform t
 	at io.ktor.server.testing.TestApplicationEngine$handleRequestNonBlocking$2$invokeSuspend$$inlined$execute$1.invoke(Pipeline.kt)
 	at io.ktor.server.testing.TestApplicationEngine$handleRequestNonBlocking$2$invokeSuspend$$inlined$execute$1.invoke(Pipeline.kt)
 	at io.ktor.util.debug.ContextUtilsKt.initContextInDebugMode(ContextUtils.kt:17)
-	at io.ktor.server.testing.TestApplicationEngine$handleRequestNonBlocking$2.invokeSuspend(TestApplicationEngine.kt:296)
+	at io.ktor.server.testing.TestApplicationEngine$handleRequestNonBlocking$2.invokeSuspend(TestApplicationEngine.kt:309)
 	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
 	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:106)
 	at kotlinx.coroutines.internal.LimitedDispatcher.run(LimitedDispatcher.kt:42)
@@ -374,63 +374,63 @@ io.ktor.server.plugins.CannotTransformContentToTypeException: Cannot transform t
 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:750)
 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:677)
 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:664)
-2022-10-10 18:17:59.459 [DefaultDispatcher-worker-3 @request#35] INFO  ktor.test - /upsert-dai-go
-2022-10-10 18:17:59.635 [DefaultDispatcher-worker-4 @request#39] INFO  ktor.test - /upsert-dai-go
-2022-10-10 18:17:59.639 [DefaultDispatcher-worker-4 @request#43] INFO  ktor.test - /upsert-dai-go
-2022-10-10 18:17:59.644 [DefaultDispatcher-worker-3 @request#47] INFO  ktor.test - /upsert-dai-go
-2022-10-10 18:17:59.650 [DefaultDispatcher-worker-1 @request#51] INFO  ktor.test - /get-dai-go?target=大好物
-2022-10-10 18:18:00.029 [DefaultDispatcher-worker-1 @request#51] INFO  ktor.test - 接頭詞,名詞接続,*,*,*,*,大,ダイ,ダイ
-2022-10-10 18:18:00.031 [DefaultDispatcher-worker-1 @request#51] INFO  ktor.test - 名詞,一般,*,*,*,*,好物,コウブツ,コーブツ
-2022-10-10 18:18:00.035 [DefaultDispatcher-worker-1 @request#55] INFO  ktor.test - /upsert-dai-go
-2022-10-10 18:18:02.142 [DefaultDispatcher-worker-1 @request#59] INFO  ktor.test - /get-dai-go?target=大好物
-2022-10-10 18:18:02.146 [DefaultDispatcher-worker-4 @request#63] INFO  ktor.test - /upsert-dai-go
-2022-10-10 18:18:04.152 [DefaultDispatcher-worker-3 @request#67] INFO  ktor.test - /get-dai-go?target=大好物
-2022-10-10 18:18:04.156 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@7567c6a8
-2022-10-10 18:18:04.157 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@7567c6a8
-2022-10-10 18:18:04.166 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
-2022-10-10 18:18:04.167 [Test worker] INFO  ktor.test - Application started in 0.001 seconds.
-2022-10-10 18:18:04.223 [DefaultDispatcher-worker-4 @request#72] INFO  ktor.test - /update-samples
-2022-10-10 18:18:04.226 [DefaultDispatcher-worker-1 @request#74] INFO  ktor.test - /update-samples
-2022-10-10 18:18:04.228 [DefaultDispatcher-worker-4 @request#76] INFO  ktor.test - /update-samples
-2022-10-10 18:18:04.341 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@1244893f
-2022-10-10 18:18:04.341 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@1244893f
-2022-10-10 18:18:04.344 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
-2022-10-10 18:18:04.344 [Test worker] INFO  ktor.test - Application started in 0.001 seconds.
-2022-10-10 18:18:04.433 [DefaultDispatcher-worker-3 @request#81] INFO  ktor.test - /app/rules
-2022-10-10 18:18:04.436 [DefaultDispatcher-worker-4 @request#83] INFO  ktor.test - /app/rules?isPrivacyPolicy=true
-2022-10-10 18:18:04.439 [DefaultDispatcher-worker-2 @request#85] INFO  ktor.test - /app/rules?backColor=#FFFFFF
-2022-10-10 18:18:04.441 [DefaultDispatcher-worker-1 @request#87] INFO  ktor.test - /app/rules?textColor=#000000
-2022-10-10 18:18:04.442 [DefaultDispatcher-worker-2 @request#89] INFO  ktor.test - /app/rules?backColor=#FFFFFF&amp;textColor=#000000
-2022-10-10 18:18:04.444 [DefaultDispatcher-worker-4 @request#91] INFO  ktor.test - /app/rules?textColor=#000000&amp;isPrivacyPolicy=true
-2022-10-10 18:18:04.446 [DefaultDispatcher-worker-1 @request#93] INFO  ktor.test - /app/rules?backColor=#FFFFFF&amp;isPrivacyPolicy=true
-2022-10-10 18:18:04.448 [DefaultDispatcher-worker-3 @request#95] INFO  ktor.test - /app/rules?backColor=#FFFFFF&amp;textColor=#000000&amp;isPrivacyPolicy=true
-2022-10-10 18:18:04.458 [DefaultDispatcher-worker-1 @request#99] INFO  ktor.test - /app/rules?backColor=#FFFFFF&amp;textColor=#000000&amp;isPrivacyPolicy=false
-2022-10-10 18:18:04.462 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@2b220023
-2022-10-10 18:18:04.462 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@2b220023
-2022-10-10 18:18:04.472 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
-2022-10-10 18:18:04.472 [Test worker] INFO  ktor.test - Application started in 0.001 seconds.
-2022-10-10 18:18:04.516 [DefaultDispatcher-worker-2 @request#104] INFO  ktor.test - /privacy_policy
-2022-10-10 18:18:04.526 [DefaultDispatcher-worker-2 @request#108] INFO  ktor.test - /view/privacy_policy
-2022-10-10 18:18:04.538 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@6e4ff113
-2022-10-10 18:18:04.539 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@6e4ff113
-2022-10-10 18:18:04.544 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
-2022-10-10 18:18:04.545 [Test worker] INFO  ktor.test - Application started in 0.001 seconds.
-2022-10-10 18:18:04.587 [DefaultDispatcher-worker-2 @request#113] INFO  ktor.test - /get-dai-go
-2022-10-10 18:18:04.590 [DefaultDispatcher-worker-4 @request#115] INFO  ktor.test - /get-dai-go
-2022-10-10 18:18:04.592 [DefaultDispatcher-worker-2 @request#117] INFO  ktor.test - /get-dai-go?target=努力大事
-2022-10-10 18:18:04.596 [DefaultDispatcher-worker-2 @request#119] INFO  ktor.test - /get-dai-go
-2022-10-10 18:18:04.603 [DefaultDispatcher-worker-2 @request#123] INFO  ktor.test - /get-dai-go?target=努力大事
-2022-10-10 18:18:04.907 [DefaultDispatcher-worker-2 @request#123] INFO  ktor.test - 名詞,サ変接続,*,*,*,*,努力,ドリョク,ドリョク
-2022-10-10 18:18:04.908 [DefaultDispatcher-worker-2 @request#123] INFO  ktor.test - 名詞,形容動詞語幹,*,*,*,*,大事,ダイジ,ダイジ
-2022-10-10 18:18:04.911 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@3a58cbb5
-2022-10-10 18:18:04.912 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@3a58cbb5
+2022-10-10 18:18:04.832 [DefaultDispatcher-worker-2 @request#35] INFO  ktor.test - /upsert-dai-go
+2022-10-10 18:18:04.984 [DefaultDispatcher-worker-3 @request#39] INFO  ktor.test - /upsert-dai-go
+2022-10-10 18:18:04.988 [DefaultDispatcher-worker-1 @request#43] INFO  ktor.test - /upsert-dai-go
+2022-10-10 18:18:04.993 [DefaultDispatcher-worker-4 @request#47] INFO  ktor.test - /upsert-dai-go
+2022-10-10 18:18:05.006 [DefaultDispatcher-worker-1 @request#51] INFO  ktor.test - /get-dai-go?target=大好物
+2022-10-10 18:18:05.400 [DefaultDispatcher-worker-1 @request#51] INFO  ktor.test - 接頭詞,名詞接続,*,*,*,*,大,ダイ,ダイ
+2022-10-10 18:18:05.402 [DefaultDispatcher-worker-1 @request#51] INFO  ktor.test - 名詞,一般,*,*,*,*,好物,コウブツ,コーブツ
+2022-10-10 18:18:05.407 [DefaultDispatcher-worker-4 @request#55] INFO  ktor.test - /upsert-dai-go
+2022-10-10 18:18:07.524 [DefaultDispatcher-worker-4 @request#59] INFO  ktor.test - /get-dai-go?target=大好物
+2022-10-10 18:18:07.529 [DefaultDispatcher-worker-1 @request#63] INFO  ktor.test - /upsert-dai-go
+2022-10-10 18:18:09.538 [DefaultDispatcher-worker-1 @request#67] INFO  ktor.test - /get-dai-go?target=大好物
+2022-10-10 18:18:09.545 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@79eab185
+2022-10-10 18:18:09.545 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@79eab185
+2022-10-10 18:18:09.550 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
+2022-10-10 18:18:09.551 [Test worker] INFO  ktor.test - Application started in 0.001 seconds.
+2022-10-10 18:18:09.616 [DefaultDispatcher-worker-4 @request#72] INFO  ktor.test - /update-samples
+2022-10-10 18:18:09.621 [DefaultDispatcher-worker-4 @request#74] INFO  ktor.test - /update-samples
+2022-10-10 18:18:09.623 [DefaultDispatcher-worker-3 @request#76] INFO  ktor.test - /update-samples
+2022-10-10 18:18:09.748 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@72fb89c2
+2022-10-10 18:18:09.752 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@72fb89c2
+2022-10-10 18:18:09.755 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
+2022-10-10 18:18:09.755 [Test worker] INFO  ktor.test - Application started in 0.001 seconds.
+2022-10-10 18:18:09.828 [DefaultDispatcher-worker-1 @request#81] INFO  ktor.test - /app/rules
+2022-10-10 18:18:09.831 [DefaultDispatcher-worker-4 @request#83] INFO  ktor.test - /app/rules?isPrivacyPolicy=true
+2022-10-10 18:18:09.832 [DefaultDispatcher-worker-2 @request#85] INFO  ktor.test - /app/rules?backColor=#FFFFFF
+2022-10-10 18:18:09.834 [DefaultDispatcher-worker-4 @request#87] INFO  ktor.test - /app/rules?textColor=#000000
+2022-10-10 18:18:09.835 [DefaultDispatcher-worker-2 @request#89] INFO  ktor.test - /app/rules?backColor=#FFFFFF&amp;textColor=#000000
+2022-10-10 18:18:09.837 [DefaultDispatcher-worker-3 @request#91] INFO  ktor.test - /app/rules?textColor=#000000&amp;isPrivacyPolicy=true
+2022-10-10 18:18:09.840 [DefaultDispatcher-worker-1 @request#93] INFO  ktor.test - /app/rules?backColor=#FFFFFF&amp;isPrivacyPolicy=true
+2022-10-10 18:18:09.842 [DefaultDispatcher-worker-3 @request#95] INFO  ktor.test - /app/rules?backColor=#FFFFFF&amp;textColor=#000000&amp;isPrivacyPolicy=true
+2022-10-10 18:18:09.852 [DefaultDispatcher-worker-2 @request#99] INFO  ktor.test - /app/rules?backColor=#FFFFFF&amp;textColor=#000000&amp;isPrivacyPolicy=false
+2022-10-10 18:18:09.869 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@1cfd1799
+2022-10-10 18:18:09.869 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@1cfd1799
+2022-10-10 18:18:09.877 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
+2022-10-10 18:18:09.877 [Test worker] INFO  ktor.test - Application started in 0.001 seconds.
+2022-10-10 18:18:09.943 [DefaultDispatcher-worker-3 @request#104] INFO  ktor.test - /privacy_policy
+2022-10-10 18:18:09.953 [DefaultDispatcher-worker-1 @request#108] INFO  ktor.test - /view/privacy_policy
+2022-10-10 18:18:09.956 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@56929112
+2022-10-10 18:18:09.957 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@56929112
+2022-10-10 18:18:09.965 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
+2022-10-10 18:18:09.969 [Test worker] INFO  ktor.test - Application started in 0.005 seconds.
+2022-10-10 18:18:10.029 [DefaultDispatcher-worker-2 @request#113] INFO  ktor.test - /get-dai-go
+2022-10-10 18:18:10.031 [DefaultDispatcher-worker-4 @request#115] INFO  ktor.test - /get-dai-go
+2022-10-10 18:18:10.034 [DefaultDispatcher-worker-2 @request#117] INFO  ktor.test - /get-dai-go?target=努力大事
+2022-10-10 18:18:10.035 [DefaultDispatcher-worker-1 @request#119] INFO  ktor.test - /get-dai-go
+2022-10-10 18:18:10.039 [DefaultDispatcher-worker-4 @request#123] INFO  ktor.test - /get-dai-go?target=努力大事
+2022-10-10 18:18:10.352 [DefaultDispatcher-worker-4 @request#123] INFO  ktor.test - 名詞,サ変接続,*,*,*,*,努力,ドリョク,ドリョク
+2022-10-10 18:18:10.352 [DefaultDispatcher-worker-4 @request#123] INFO  ktor.test - 名詞,形容動詞語幹,*,*,*,*,大事,ダイジ,ダイジ
+2022-10-10 18:18:10.356 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@639e636f
+2022-10-10 18:18:10.357 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@639e636f
 </pre>
 </span>
 </div>
 <div id="tab2" class="tab">
 <h2>Standard error</h2>
 <span class="code">
-<pre>Oct 10, 2022 9:17:59 AM io.grpc.internal.ManagedChannelOrphanWrapper$ManagedChannelReference cleanQueue
+<pre>Oct 10, 2022 9:18:04 AM io.grpc.internal.ManagedChannelOrphanWrapper$ManagedChannelReference cleanQueue
 SEVERE: *~*~*~ Channel ManagedChannelImpl{logId=5, target=localhost:8081} was not shutdown properly!!! ~*~*~*
     Make sure to call shutdown()/shutdownNow() and wait until awaitTermination() returns true.
 java.lang.RuntimeException: ManagedChannel allocation site
@@ -511,7 +511,7 @@ java.lang.RuntimeException: ManagedChannel allocation site
 	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)
 	at java.base/java.lang.Thread.run(Thread.java:829)
 
-Oct 10, 2022 9:18:04 AM io.grpc.internal.ManagedChannelOrphanWrapper$ManagedChannelReference cleanQueue
+Oct 10, 2022 9:18:09 AM io.grpc.internal.ManagedChannelOrphanWrapper$ManagedChannelReference cleanQueue
 SEVERE: *~*~*~ Channel ManagedChannelImpl{logId=9, target=localhost:8081} was not shutdown properly!!! ~*~*~*
     Make sure to call shutdown()/shutdownNow() and wait until awaitTermination() returns true.
 java.lang.RuntimeException: ManagedChannel allocation site
@@ -592,7 +592,7 @@ java.lang.RuntimeException: ManagedChannel allocation site
 	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)
 	at java.base/java.lang.Thread.run(Thread.java:829)
 
-Oct 10, 2022 9:18:04 AM io.grpc.internal.ManagedChannelOrphanWrapper$ManagedChannelReference cleanQueue
+Oct 10, 2022 9:18:09 AM io.grpc.internal.ManagedChannelOrphanWrapper$ManagedChannelReference cleanQueue
 SEVERE: *~*~*~ Channel ManagedChannelImpl{logId=13, target=localhost:8081} was not shutdown properly!!! ~*~*~*
     Make sure to call shutdown()/shutdownNow() and wait until awaitTermination() returns true.
 java.lang.RuntimeException: ManagedChannel allocation site
@@ -684,7 +684,7 @@ java.lang.RuntimeException: ManagedChannel allocation site
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.1.1</a> at Oct 10, 2022, 9:18:05 AM</p>
+<a href="http://www.gradle.org">Gradle 7.1.1</a> at Oct 10, 2022, 9:18:10 AM</p>
 </div>
 </div>
 </body>
