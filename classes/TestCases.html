@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">8.516s</div>
+<div class="counter">9.322s</div>
 <p>duration</p>
 </div>
 </td>
@@ -82,42 +82,42 @@
 </thead>
 <tr>
 <td class="success">appRules</td>
-<td class="success">0.087s</td>
+<td class="success">0.094s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">getDaigo</td>
-<td class="success">0.392s</td>
+<td class="success">0.347s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">getSamples</td>
-<td class="success">2.689s</td>
+<td class="success">3.305s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">health</td>
-<td class="success">0.098s</td>
+<td class="success">0.145s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">privacyPolicy</td>
-<td class="success">0.054s</td>
+<td class="success">0.082s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">termsOfUse</td>
-<td class="success">0.346s</td>
+<td class="success">0.356s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">updateSamples</td>
-<td class="success">0.170s</td>
+<td class="success">0.254s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">upsertDaigo</td>
-<td class="success">4.680s</td>
+<td class="success">4.739s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -125,41 +125,41 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>14:02:00,909 |-INFO in ch.qos.logback.classic.LoggerContext[default] - This is logback-classic version 1.4.4
-14:02:00,930 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
-14:02:00,946 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [file:/home/runner/work/DAIgoAPI/DAIgoAPI/build/resources/main/logback.xml]
-14:02:01,097 |-ERROR in ch.qos.logback.core.model.processor.PropertyModelHandler - Could not find properties file [./application.properties].
-14:02:01,099 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [STDOUT]
-14:02:01,099 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
-14:02:01,125 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
-14:02:01,156 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [FILE]
-14:02:01,156 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
-14:02:01,166 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@1654843732 - No compression will be used
-14:02:01,167 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@1654843732 - Will use the pattern LOG_OUT_DIR_IS_UNDEFINED/log/dai-go-api.%d{yyyy-MM-dd}.log for the active file
-14:02:01,171 |-INFO in c.q.l.core.rolling.DefaultTimeBasedFileNamingAndTriggeringPolicy - The date pattern is 'yyyy-MM-dd' from file name pattern 'LOG_OUT_DIR_IS_UNDEFINED/log/dai-go-api.%d{yyyy-MM-dd}.log'.
-14:02:01,171 |-INFO in c.q.l.core.rolling.DefaultTimeBasedFileNamingAndTriggeringPolicy - Roll-over at midnight.
-14:02:01,179 |-INFO in c.q.l.core.rolling.DefaultTimeBasedFileNamingAndTriggeringPolicy - Setting initial period to Sat Nov 26 14:02:01 UTC 2022
-14:02:01,180 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
-14:02:01,195 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE] - Active log file name: LOG_OUT_DIR_IS_UNDEFINED/log/dai-go-api.log
-14:02:01,195 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE] - File property is set to [LOG_OUT_DIR_IS_UNDEFINED/log/dai-go-api.log]
-14:02:01,197 |-INFO in ch.qos.logback.classic.model.processor.RootLoggerModelHandler - Setting level of ROOT logger to TRACE
-14:02:01,204 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [STDOUT] to Logger[ROOT]
-14:02:01,205 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [FILE] to Logger[ROOT]
-14:02:01,205 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [io.netty] to INFO
-14:02:01,205 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [io.grpc] to INFO
-14:02:01,205 |-INFO in ch.qos.logback.core.model.processor.DefaultProcessor@215c63c1 - End of configuration.
-14:02:01,206 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@4f60aa95 - Registering current configuration as safe fallback point
+<pre>11:39:34,510 |-INFO in ch.qos.logback.classic.LoggerContext[default] - This is logback-classic version 1.4.5
+11:39:34,555 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
+11:39:34,581 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [file:/home/runner/work/DAIgoAPI/DAIgoAPI/build/resources/main/logback.xml]
+11:39:34,746 |-ERROR in ch.qos.logback.core.model.processor.PropertyModelHandler - Could not find properties file [./application.properties].
+11:39:34,748 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [STDOUT]
+11:39:34,749 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+11:39:34,782 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+11:39:34,826 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [FILE]
+11:39:34,826 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
+11:39:34,840 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@238209551 - No compression will be used
+11:39:34,841 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@238209551 - Will use the pattern LOG_OUT_DIR_IS_UNDEFINED/log/dai-go-api.%d{yyyy-MM-dd}.log for the active file
+11:39:34,847 |-INFO in c.q.l.core.rolling.DefaultTimeBasedFileNamingAndTriggeringPolicy - The date pattern is 'yyyy-MM-dd' from file name pattern 'LOG_OUT_DIR_IS_UNDEFINED/log/dai-go-api.%d{yyyy-MM-dd}.log'.
+11:39:34,847 |-INFO in c.q.l.core.rolling.DefaultTimeBasedFileNamingAndTriggeringPolicy - Roll-over at midnight.
+11:39:34,856 |-INFO in c.q.l.core.rolling.DefaultTimeBasedFileNamingAndTriggeringPolicy - Setting initial period to Sun Nov 27 11:39:34 UTC 2022
+11:39:34,857 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+11:39:34,878 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE] - Active log file name: LOG_OUT_DIR_IS_UNDEFINED/log/dai-go-api.log
+11:39:34,878 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE] - File property is set to [LOG_OUT_DIR_IS_UNDEFINED/log/dai-go-api.log]
+11:39:34,880 |-INFO in ch.qos.logback.classic.model.processor.RootLoggerModelHandler - Setting level of ROOT logger to TRACE
+11:39:34,893 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [STDOUT] to Logger[ROOT]
+11:39:34,893 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [FILE] to Logger[ROOT]
+11:39:34,895 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [io.netty] to INFO
+11:39:34,895 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [io.grpc] to INFO
+11:39:34,895 |-INFO in ch.qos.logback.core.model.processor.DefaultProcessor@52b26240 - End of configuration.
+11:39:34,895 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@58508d2 - Registering current configuration as safe fallback point
 
-2022-11-26 23:02:01.403 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
-2022-11-26 23:02:01.411 [Test worker] INFO  ktor.test - Application started in 0.157 seconds.
-2022-11-26 23:02:03.452 [DefaultDispatcher-worker-1 @request#2] INFO  ktor.test - /get-samples
-2022-11-26 23:02:03.466 [DefaultDispatcher-worker-1 @request#4] INFO  ktor.test - /get-samples
-2022-11-26 23:02:03.470 [DefaultDispatcher-worker-1 @request#6] INFO  ktor.test - /get-samples
-2022-11-26 23:02:03.549 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@667d37bf
-2022-11-26 23:02:03.551 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@667d37bf
-2022-11-26 23:02:03.567 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
-2022-11-26 23:02:03.569 [Test worker] INFO  ktor.test - Application started in 0.006 seconds.
-2022-11-26 23:02:03.633 [DefaultDispatcher-worker-2 @request#11] WARN  ktor.test - StatusPages Error
+2022-11-27 20:39:35.118 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
+2022-11-27 20:39:35.130 [Test worker] INFO  ktor.test - Application started in 0.165 seconds.
+2022-11-27 20:39:37.586 [DefaultDispatcher-worker-1 @request#2] INFO  ktor.test - /get-samples
+2022-11-27 20:39:37.604 [DefaultDispatcher-worker-1 @request#4] INFO  ktor.test - /get-samples
+2022-11-27 20:39:37.608 [DefaultDispatcher-worker-1 @request#6] INFO  ktor.test - /get-samples
+2022-11-27 20:39:37.731 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@2ce20cbf
+2022-11-27 20:39:37.736 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@2ce20cbf
+2022-11-27 20:39:37.753 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
+2022-11-27 20:39:37.753 [Test worker] INFO  ktor.test - Application started in 0.001 seconds.
+2022-11-27 20:39:37.840 [DefaultDispatcher-worker-3 @request#11] WARN  ktor.test - StatusPages Error
 java.lang.IllegalStateException: target host is null
 	at net.ambitious.daigoapi.ApplicationKt$module$6$1.invokeSuspend(Application.kt:100)
 	at net.ambitious.daigoapi.ApplicationKt$module$6$1.invoke(Application.kt)
@@ -292,20 +292,20 @@ Caused by: java.lang.IllegalStateException: target host is null
 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:750)
 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:677)
 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:664)
-2022-11-26 23:02:03.659 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@4e54b893
-2022-11-26 23:02:03.659 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@4e54b893
-2022-11-26 23:02:03.662 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
-2022-11-26 23:02:03.662 [Test worker] INFO  ktor.test - Application started in 0.001 seconds.
-2022-11-26 23:02:03.715 [DefaultDispatcher-worker-2 @request#18] INFO  ktor.test - /terms_of_use
-2022-11-26 23:02:03.987 [DefaultDispatcher-worker-4 @request#22] INFO  ktor.test - /view/terms_of_use
-2022-11-26 23:02:03.995 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@53502d20
-2022-11-26 23:02:03.996 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@53502d20
-2022-11-26 23:02:04.007 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
-2022-11-26 23:02:04.007 [Test worker] INFO  ktor.test - Application started in 0.0 seconds.
-2022-11-26 23:02:04.082 [DefaultDispatcher-worker-1 @request#27] INFO  ktor.test - /upsert-dai-go
-2022-11-26 23:02:04.084 [DefaultDispatcher-worker-1 @request#29] INFO  ktor.test - /upsert-dai-go
-2022-11-26 23:02:04.086 [DefaultDispatcher-worker-4 @request#31] INFO  ktor.test - /upsert-dai-go
-2022-11-26 23:02:04.107 [DefaultDispatcher-worker-4 @request#31] DEBUG ktor.test - Conversion failed, null returned
+2022-11-27 20:39:37.893 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@324c8a78
+2022-11-27 20:39:37.894 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@324c8a78
+2022-11-27 20:39:37.898 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
+2022-11-27 20:39:37.899 [Test worker] INFO  ktor.test - Application started in 0.002 seconds.
+2022-11-27 20:39:37.943 [DefaultDispatcher-worker-1 @request#18] INFO  ktor.test - /terms_of_use
+2022-11-27 20:39:38.240 [DefaultDispatcher-worker-1 @request#22] INFO  ktor.test - /view/terms_of_use
+2022-11-27 20:39:38.249 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@3d20a7c6
+2022-11-27 20:39:38.249 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@3d20a7c6
+2022-11-27 20:39:38.254 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
+2022-11-27 20:39:38.254 [Test worker] INFO  ktor.test - Application started in 0.001 seconds.
+2022-11-27 20:39:38.312 [DefaultDispatcher-worker-2 @request#27] INFO  ktor.test - /upsert-dai-go
+2022-11-27 20:39:38.315 [DefaultDispatcher-worker-2 @request#29] INFO  ktor.test - /upsert-dai-go
+2022-11-27 20:39:38.317 [DefaultDispatcher-worker-2 @request#31] INFO  ktor.test - /upsert-dai-go
+2022-11-27 20:39:38.337 [DefaultDispatcher-worker-2 @request#31] DEBUG ktor.test - Conversion failed, null returned
 io.ktor.server.plugins.CannotTransformContentToTypeException: Cannot transform this request's content to net.ambitious.daigoapi.SaveRequest
 	at io.ktor.server.request.ApplicationReceiveFunctionsKt.receiveNullable(ApplicationReceiveFunctions.kt:107)
 	at io.ktor.server.request.ApplicationReceiveFunctionsKt.receiveOrNull(ApplicationReceiveFunctions.kt:136)
@@ -374,64 +374,64 @@ io.ktor.server.plugins.CannotTransformContentToTypeException: Cannot transform t
 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:750)
 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:677)
 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:664)
-2022-11-26 23:02:04.120 [DefaultDispatcher-worker-4 @request#35] INFO  ktor.test - /upsert-dai-go
-2022-11-26 23:02:04.235 [DefaultDispatcher-worker-4 @request#39] INFO  ktor.test - /upsert-dai-go
-2022-11-26 23:02:04.243 [DefaultDispatcher-worker-2 @request#43] INFO  ktor.test - /upsert-dai-go
-2022-11-26 23:02:04.246 [DefaultDispatcher-worker-2 @request#47] INFO  ktor.test - /upsert-dai-go
-2022-11-26 23:02:04.249 [DefaultDispatcher-worker-3 @request#51] INFO  ktor.test - /get-dai-go?target=大好物
-2022-11-26 23:02:04.573 [DefaultDispatcher-worker-3 @request#51] INFO  ktor.test - 接頭詞,名詞接続,*,*,*,*,大,ダイ,ダイ
-2022-11-26 23:02:04.574 [DefaultDispatcher-worker-3 @request#51] INFO  ktor.test - 名詞,一般,*,*,*,*,好物,コウブツ,コーブツ
-2022-11-26 23:02:04.580 [DefaultDispatcher-worker-4 @request#55] INFO  ktor.test - /upsert-dai-go
-2022-11-26 23:02:06.667 [DefaultDispatcher-worker-1 @request#59] INFO  ktor.test - /get-dai-go?target=大好物
-2022-11-26 23:02:06.671 [DefaultDispatcher-worker-3 @request#63] INFO  ktor.test - /upsert-dai-go
-2022-11-26 23:02:08.680 [DefaultDispatcher-worker-2 @request#67] INFO  ktor.test - /get-dai-go?target=大好物
-2022-11-26 23:02:08.683 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@40b413dc
-2022-11-26 23:02:08.683 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@40b413dc
-2022-11-26 23:02:08.687 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
-2022-11-26 23:02:08.687 [Test worker] INFO  ktor.test - Application started in 0.001 seconds.
-2022-11-26 23:02:08.744 [DefaultDispatcher-worker-3 @request#72] INFO  ktor.test - /update-samples
-2022-11-26 23:02:08.746 [DefaultDispatcher-worker-2 @request#74] INFO  ktor.test - /update-samples
-2022-11-26 23:02:08.747 [DefaultDispatcher-worker-3 @request#76] INFO  ktor.test - /update-samples
-2022-11-26 23:02:08.849 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@546fd10
-2022-11-26 23:02:08.850 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@546fd10
-2022-11-26 23:02:08.857 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
-2022-11-26 23:02:08.858 [Test worker] INFO  ktor.test - Application started in 0.001 seconds.
-2022-11-26 23:02:08.919 [DefaultDispatcher-worker-4 @request#81] INFO  ktor.test - /app/rules
-2022-11-26 23:02:08.921 [DefaultDispatcher-worker-2 @request#83] INFO  ktor.test - /app/rules?isPrivacyPolicy=true
-2022-11-26 23:02:08.922 [DefaultDispatcher-worker-4 @request#85] INFO  ktor.test - /app/rules?backColor=#FFFFFF
-2022-11-26 23:02:08.924 [DefaultDispatcher-worker-4 @request#87] INFO  ktor.test - /app/rules?textColor=#000000
-2022-11-26 23:02:08.925 [DefaultDispatcher-worker-4 @request#89] INFO  ktor.test - /app/rules?backColor=#FFFFFF&amp;textColor=#000000
-2022-11-26 23:02:08.926 [DefaultDispatcher-worker-3 @request#91] INFO  ktor.test - /app/rules?textColor=#000000&amp;isPrivacyPolicy=true
-2022-11-26 23:02:08.927 [DefaultDispatcher-worker-2 @request#93] INFO  ktor.test - /app/rules?backColor=#FFFFFF&amp;isPrivacyPolicy=true
-2022-11-26 23:02:08.928 [DefaultDispatcher-worker-3 @request#95] INFO  ktor.test - /app/rules?backColor=#FFFFFF&amp;textColor=#000000&amp;isPrivacyPolicy=true
-2022-11-26 23:02:08.932 [DefaultDispatcher-worker-1 @request#99] INFO  ktor.test - /app/rules?backColor=#FFFFFF&amp;textColor=#000000&amp;isPrivacyPolicy=false
-2022-11-26 23:02:08.935 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@43002760
-2022-11-26 23:02:08.937 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@43002760
-2022-11-26 23:02:08.944 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
-2022-11-26 23:02:08.944 [Test worker] INFO  ktor.test - Application started in 0.0 seconds.
-2022-11-26 23:02:08.983 [DefaultDispatcher-worker-2 @request#104] INFO  ktor.test - /privacy_policy
-2022-11-26 23:02:08.990 [DefaultDispatcher-worker-3 @request#108] INFO  ktor.test - /view/privacy_policy
-2022-11-26 23:02:08.993 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@23aa0bcc
-2022-11-26 23:02:08.993 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@23aa0bcc
-2022-11-26 23:02:08.998 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
-2022-11-26 23:02:08.998 [Test worker] INFO  ktor.test - Application started in 0.0 seconds.
-2022-11-26 23:02:09.044 [DefaultDispatcher-worker-1 @request#113] INFO  ktor.test - /get-dai-go
-2022-11-26 23:02:09.046 [DefaultDispatcher-worker-4 @request#115] INFO  ktor.test - /get-dai-go
-2022-11-26 23:02:09.047 [DefaultDispatcher-worker-2 @request#117] INFO  ktor.test - /get-dai-go?target=努力大事
-2022-11-26 23:02:09.049 [DefaultDispatcher-worker-1 @request#119] INFO  ktor.test - /get-dai-go
-2022-11-26 23:02:09.052 [DefaultDispatcher-worker-4 @request#123] INFO  ktor.test - /get-dai-go?target=努力大事
-2022-11-26 23:02:09.384 [DefaultDispatcher-worker-4 @request#123] INFO  ktor.test - 名詞,サ変接続,*,*,*,*,努力,ドリョク,ドリョク
-2022-11-26 23:02:09.385 [DefaultDispatcher-worker-4 @request#123] INFO  ktor.test - 名詞,形容動詞語幹,*,*,*,*,大事,ダイジ,ダイジ
-2022-11-26 23:02:09.387 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@3e723fcf
-2022-11-26 23:02:09.387 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@3e723fcf
+2022-11-27 20:39:38.363 [DefaultDispatcher-worker-2 @request#35] INFO  ktor.test - /upsert-dai-go
+2022-11-27 20:39:38.516 [DefaultDispatcher-worker-2 @request#39] INFO  ktor.test - /upsert-dai-go
+2022-11-27 20:39:38.521 [DefaultDispatcher-worker-3 @request#43] INFO  ktor.test - /upsert-dai-go
+2022-11-27 20:39:38.524 [DefaultDispatcher-worker-1 @request#47] INFO  ktor.test - /upsert-dai-go
+2022-11-27 20:39:38.528 [DefaultDispatcher-worker-3 @request#51] INFO  ktor.test - /get-dai-go?target=大好物
+2022-11-27 20:39:38.855 [DefaultDispatcher-worker-3 @request#51] INFO  ktor.test - 接頭詞,名詞接続,*,*,*,*,大,ダイ,ダイ
+2022-11-27 20:39:38.856 [DefaultDispatcher-worker-3 @request#51] INFO  ktor.test - 名詞,一般,*,*,*,*,好物,コウブツ,コーブツ
+2022-11-27 20:39:38.861 [DefaultDispatcher-worker-1 @request#55] INFO  ktor.test - /upsert-dai-go
+2022-11-27 20:39:40.964 [DefaultDispatcher-worker-1 @request#59] INFO  ktor.test - /get-dai-go?target=大好物
+2022-11-27 20:39:40.968 [DefaultDispatcher-worker-1 @request#63] INFO  ktor.test - /upsert-dai-go
+2022-11-27 20:39:42.985 [DefaultDispatcher-worker-1 @request#67] INFO  ktor.test - /get-dai-go?target=大好物
+2022-11-27 20:39:42.989 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@4033f50b
+2022-11-27 20:39:42.989 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@4033f50b
+2022-11-27 20:39:42.992 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
+2022-11-27 20:39:42.993 [Test worker] INFO  ktor.test - Application started in 0.002 seconds.
+2022-11-27 20:39:43.119 [DefaultDispatcher-worker-2 @request#72] INFO  ktor.test - /update-samples
+2022-11-27 20:39:43.127 [DefaultDispatcher-worker-1 @request#74] INFO  ktor.test - /update-samples
+2022-11-27 20:39:43.129 [DefaultDispatcher-worker-4 @request#76] INFO  ktor.test - /update-samples
+2022-11-27 20:39:43.237 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@4c7866dc
+2022-11-27 20:39:43.237 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@4c7866dc
+2022-11-27 20:39:43.246 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
+2022-11-27 20:39:43.246 [Test worker] INFO  ktor.test - Application started in 0.001 seconds.
+2022-11-27 20:39:43.304 [DefaultDispatcher-worker-1 @request#81] INFO  ktor.test - /app/rules
+2022-11-27 20:39:43.307 [DefaultDispatcher-worker-3 @request#83] INFO  ktor.test - /app/rules?isPrivacyPolicy=true
+2022-11-27 20:39:43.308 [DefaultDispatcher-worker-4 @request#85] INFO  ktor.test - /app/rules?backColor=#FFFFFF
+2022-11-27 20:39:43.309 [DefaultDispatcher-worker-3 @request#87] INFO  ktor.test - /app/rules?textColor=#000000
+2022-11-27 20:39:43.311 [DefaultDispatcher-worker-4 @request#89] INFO  ktor.test - /app/rules?backColor=#FFFFFF&amp;textColor=#000000
+2022-11-27 20:39:43.312 [DefaultDispatcher-worker-2 @request#91] INFO  ktor.test - /app/rules?textColor=#000000&amp;isPrivacyPolicy=true
+2022-11-27 20:39:43.314 [DefaultDispatcher-worker-1 @request#93] INFO  ktor.test - /app/rules?backColor=#FFFFFF&amp;isPrivacyPolicy=true
+2022-11-27 20:39:43.316 [DefaultDispatcher-worker-1 @request#95] INFO  ktor.test - /app/rules?backColor=#FFFFFF&amp;textColor=#000000&amp;isPrivacyPolicy=true
+2022-11-27 20:39:43.326 [DefaultDispatcher-worker-2 @request#99] INFO  ktor.test - /app/rules?backColor=#FFFFFF&amp;textColor=#000000&amp;isPrivacyPolicy=false
+2022-11-27 20:39:43.330 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@5d72d22c
+2022-11-27 20:39:43.331 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@5d72d22c
+2022-11-27 20:39:43.340 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
+2022-11-27 20:39:43.340 [Test worker] INFO  ktor.test - Application started in 0.001 seconds.
+2022-11-27 20:39:43.407 [DefaultDispatcher-worker-1 @request#104] INFO  ktor.test - /privacy_policy
+2022-11-27 20:39:43.414 [DefaultDispatcher-worker-2 @request#108] INFO  ktor.test - /view/privacy_policy
+2022-11-27 20:39:43.418 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@38c11d24
+2022-11-27 20:39:43.418 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@38c11d24
+2022-11-27 20:39:43.422 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
+2022-11-27 20:39:43.422 [Test worker] INFO  ktor.test - Application started in 0.0 seconds.
+2022-11-27 20:39:43.461 [DefaultDispatcher-worker-1 @request#113] INFO  ktor.test - /get-dai-go
+2022-11-27 20:39:43.463 [DefaultDispatcher-worker-4 @request#115] INFO  ktor.test - /get-dai-go
+2022-11-27 20:39:43.465 [DefaultDispatcher-worker-1 @request#117] INFO  ktor.test - /get-dai-go?target=努力大事
+2022-11-27 20:39:43.467 [DefaultDispatcher-worker-4 @request#119] INFO  ktor.test - /get-dai-go
+2022-11-27 20:39:43.472 [DefaultDispatcher-worker-1 @request#123] INFO  ktor.test - /get-dai-go?target=努力大事
+2022-11-27 20:39:43.760 [DefaultDispatcher-worker-1 @request#123] INFO  ktor.test - 名詞,サ変接続,*,*,*,*,努力,ドリョク,ドリョク
+2022-11-27 20:39:43.761 [DefaultDispatcher-worker-1 @request#123] INFO  ktor.test - 名詞,形容動詞語幹,*,*,*,*,大事,ダイジ,ダイジ
+2022-11-27 20:39:43.763 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@6da82cfd
+2022-11-27 20:39:43.764 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@6da82cfd
 </pre>
 </span>
 </div>
 <div id="tab2" class="tab">
 <h2>Standard error</h2>
 <span class="code">
-<pre>Nov 26, 2022 2:02:04 PM io.grpc.internal.ManagedChannelOrphanWrapper$ManagedChannelReference cleanQueue
-SEVERE: *~*~*~ Channel ManagedChannelImpl{logId=5, target=localhost:8081} was not shutdown properly!!! ~*~*~*
+<pre>Nov 27, 2022 11:39:43 AM io.grpc.internal.ManagedChannelOrphanWrapper$ManagedChannelReference cleanQueue
+SEVERE: *~*~*~ Channel ManagedChannelImpl{logId=1, target=localhost:8081} was not shutdown properly!!! ~*~*~*
     Make sure to call shutdown()/shutdownNow() and wait until awaitTermination() returns true.
 java.lang.RuntimeException: ManagedChannel allocation site
 	at io.grpc.internal.ManagedChannelOrphanWrapper$ManagedChannelReference.&lt;init&gt;(ManagedChannelOrphanWrapper.java:93)
@@ -511,7 +511,7 @@ java.lang.RuntimeException: ManagedChannel allocation site
 	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)
 	at java.base/java.lang.Thread.run(Thread.java:829)
 
-Nov 26, 2022 2:02:08 PM io.grpc.internal.ManagedChannelOrphanWrapper$ManagedChannelReference cleanQueue
+Nov 27, 2022 11:39:43 AM io.grpc.internal.ManagedChannelOrphanWrapper$ManagedChannelReference cleanQueue
 SEVERE: *~*~*~ Channel ManagedChannelImpl{logId=9, target=localhost:8081} was not shutdown properly!!! ~*~*~*
     Make sure to call shutdown()/shutdownNow() and wait until awaitTermination() returns true.
 java.lang.RuntimeException: ManagedChannel allocation site
@@ -592,8 +592,8 @@ java.lang.RuntimeException: ManagedChannel allocation site
 	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)
 	at java.base/java.lang.Thread.run(Thread.java:829)
 
-Nov 26, 2022 2:02:08 PM io.grpc.internal.ManagedChannelOrphanWrapper$ManagedChannelReference cleanQueue
-SEVERE: *~*~*~ Channel ManagedChannelImpl{logId=13, target=localhost:8081} was not shutdown properly!!! ~*~*~*
+Nov 27, 2022 11:39:43 AM io.grpc.internal.ManagedChannelOrphanWrapper$ManagedChannelReference cleanQueue
+SEVERE: *~*~*~ Channel ManagedChannelImpl{logId=5, target=localhost:8081} was not shutdown properly!!! ~*~*~*
     Make sure to call shutdown()/shutdownNow() and wait until awaitTermination() returns true.
 java.lang.RuntimeException: ManagedChannel allocation site
 	at io.grpc.internal.ManagedChannelOrphanWrapper$ManagedChannelReference.&lt;init&gt;(ManagedChannelOrphanWrapper.java:93)
@@ -684,7 +684,7 @@ java.lang.RuntimeException: ManagedChannel allocation site
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.1.1</a> at Nov 26, 2022, 2:02:09 PM</p>
+<a href="http://www.gradle.org">Gradle 7.1.1</a> at Nov 27, 2022, 11:39:44 AM</p>
 </div>
 </div>
 </body>
