@@ -23,7 +23,7 @@ import io.ktor.server.plugins.contentnegotiation.ContentNegotiation
 import io.ktor.server.plugins.statuspages.StatusPages
 import io.ktor.server.request.header
 import io.ktor.server.request.path
-import io.ktor.server.request.receiveOrNull
+import io.ktor.server.request.receiveNullable
 import io.ktor.server.request.uri
 import io.ktor.server.response.respond
 import io.ktor.server.response.respondText
@@ -114,7 +114,7 @@ fun Application.module() {
             }
 
             post("/upsert-dai-go") {
-                val param = call.receiveOrNull<SaveRequest>()
+                val param = call.receiveNullable<SaveRequest>()
                 if (param?.word.isNullOrEmpty() || param?.daiGo.isNullOrEmpty()) {
                     call.respond(HttpStatusCode.BadRequest, mapOf("save" to "parameter is empty"))
                     return@post

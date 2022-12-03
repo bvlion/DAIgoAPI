@@ -179,6 +179,7 @@ class TestCases {
       // error auth
       headerAddedHandleRequest(HttpMethod.Post, "/upsert-dai-go") {
         addHeader(HttpHeaders.Authorization, "Bearer test2")
+        addHeader(HttpHeaders.ContentType, ContentType.Application.Json.toString())
       }.response.run {
         Assert.assertEquals(HttpStatusCode.Unauthorized, status())
       }
@@ -187,8 +188,7 @@ class TestCases {
       headerAddedHandleRequest(HttpMethod.Post, "/upsert-dai-go") {
         addHeader(HttpHeaders.Authorization, "Bearer test")
       }.response.run {
-        Assert.assertEquals(HttpStatusCode.BadRequest, status())
-        Assert.assertEquals(JSONObject(mapOf("save" to "parameter is empty")).toJSONString(), content)
+        Assert.assertEquals(HttpStatusCode.UnsupportedMediaType, status())
       }
 
       // error no parameter
