@@ -131,8 +131,8 @@ fun Application.module() {
                 call.respond(
                     mapOf(
                         "notExists" to notExists,
-                        "samples" to samples
-                    )
+                        "samples" to samples,
+                    ),
                 )
             }
         }
@@ -152,14 +152,14 @@ fun Application.module() {
         get("/view/privacy_policy") {
             call.respondText(
                 getResourceText("/rules.html").format("プライバシーポリシー", getHtml("/privacy_policy.md")),
-                ContentType.Text.Html
+                ContentType.Text.Html,
             )
         }
 
         get("/view/terms_of_use") {
             call.respondText(
                 getResourceText("/rules.html").format("利用規約", getHtml("/terms_of_use.md")),
-                ContentType.Text.Html
+                ContentType.Text.Html,
             )
         }
 
@@ -178,10 +178,10 @@ fun Application.module() {
                                 "/privacy_policy.md"
                             } else {
                                 "/terms_of_use.md"
-                            }
-                        )
+                            },
+                        ),
                     ),
-                    ContentType.Text.Html
+                    ContentType.Text.Html,
                 )
             } catch (_: Exception) {
                 call.respond(HttpStatusCode.NotFound)

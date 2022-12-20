@@ -13,7 +13,7 @@ import io.ktor.server.request.ApplicationRequest
 import io.ktor.server.response.respond
 
 class BearerAuthenticationProvider internal constructor(
-    config: Configuration
+    config: Configuration,
 ) : AuthenticationProvider(config) {
 
     private val realm: String = config.realm
@@ -22,7 +22,7 @@ class BearerAuthenticationProvider internal constructor(
     class Configuration(name: String?) : Config(name) {
         var authenticationFunction: AuthenticationFunction<BearerPrincipal> = {
             throw NotImplementedError(
-                "Bearer auth validate function is not specified. Use bearer { validate(correctToken) } to fix."
+                "Bearer auth validate function is not specified. Use bearer { validate(correctToken) } to fix.",
             )
         }
 
@@ -56,9 +56,9 @@ class BearerAuthenticationProvider internal constructor(
                     UnauthorizedResponse(
                         HttpAuthHeader.Parameterized(
                             "Bearer",
-                            mapOf(HttpAuthHeader.Parameters.Realm to realm)
-                        )
-                    )
+                            mapOf(HttpAuthHeader.Parameters.Realm to realm),
+                        ),
+                    ),
                 )
                 challenge.complete()
             }
@@ -71,7 +71,7 @@ class BearerAuthenticationProvider internal constructor(
 
 fun AuthenticationConfig.bearer(
     name: String? = null,
-    configure: BearerAuthenticationProvider.Configuration.() -> Unit
+    configure: BearerAuthenticationProvider.Configuration.() -> Unit,
 ) {
     val provider = BearerAuthenticationProvider(BearerAuthenticationProvider.Configuration(name).apply(configure))
     register(provider)

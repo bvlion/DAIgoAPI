@@ -36,7 +36,7 @@ fun save(db: Firestore, saveRequest: SaveRequest, log: Logger): Map<String, Stri
         getDocument(db)
             .set(
                 mapOf(saveRequest.word to saveRequest.daiGo),
-                SetOptions.merge()
+                SetOptions.merge(),
             ),
         object : ApiFutureCallback<WriteResult> {
 
@@ -48,7 +48,7 @@ fun save(db: Firestore, saveRequest: SaveRequest, log: Logger): Map<String, Stri
                 originalWords.clear()
                 setOriginalWords(db)
             }
-        }
+        },
     ) {
         it.run()
     }
@@ -59,8 +59,8 @@ fun save(db: Firestore, saveRequest: SaveRequest, log: Logger): Map<String, Stri
 fun setOriginalWords(db: Firestore) {
     getDocument(db).get().get()
         .data?.map { mapOf(it.key to it.value.toString()) }?.forEach {
-            originalWords.putAll(it)
-        }
+        originalWords.putAll(it)
+    }
 }
 
 fun setWords(db: Firestore) {
@@ -81,7 +81,7 @@ fun setWords(db: Firestore) {
                 .map { it.second as Map<*, *> }
                 .flatMap { map ->
                     map.map { it.key.toString() to it.value.toString() }
-                }
+                },
         )
     }
 }
@@ -91,7 +91,7 @@ private fun getDocument(db: Firestore, document: String = "words"): DocumentRefe
 
 data class SaveRequest(
     @JsonAlias("word") val word: String?,
-    @JsonAlias("dai_go") val daiGo: String?
+    @JsonAlias("dai_go") val daiGo: String?,
 )
 
 val words: Map<String, String>
@@ -104,7 +104,7 @@ private val notExistWords = arrayListOf(
     "からあげ" to "K",
     "から揚げ" to "K",
     "唐揚げ" to "K",
-    "唐揚" to "K"
+    "唐揚" to "K",
 )
 
 val samples: List<String>
@@ -114,5 +114,5 @@ private val sampleWords = arrayListOf(
     "DAIGO大誤算",
     "グイグイヨシコイ",
     "上昇志向",
-    "負ける気がしない"
+    "負ける気がしない",
 )
