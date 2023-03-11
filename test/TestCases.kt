@@ -5,8 +5,8 @@ import io.ktor.server.testing.*
 import net.ambitious.daigoapi.module
 import net.ambitious.daigoapi.notExists
 import net.ambitious.daigoapi.samples
-import org.json.simple.JSONArray
-import org.json.simple.JSONObject
+import org.json.JSONArray
+import org.json.JSONObject
 import org.junit.*
 import org.slf4j.LoggerFactory
 
@@ -44,7 +44,7 @@ class TestCases {
 
       headerAddedHandleRequest(HttpMethod.Get, "/health").response.run {
         Assert.assertEquals(HttpStatusCode.OK, status())
-        Assert.assertEquals(JSONObject(mapOf("status" to "ok")).toJSONString(), content)
+        Assert.assertEquals(JSONObject(mapOf("status" to "ok")).toString(), content)
       }
     }
   }
@@ -56,7 +56,7 @@ class TestCases {
       headerAddedHandleRequest(HttpMethod.Get, "/terms_of_use").response.run {
         Assert.assertEquals(HttpStatusCode.OK, status())
         Assert.assertEquals(
-          JSONObject(mapOf("text" to TERMS_OF_USE_CONTENT)).toJSONString().replace("\\/", "/"),
+          JSONObject(mapOf("text" to TERMS_OF_USE_CONTENT)).toString().replace("\\/", "/"),
           content
         )
       }
@@ -75,7 +75,7 @@ class TestCases {
       headerAddedHandleRequest(HttpMethod.Get, "/privacy_policy").response.run {
         Assert.assertEquals(HttpStatusCode.OK, status())
         Assert.assertEquals(
-          JSONObject(mapOf("text" to PRIVACY_POLICY_CONTENT)).toJSONString().replace("\\/", "/"),
+          JSONObject(mapOf("text" to PRIVACY_POLICY_CONTENT)).toString().replace("\\/", "/"),
           content
         )
       }
@@ -154,7 +154,7 @@ class TestCases {
         addHeader(HttpHeaders.Authorization, "Bearer test")
       }.response.run {
         Assert.assertEquals(HttpStatusCode.BadRequest, status())
-        Assert.assertEquals(JSONObject(mapOf("text" to "target is empty")).toJSONString(), content)
+        Assert.assertEquals(JSONObject(mapOf("text" to "target is empty")).toString(), content)
       }
 
       // success
@@ -162,7 +162,7 @@ class TestCases {
         addHeader(HttpHeaders.Authorization, "Bearer test")
       }.response.run {
         Assert.assertEquals(HttpStatusCode.OK, status())
-        Assert.assertEquals(JSONObject(mapOf("text" to "DD")).toJSONString(), content)
+        Assert.assertEquals(JSONObject(mapOf("text" to "DD")).toString(), content)
       }
     }
   }
@@ -198,7 +198,7 @@ class TestCases {
         setBody(JSONObject().toString())
       }.response.run {
         Assert.assertEquals(HttpStatusCode.BadRequest, status())
-        Assert.assertEquals(JSONObject(mapOf("save" to "parameter is empty")).toJSONString(), content)
+        Assert.assertEquals(JSONObject(mapOf("save" to "parameter is empty")).toString(), content)
       }
 
       // error empty parameter
@@ -210,7 +210,7 @@ class TestCases {
         }.toString())
       }.response.run {
         Assert.assertEquals(HttpStatusCode.BadRequest, status())
-        Assert.assertEquals(JSONObject(mapOf("save" to "parameter is empty")).toJSONString(), content)
+        Assert.assertEquals(JSONObject(mapOf("save" to "parameter is empty")).toString(), content)
       }
       headerAddedHandleRequest(HttpMethod.Post, "/upsert-dai-go") {
         addHeader(HttpHeaders.Authorization, "Bearer test")
@@ -220,7 +220,7 @@ class TestCases {
         }.toString())
       }.response.run {
         Assert.assertEquals(HttpStatusCode.BadRequest, status())
-        Assert.assertEquals(JSONObject(mapOf("save" to "parameter is empty")).toJSONString(), content)
+        Assert.assertEquals(JSONObject(mapOf("save" to "parameter is empty")).toString(), content)
       }
       headerAddedHandleRequest(HttpMethod.Post, "/upsert-dai-go") {
         addHeader(HttpHeaders.Authorization, "Bearer test")
@@ -231,7 +231,7 @@ class TestCases {
         }.toString())
       }.response.run {
         Assert.assertEquals(HttpStatusCode.BadRequest, status())
-        Assert.assertEquals(JSONObject(mapOf("save" to "parameter is empty")).toJSONString(), content)
+        Assert.assertEquals(JSONObject(mapOf("save" to "parameter is empty")).toString(), content)
       }
 
       // success insert
@@ -240,7 +240,7 @@ class TestCases {
         addHeader(HttpHeaders.Authorization, "Bearer test")
       }.response.run {
         Assert.assertEquals(HttpStatusCode.OK, status())
-        Assert.assertEquals(JSONObject(mapOf("text" to "DK")).toJSONString(), content)
+        Assert.assertEquals(JSONObject(mapOf("text" to "DK")).toString(), content)
 
         headerAddedHandleRequest(HttpMethod.Post, "/upsert-dai-go") {
           addHeader(HttpHeaders.Authorization, "Bearer test")
@@ -251,14 +251,14 @@ class TestCases {
           }.toString())
         }.response.run {
           Assert.assertEquals(HttpStatusCode.OK, status())
-          Assert.assertEquals(JSONObject(mapOf("save" to "success")).toJSONString(), content)
+          Assert.assertEquals(JSONObject(mapOf("save" to "success")).toString(), content)
 
           Thread.sleep(2000)
           headerAddedHandleRequest(HttpMethod.Get, "/get-dai-go?target=$target") {
             addHeader(HttpHeaders.Authorization, "Bearer test")
           }.response.run {
             Assert.assertEquals(HttpStatusCode.OK, status())
-            Assert.assertEquals(JSONObject(mapOf("text" to "DKB")).toJSONString(), content)
+            Assert.assertEquals(JSONObject(mapOf("text" to "DKB")).toString(), content)
           }
         }
       }
@@ -273,14 +273,14 @@ class TestCases {
         }.toString())
       }.response.run {
         Assert.assertEquals(HttpStatusCode.OK, status())
-        Assert.assertEquals(JSONObject(mapOf("save" to "success")).toJSONString(), content)
+        Assert.assertEquals(JSONObject(mapOf("save" to "success")).toString(), content)
 
         Thread.sleep(2000)
         headerAddedHandleRequest(HttpMethod.Get, "/get-dai-go?target=$target") {
           addHeader(HttpHeaders.Authorization, "Bearer test")
         }.response.run {
           Assert.assertEquals(HttpStatusCode.OK, status())
-          Assert.assertEquals(JSONObject(mapOf("text" to "DKB2")).toJSONString(), content)
+          Assert.assertEquals(JSONObject(mapOf("text" to "DKB2")).toString(), content)
         }
       }
     }
@@ -307,7 +307,7 @@ class TestCases {
         addHeader(HttpHeaders.Authorization, "Bearer test")
       }.response.run {
         Assert.assertEquals(HttpStatusCode.OK, status())
-        Assert.assertEquals(JSONObject(mapOf("samples" to JSONArray().apply { addAll(samples) })).toJSONString(), content)
+        Assert.assertEquals(JSONObject(mapOf("samples" to JSONArray().apply { putAll(samples) })).toString(), content)
       }
     }
   }
@@ -334,9 +334,9 @@ class TestCases {
       }.response.run {
         Assert.assertEquals(HttpStatusCode.OK, status())
         Assert.assertEquals(JSONObject(mapOf(
-          "samples" to JSONArray().apply { addAll(samples) },
-          "notExists" to JSONArray().apply { addAll(notExists.map { JSONObject(mapOf("first" to it.first, "second" to it.second)) }) },
-        )).toJSONString(), content)
+          "samples" to JSONArray().apply { putAll(samples) },
+          "notExists" to JSONArray().apply { putAll(notExists.map { JSONObject(mapOf("first" to it.first, "second" to it.second)) }) },
+        )).toString(), content)
       }
     }
   }
