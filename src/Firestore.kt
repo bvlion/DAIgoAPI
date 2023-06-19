@@ -59,8 +59,8 @@ fun save(db: Firestore, saveRequest: SaveRequest, log: Logger): Map<String, Stri
 fun setOriginalWords(db: Firestore) {
     getDocument(db).get().get()
         .data?.map { mapOf(it.key to it.value.toString()) }?.forEach {
-        originalWords.putAll(it)
-    }
+            originalWords.putAll(it)
+        }
 }
 
 fun setWords(db: Firestore) {
