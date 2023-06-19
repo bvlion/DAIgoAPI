@@ -5,7 +5,7 @@ buildscript {
     }
     
     dependencies {
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.8.10"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.8.22"
         classpath "gradle.plugin.com.github.johnrengelman:shadow:8.0.0"
     }
 }
@@ -43,21 +43,21 @@ shadowJar {
 }
 
 dependencies {
-    def ktor_version = captureVersion(implementation('io.ktor:ktor-server-netty:2.2.4'))
+    def ktor_version = captureVersion(implementation('io.ktor:ktor-server-netty:2.3.1'))
     implementation "io.ktor:ktor-server-locations:$ktor_version"
     implementation "io.ktor:ktor-server-auth:$ktor_version"
     implementation "io.ktor:ktor-server-content-negotiation:$ktor_version"
     implementation "io.ktor:ktor-serialization-jackson:$ktor_version"
     implementation "io.ktor:ktor-server-status-pages:$ktor_version"
     implementation "io.ktor:ktor-server-call-logging:$ktor_version"
-    implementation 'ch.qos.logback:logback-classic:1.4.6'
+    implementation 'ch.qos.logback:logback-classic:1.4.8'
     implementation 'com.atilika.kuromoji:kuromoji-ipadic:0.9.0'
-    implementation 'com.google.cloud:google-cloud-firestore:3.9.3'
+    implementation 'com.google.cloud:google-cloud-firestore:3.13.0'
     implementation 'com.google.firebase:firebase-admin:9.1.1'
-    implementation 'com.vladsch.flexmark:flexmark-all:0.64.0'
+    implementation 'com.vladsch.flexmark:flexmark-all:0.64.8'
 
     testImplementation "io.ktor:ktor-server-tests:$ktor_version"
-    testImplementation "org.json:json:20230227"
+    testImplementation "org.json:json:20230618"
     ktlint('com.pinterest:ktlint:0.49.1') {
         attributes {
             attribute(Bundling.BUNDLING_ATTRIBUTE, getObjects().named(Bundling, Bundling.EXTERNAL))
