@@ -15,8 +15,7 @@ import io.ktor.server.application.install
 import io.ktor.server.application.log
 import io.ktor.server.auth.Authentication
 import io.ktor.server.auth.authenticate
-import io.ktor.server.http.content.resources
-import io.ktor.server.http.content.static
+import io.ktor.server.http.content.staticResources
 import io.ktor.server.netty.EngineMain
 import io.ktor.server.plugins.callloging.CallLogging
 import io.ktor.server.plugins.contentnegotiation.ContentNegotiation
@@ -73,9 +72,7 @@ fun Application.module() {
     }
 
     install(Routing) {
-        static {
-            resources("/web")
-        }
+        staticResources("/", "/web")
     }
 
     val credential = environment.config.property("firestore.admin_sdk").getString().let {
