@@ -5,7 +5,7 @@ buildscript {
     }
     
     dependencies {
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.0"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.10"
         classpath "gradle.plugin.com.github.johnrengelman:shadow:8.0.0"
     }
 }
@@ -43,16 +43,16 @@ shadowJar {
 }
 
 dependencies {
-    def ktor_version = captureVersion(implementation('io.ktor:ktor-server-netty:2.3.2'))
+    def ktor_version = captureVersion(implementation('io.ktor:ktor-server-netty:2.3.5'))
     implementation "io.ktor:ktor-server-locations:$ktor_version"
     implementation "io.ktor:ktor-server-auth:$ktor_version"
     implementation "io.ktor:ktor-server-content-negotiation:$ktor_version"
     implementation "io.ktor:ktor-serialization-jackson:$ktor_version"
     implementation "io.ktor:ktor-server-status-pages:$ktor_version"
     implementation "io.ktor:ktor-server-call-logging:$ktor_version"
-    implementation 'ch.qos.logback:logback-classic:1.4.8'
+    implementation 'ch.qos.logback:logback-classic:1.4.11'
     implementation 'com.atilika.kuromoji:kuromoji-ipadic:0.9.0'
-    implementation 'com.google.cloud:google-cloud-firestore:3.13.2'
+    implementation 'com.google.cloud:google-cloud-firestore:3.15.0'
     implementation 'com.google.firebase:firebase-admin:9.2.0'
     implementation 'com.vladsch.flexmark:flexmark-all:0.64.8'
 
