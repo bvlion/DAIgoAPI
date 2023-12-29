@@ -43,7 +43,7 @@ shadowJar {
 }
 
 dependencies {
-    def ktor_version = captureVersion(implementation('io.ktor:ktor-server-netty:2.3.6'))
+    def ktor_version = captureVersion(implementation('io.ktor:ktor-server-netty:2.3.7'))
     implementation "io.ktor:ktor-server-locations:$ktor_version"
     implementation "io.ktor:ktor-server-auth:$ktor_version"
     implementation "io.ktor:ktor-server-content-negotiation:$ktor_version"
