@@ -50,7 +50,7 @@ dependencies {
     implementation "io.ktor:ktor-serialization-jackson:$ktor_version"
     implementation "io.ktor:ktor-server-status-pages:$ktor_version"
     implementation "io.ktor:ktor-server-call-logging:$ktor_version"
-    implementation 'ch.qos.logback:logback-classic:1.5.4'
+    implementation 'ch.qos.logback:logback-classic:1.5.5'
     implementation 'com.atilika.kuromoji:kuromoji-ipadic:0.9.0'
     implementation 'com.google.cloud:google-cloud-firestore:3.20.0'
     implementation 'com.google.firebase:firebase-admin:9.2.0'
