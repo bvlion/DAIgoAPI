@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">7.617s</div>
+<div class="counter">7.234s</div>
 <p>duration</p>
 </div>
 </td>
@@ -82,42 +82,42 @@
 </thead>
 <tr>
 <td class="success">appRules</td>
-<td class="success">0.085s</td>
+<td class="success">0.059s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">getDaigo</td>
-<td class="success">0.218s</td>
+<td class="success">0.207s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">getSamples</td>
-<td class="success">2.258s</td>
+<td class="success">2.011s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">health</td>
-<td class="success">0.149s</td>
+<td class="success">0.137s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">privacyPolicy</td>
-<td class="success">0.048s</td>
+<td class="success">0.047s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">termsOfUse</td>
-<td class="success">0.235s</td>
+<td class="success">0.196s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">updateSamples</td>
-<td class="success">0.113s</td>
+<td class="success">0.092s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">upsertDaigo</td>
-<td class="success">4.511s</td>
+<td class="success">4.485s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -125,47 +125,47 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>09:28:56,145 |-INFO in ch.qos.logback.classic.LoggerContext[default] - This is logback-classic version 1.5.4
-09:28:56,146 |-INFO in ch.qos.logback.classic.util.ContextInitializer@49ff7d8c - No custom configurators were discovered as a service.
-09:28:56,146 |-INFO in ch.qos.logback.classic.util.ContextInitializer@49ff7d8c - Trying to configure with ch.qos.logback.classic.joran.SerializedModelConfigurator
-09:28:56,147 |-INFO in ch.qos.logback.classic.util.ContextInitializer@49ff7d8c - Constructed configurator of type class ch.qos.logback.classic.joran.SerializedModelConfigurator
-09:28:56,153 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.scmo]
-09:28:56,153 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.scmo]
-09:28:56,163 |-INFO in ch.qos.logback.classic.util.ContextInitializer@49ff7d8c - ch.qos.logback.classic.joran.SerializedModelConfigurator.configure() call lasted 7 milliseconds. ExecutionStatus=INVOKE_NEXT_IF_ANY
-09:28:56,163 |-INFO in ch.qos.logback.classic.util.ContextInitializer@49ff7d8c - Trying to configure with ch.qos.logback.classic.util.DefaultJoranConfigurator
-09:28:56,164 |-INFO in ch.qos.logback.classic.util.ContextInitializer@49ff7d8c - Constructed configurator of type class ch.qos.logback.classic.util.DefaultJoranConfigurator
-09:28:56,165 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
-09:28:56,168 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [file:/home/runner/work/DAIgoAPI/DAIgoAPI/build/resources/main/logback.xml]
-09:28:56,263 |-ERROR in ch.qos.logback.core.model.processor.PropertyModelHandler - Could not find properties file [./application.properties].
-09:28:56,265 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [STDOUT]
-09:28:56,265 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
-09:28:56,271 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
-09:28:56,289 |-INFO in ch.qos.logback.classic.pattern.DateConverter@29526c05 - Setting zoneId to &quot;Asia/Tokyo&quot;
-09:28:56,292 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [FILE]
-09:28:56,292 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
-09:28:56,299 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@49222910 - No compression will be used
-09:28:56,301 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@49222910 - Will use the pattern LOG_OUT_DIR_IS_UNDEFINED/log/dai-go-api.%d{yyyy-MM-dd}.log for the active file
-09:28:56,304 |-INFO in c.q.l.core.rolling.DefaultTimeBasedFileNamingAndTriggeringPolicy - The date pattern is 'yyyy-MM-dd' from file name pattern 'LOG_OUT_DIR_IS_UNDEFINED/log/dai-go-api.%d{yyyy-MM-dd}.log'.
-09:28:56,304 |-INFO in c.q.l.core.rolling.DefaultTimeBasedFileNamingAndTriggeringPolicy - Roll-over at midnight.
-09:28:56,305 |-INFO in c.q.l.core.rolling.DefaultTimeBasedFileNamingAndTriggeringPolicy - Setting initial period to 2024-05-26T09:28:56.305Z
-09:28:56,306 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
-09:28:56,306 |-INFO in ch.qos.logback.classic.pattern.DateConverter@77102b91 - Setting zoneId to &quot;Asia/Tokyo&quot;
-09:28:56,311 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE] - Active log file name: LOG_OUT_DIR_IS_UNDEFINED/log/dai-go-api.log
-09:28:56,311 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE] - File property is set to [LOG_OUT_DIR_IS_UNDEFINED/log/dai-go-api.log]
-09:28:56,313 |-INFO in ch.qos.logback.classic.model.processor.RootLoggerModelHandler - Setting level of ROOT logger to TRACE
-09:28:56,313 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [STDOUT] to Logger[ROOT]
-09:28:56,313 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [FILE] to Logger[ROOT]
-09:28:56,314 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [io.netty] to INFO
-09:28:56,314 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [io.grpc] to INFO
-09:28:56,314 |-INFO in ch.qos.logback.core.model.processor.DefaultProcessor@45312be2 - End of configuration.
-09:28:56,315 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@7fb95505 - Registering current configuration as safe fallback point
-09:28:56,315 |-INFO in ch.qos.logback.classic.util.ContextInitializer@49ff7d8c - ch.qos.logback.classic.util.DefaultJoranConfigurator.configure() call lasted 151 milliseconds. ExecutionStatus=DO_NOT_INVOKE_NEXT_IF_ANY
+<pre>09:29:37,356 |-INFO in ch.qos.logback.classic.LoggerContext[default] - This is logback-classic version 1.5.4
+09:29:37,357 |-INFO in ch.qos.logback.classic.util.ContextInitializer@7f0d96f2 - No custom configurators were discovered as a service.
+09:29:37,357 |-INFO in ch.qos.logback.classic.util.ContextInitializer@7f0d96f2 - Trying to configure with ch.qos.logback.classic.joran.SerializedModelConfigurator
+09:29:37,358 |-INFO in ch.qos.logback.classic.util.ContextInitializer@7f0d96f2 - Constructed configurator of type class ch.qos.logback.classic.joran.SerializedModelConfigurator
+09:29:37,364 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.scmo]
+09:29:37,364 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.scmo]
+09:29:37,373 |-INFO in ch.qos.logback.classic.util.ContextInitializer@7f0d96f2 - ch.qos.logback.classic.joran.SerializedModelConfigurator.configure() call lasted 6 milliseconds. ExecutionStatus=INVOKE_NEXT_IF_ANY
+09:29:37,373 |-INFO in ch.qos.logback.classic.util.ContextInitializer@7f0d96f2 - Trying to configure with ch.qos.logback.classic.util.DefaultJoranConfigurator
+09:29:37,374 |-INFO in ch.qos.logback.classic.util.ContextInitializer@7f0d96f2 - Constructed configurator of type class ch.qos.logback.classic.util.DefaultJoranConfigurator
+09:29:37,374 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
+09:29:37,377 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [file:/home/runner/work/DAIgoAPI/DAIgoAPI/build/resources/main/logback.xml]
+09:29:37,465 |-ERROR in ch.qos.logback.core.model.processor.PropertyModelHandler - Could not find properties file [./application.properties].
+09:29:37,466 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [STDOUT]
+09:29:37,466 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+09:29:37,472 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+09:29:37,492 |-INFO in ch.qos.logback.classic.pattern.DateConverter@545b995e - Setting zoneId to &quot;Asia/Tokyo&quot;
+09:29:37,495 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [FILE]
+09:29:37,495 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
+09:29:37,503 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@1990385139 - No compression will be used
+09:29:37,504 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@1990385139 - Will use the pattern LOG_OUT_DIR_IS_UNDEFINED/log/dai-go-api.%d{yyyy-MM-dd}.log for the active file
+09:29:37,508 |-INFO in c.q.l.core.rolling.DefaultTimeBasedFileNamingAndTriggeringPolicy - The date pattern is 'yyyy-MM-dd' from file name pattern 'LOG_OUT_DIR_IS_UNDEFINED/log/dai-go-api.%d{yyyy-MM-dd}.log'.
+09:29:37,508 |-INFO in c.q.l.core.rolling.DefaultTimeBasedFileNamingAndTriggeringPolicy - Roll-over at midnight.
+09:29:37,508 |-INFO in c.q.l.core.rolling.DefaultTimeBasedFileNamingAndTriggeringPolicy - Setting initial period to 2024-05-26T09:29:37.508Z
+09:29:37,509 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+09:29:37,510 |-INFO in ch.qos.logback.classic.pattern.DateConverter@524f3b3a - Setting zoneId to &quot;Asia/Tokyo&quot;
+09:29:37,514 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE] - Active log file name: LOG_OUT_DIR_IS_UNDEFINED/log/dai-go-api.log
+09:29:37,514 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE] - File property is set to [LOG_OUT_DIR_IS_UNDEFINED/log/dai-go-api.log]
+09:29:37,515 |-INFO in ch.qos.logback.classic.model.processor.RootLoggerModelHandler - Setting level of ROOT logger to TRACE
+09:29:37,515 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [STDOUT] to Logger[ROOT]
+09:29:37,516 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [FILE] to Logger[ROOT]
+09:29:37,517 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [io.netty] to INFO
+09:29:37,517 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [io.grpc] to INFO
+09:29:37,517 |-INFO in ch.qos.logback.core.model.processor.DefaultProcessor@41e68d87 - End of configuration.
+09:29:37,517 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@49ff7d8c - Registering current configuration as safe fallback point
+09:29:37,517 |-INFO in ch.qos.logback.classic.util.ContextInitializer@7f0d96f2 - ch.qos.logback.classic.util.DefaultJoranConfigurator.configure() call lasted 143 milliseconds. ExecutionStatus=DO_NOT_INVOKE_NEXT_IF_ANY
 
-2024-05-26 18:28:56.417 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
-2024-05-26 18:28:56.424 [Test worker] INFO  ktor.test - Application started in 0.078 seconds.
-2024-05-26 18:28:56.429 [DefaultDispatcher-worker-1 @coroutine#1] INFO  ktor.test - Responding at http://localhost:80
-2024-05-26 18:28:56.430 [DefaultDispatcher-worker-1 @coroutine#1] INFO  ktor.test - Responding at https://localhost:443
-2024-05-26 18:28:58.003 [DefaultDispatcher-worker-1 @request#3] TRACE io.ktor.routing.Routing - Trace for [get-samples]
+2024-05-26 18:29:37.620 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
+2024-05-26 18:29:37.627 [Test worker] INFO  ktor.test - Application started in 0.081 seconds.
+2024-05-26 18:29:37.632 [DefaultDispatcher-worker-1 @coroutine#1] INFO  ktor.test - Responding at http://localhost:80
+2024-05-26 18:29:37.633 [DefaultDispatcher-worker-1 @coroutine#1] INFO  ktor.test - Responding at https://localhost:443
+2024-05-26 18:29:38.976 [DefaultDispatcher-worker-1 @request#3] TRACE io.ktor.routing.Routing - Trace for [get-samples]
 /, segment:0 -&gt; SUCCESS @ /
   /, segment:0 -&gt; SUCCESS @ /
     /{...}, segment:1 -&gt; SUCCESS; Parameters [static-content-path-parameter=[get-samples]] @ /{...}
@@ -186,12 +186,12 @@ Matched routes:
   &quot;&quot; -&gt; &quot;(authenticate &quot;default&quot;)&quot; -&gt; &quot;get-samples&quot; -&gt; &quot;(method:GET)&quot;
 Route resolve result:
   SUCCESS @ /(authenticate &quot;default&quot;)/get-samples/(method:GET)
-2024-05-26 18:28:58.010 [DefaultDispatcher-worker-1 @request#3] INFO  ktor.test - /get-samples
-2024-05-26 18:28:58.013 [DefaultDispatcher-worker-1 @request#3] TRACE io.ktor.server.auth.Authentication - Trying to authenticate /get-samples with null
-2024-05-26 18:28:58.015 [DefaultDispatcher-worker-1 @request#3] TRACE io.ktor.server.auth.Authentication - Authentication failed for /get-samples with provider net.ambitious.daigoapi.BearerAuthenticationProvider@1f1ce995
-2024-05-26 18:28:58.019 [DefaultDispatcher-worker-1 @request#3] TRACE i.k.s.p.c.ContentNegotiation - Skipping because body is already converted.
-2024-05-26 18:28:58.020 [DefaultDispatcher-worker-1 @request#3] TRACE i.k.s.p.statuspages.StatusPages - No handler found for status code 401 Unauthorized for call: /get-samples
-2024-05-26 18:28:58.027 [DefaultDispatcher-worker-1 @request#5] TRACE io.ktor.routing.Routing - Trace for [get-samples]
+2024-05-26 18:29:38.982 [DefaultDispatcher-worker-1 @request#3] INFO  ktor.test - /get-samples
+2024-05-26 18:29:38.984 [DefaultDispatcher-worker-1 @request#3] TRACE io.ktor.server.auth.Authentication - Trying to authenticate /get-samples with null
+2024-05-26 18:29:38.986 [DefaultDispatcher-worker-1 @request#3] TRACE io.ktor.server.auth.Authentication - Authentication failed for /get-samples with provider net.ambitious.daigoapi.BearerAuthenticationProvider@1db1f437
+2024-05-26 18:29:38.990 [DefaultDispatcher-worker-1 @request#3] TRACE i.k.s.p.c.ContentNegotiation - Skipping because body is already converted.
+2024-05-26 18:29:38.991 [DefaultDispatcher-worker-1 @request#3] TRACE i.k.s.p.statuspages.StatusPages - No handler found for status code 401 Unauthorized for call: /get-samples
+2024-05-26 18:29:38.996 [DefaultDispatcher-worker-1 @request#5] TRACE io.ktor.routing.Routing - Trace for [get-samples]
 /, segment:0 -&gt; SUCCESS @ /
   /, segment:0 -&gt; SUCCESS @ /
     /{...}, segment:1 -&gt; SUCCESS; Parameters [static-content-path-parameter=[get-samples]] @ /{...}
@@ -212,12 +212,12 @@ Matched routes:
   &quot;&quot; -&gt; &quot;(authenticate &quot;default&quot;)&quot; -&gt; &quot;get-samples&quot; -&gt; &quot;(method:GET)&quot;
 Route resolve result:
   SUCCESS @ /(authenticate &quot;default&quot;)/get-samples/(method:GET)
-2024-05-26 18:28:58.030 [DefaultDispatcher-worker-1 @request#5] INFO  ktor.test - /get-samples
-2024-05-26 18:28:58.030 [DefaultDispatcher-worker-1 @request#5] TRACE io.ktor.server.auth.Authentication - Trying to authenticate /get-samples with null
-2024-05-26 18:28:58.032 [DefaultDispatcher-worker-1 @request#5] TRACE io.ktor.server.auth.Authentication - Authentication failed for /get-samples with provider net.ambitious.daigoapi.BearerAuthenticationProvider@1f1ce995
-2024-05-26 18:28:58.032 [DefaultDispatcher-worker-1 @request#5] TRACE i.k.s.p.c.ContentNegotiation - Skipping because body is already converted.
-2024-05-26 18:28:58.032 [DefaultDispatcher-worker-1 @request#5] TRACE i.k.s.p.statuspages.StatusPages - No handler found for status code 401 Unauthorized for call: /get-samples
-2024-05-26 18:28:58.035 [DefaultDispatcher-worker-1 @request#7] TRACE io.ktor.routing.Routing - Trace for [get-samples]
+2024-05-26 18:29:39.000 [DefaultDispatcher-worker-1 @request#5] INFO  ktor.test - /get-samples
+2024-05-26 18:29:39.001 [DefaultDispatcher-worker-1 @request#5] TRACE io.ktor.server.auth.Authentication - Trying to authenticate /get-samples with null
+2024-05-26 18:29:39.002 [DefaultDispatcher-worker-1 @request#5] TRACE io.ktor.server.auth.Authentication - Authentication failed for /get-samples with provider net.ambitious.daigoapi.BearerAuthenticationProvider@1db1f437
+2024-05-26 18:29:39.003 [DefaultDispatcher-worker-1 @request#5] TRACE i.k.s.p.c.ContentNegotiation - Skipping because body is already converted.
+2024-05-26 18:29:39.003 [DefaultDispatcher-worker-1 @request#5] TRACE i.k.s.p.statuspages.StatusPages - No handler found for status code 401 Unauthorized for call: /get-samples
+2024-05-26 18:29:39.005 [DefaultDispatcher-worker-1 @request#7] TRACE io.ktor.routing.Routing - Trace for [get-samples]
 /, segment:0 -&gt; SUCCESS @ /
   /, segment:0 -&gt; SUCCESS @ /
     /{...}, segment:1 -&gt; SUCCESS; Parameters [static-content-path-parameter=[get-samples]] @ /{...}
@@ -238,17 +238,17 @@ Matched routes:
   &quot;&quot; -&gt; &quot;(authenticate &quot;default&quot;)&quot; -&gt; &quot;get-samples&quot; -&gt; &quot;(method:GET)&quot;
 Route resolve result:
   SUCCESS @ /(authenticate &quot;default&quot;)/get-samples/(method:GET)
-2024-05-26 18:28:58.037 [DefaultDispatcher-worker-1 @request#7] INFO  ktor.test - /get-samples
-2024-05-26 18:28:58.037 [DefaultDispatcher-worker-1 @request#7] TRACE io.ktor.server.auth.Authentication - Trying to authenticate /get-samples with null
-2024-05-26 18:28:58.038 [DefaultDispatcher-worker-1 @request#7] TRACE io.ktor.server.auth.Authentication - Authentication succeeded for /get-samples with provider net.ambitious.daigoapi.BearerAuthenticationProvider@1f1ce995
-2024-05-26 18:28:58.303 [DefaultDispatcher-worker-1 @request#7] TRACE i.k.s.p.statuspages.StatusPages - No status code found for call: /get-samples
-2024-05-26 18:28:58.347 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@439e3cb4
-2024-05-26 18:28:58.348 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@439e3cb4
-2024-05-26 18:28:58.354 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
-2024-05-26 18:28:58.356 [Test worker] INFO  ktor.test - Application started in 0.003 seconds.
-2024-05-26 18:28:58.356 [DefaultDispatcher-worker-2 @coroutine#12] INFO  ktor.test - Responding at http://localhost:80
-2024-05-26 18:28:58.356 [DefaultDispatcher-worker-2 @coroutine#12] INFO  ktor.test - Responding at https://localhost:443
-2024-05-26 18:28:58.400 [DefaultDispatcher-worker-2 @request#14] TRACE io.ktor.routing.Routing - Trace for [health]
+2024-05-26 18:29:39.006 [DefaultDispatcher-worker-1 @request#7] INFO  ktor.test - /get-samples
+2024-05-26 18:29:39.007 [DefaultDispatcher-worker-1 @request#7] TRACE io.ktor.server.auth.Authentication - Trying to authenticate /get-samples with null
+2024-05-26 18:29:39.008 [DefaultDispatcher-worker-1 @request#7] TRACE io.ktor.server.auth.Authentication - Authentication succeeded for /get-samples with provider net.ambitious.daigoapi.BearerAuthenticationProvider@1db1f437
+2024-05-26 18:29:39.284 [DefaultDispatcher-worker-1 @request#7] TRACE i.k.s.p.statuspages.StatusPages - No status code found for call: /get-samples
+2024-05-26 18:29:39.321 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@3a2d3909
+2024-05-26 18:29:39.322 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@3a2d3909
+2024-05-26 18:29:39.326 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
+2024-05-26 18:29:39.327 [Test worker] INFO  ktor.test - Application started in 0.001 seconds.
+2024-05-26 18:29:39.327 [DefaultDispatcher-worker-2 @coroutine#11] INFO  ktor.test - Responding at http://localhost:80
+2024-05-26 18:29:39.328 [DefaultDispatcher-worker-2 @coroutine#11] INFO  ktor.test - Responding at https://localhost:443
+2024-05-26 18:29:39.357 [DefaultDispatcher-worker-2 @request#13] TRACE io.ktor.routing.Routing - Trace for [health]
 /, segment:0 -&gt; SUCCESS @ /
   /, segment:0 -&gt; SUCCESS @ /
     /{...}, segment:1 -&gt; SUCCESS; Parameters [static-content-path-parameter=[health]] @ /{...}
@@ -269,9 +269,9 @@ Matched routes:
   &quot;&quot; -&gt; &quot;health&quot; -&gt; &quot;(method:GET)&quot;
 Route resolve result:
   SUCCESS @ /health/(method:GET)
-2024-05-26 18:28:58.417 [DefaultDispatcher-worker-2 @request#14] TRACE i.k.s.p.statuspages.StatusPages - Call /health failed with cause java.lang.IllegalStateException: target host is null
-2024-05-26 18:28:58.472 [DefaultDispatcher-worker-2 @request#14] TRACE i.k.s.p.statuspages.StatusPages - Executing (io.ktor.server.application.ApplicationCall, java.lang.IllegalStateException) -&gt; kotlin.Unit for exception java.lang.IllegalStateException: target host is null for call /health
-2024-05-26 18:28:58.474 [DefaultDispatcher-worker-2 @request#14] WARN  ktor.test - StatusPages Error
+2024-05-26 18:29:39.369 [DefaultDispatcher-worker-2 @request#13] TRACE i.k.s.p.statuspages.StatusPages - Call /health failed with cause java.lang.IllegalStateException: target host is null
+2024-05-26 18:29:39.409 [DefaultDispatcher-worker-2 @request#13] TRACE i.k.s.p.statuspages.StatusPages - Executing (io.ktor.server.application.ApplicationCall, kotlin.IllegalStateException /* = java.lang.IllegalStateException */) -&gt; kotlin.Unit for exception java.lang.IllegalStateException: target host is null for call /health
+2024-05-26 18:29:39.409 [DefaultDispatcher-worker-2 @request#13] WARN  ktor.test - StatusPages Error
 java.lang.IllegalStateException: target host is null
 	at net.ambitious.daigoapi.ApplicationKt$module$6$1.invokeSuspend(Application.kt:97)
 	at net.ambitious.daigoapi.ApplicationKt$module$6$1.invoke(Application.kt)
@@ -312,10 +312,10 @@ java.lang.IllegalStateException: target host is null
 	at io.ktor.server.testing.TestApplicationEngine$3$invokeSuspend$$inlined$execute$1.invoke(Pipeline.kt)
 	at io.ktor.server.testing.TestApplicationEngine$3$invokeSuspend$$inlined$execute$1.invoke(Pipeline.kt)
 	at io.ktor.util.debug.ContextUtilsKt.initContextInDebugMode(ContextUtils.kt:17)
-	at io.ktor.server.testing.TestApplicationEngine$3.invokeSuspend(TestApplicationEngine.kt:318)
+	at io.ktor.server.testing.TestApplicationEngine$3.invokeSuspend(TestApplicationEngine.kt:311)
 	at io.ktor.server.testing.TestApplicationEngine$3.invoke(TestApplicationEngine.kt)
 	at io.ktor.server.testing.TestApplicationEngine$3.invoke(TestApplicationEngine.kt)
-	at io.ktor.server.testing.TestApplicationEngine$2.invokeSuspend(TestApplicationEngine.kt:91)
+	at io.ktor.server.testing.TestApplicationEngine$2.invokeSuspend(TestApplicationEngine.kt:90)
 	at io.ktor.server.testing.TestApplicationEngine$2.invoke(TestApplicationEngine.kt)
 	at io.ktor.server.testing.TestApplicationEngine$2.invoke(TestApplicationEngine.kt)
 	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:131)
@@ -326,14 +326,14 @@ java.lang.IllegalStateException: target host is null
 	at io.ktor.server.testing.TestApplicationEngine$handleRequestNonBlocking$2$invokeSuspend$$inlined$execute$1.invoke(Pipeline.kt)
 	at io.ktor.server.testing.TestApplicationEngine$handleRequestNonBlocking$2$invokeSuspend$$inlined$execute$1.invoke(Pipeline.kt)
 	at io.ktor.util.debug.ContextUtilsKt.initContextInDebugMode(ContextUtils.kt:17)
-	at io.ktor.server.testing.TestApplicationEngine$handleRequestNonBlocking$2.invokeSuspend(TestApplicationEngine.kt:317)
+	at io.ktor.server.testing.TestApplicationEngine$handleRequestNonBlocking$2.invokeSuspend(TestApplicationEngine.kt:310)
 	at io.ktor.server.testing.TestApplicationEngine$handleRequestNonBlocking$2.invoke(TestApplicationEngine.kt)
 	at io.ktor.server.testing.TestApplicationEngine$handleRequestNonBlocking$2.invoke(TestApplicationEngine.kt)
 	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndispatchedOrReturn(Undispatched.kt:78)
 	at kotlinx.coroutines.BuildersKt__Builders_commonKt.withContext(Builders.common.kt:167)
 	at kotlinx.coroutines.BuildersKt.withContext(Unknown Source)
-	at io.ktor.server.testing.TestApplicationEngine.handleRequestNonBlocking$ktor_server_test_host(TestApplicationEngine.kt:230)
-	at io.ktor.server.testing.TestApplicationEngine$handleRequest$callJob$1.invokeSuspend(TestApplicationEngine.kt:207)
+	at io.ktor.server.testing.TestApplicationEngine.handleRequestNonBlocking$ktor_server_test_host(TestApplicationEngine.kt:225)
+	at io.ktor.server.testing.TestApplicationEngine$handleRequest$callJob$1.invokeSuspend(TestApplicationEngine.kt:206)
 	at _COROUTINE._BOUNDARY._(CoroutineDebugging.kt:46)
 	at io.ktor.util.pipeline.PipelineKt$execute$2.invokeSuspend(Pipeline.kt:478)
 	at io.ktor.server.routing.Routing.executeResult(Routing.kt:188)
@@ -342,12 +342,12 @@ java.lang.IllegalStateException: target host is null
 	at io.ktor.server.application.hooks.CallFailed$install$1$1.invokeSuspend(CommonHooks.kt:45)
 	at io.ktor.server.application.hooks.CallFailed$install$1.invokeSuspend(CommonHooks.kt:44)
 	at io.ktor.util.pipeline.PipelineKt$execute$2.invokeSuspend(Pipeline.kt:478)
-	at io.ktor.server.testing.TestApplicationEngine$3.invokeSuspend(TestApplicationEngine.kt:318)
-	at io.ktor.server.testing.TestApplicationEngine$2.invokeSuspend(TestApplicationEngine.kt:91)
+	at io.ktor.server.testing.TestApplicationEngine$3.invokeSuspend(TestApplicationEngine.kt:311)
+	at io.ktor.server.testing.TestApplicationEngine$2.invokeSuspend(TestApplicationEngine.kt:90)
 	at io.ktor.util.pipeline.PipelineKt$execute$2.invokeSuspend(Pipeline.kt:478)
-	at io.ktor.server.testing.TestApplicationEngine$handleRequestNonBlocking$2.invokeSuspend(TestApplicationEngine.kt:317)
-	at io.ktor.server.testing.TestApplicationEngine.handleRequestNonBlocking$ktor_server_test_host(TestApplicationEngine.kt:230)
-	at io.ktor.server.testing.TestApplicationEngine$handleRequest$callJob$1.invokeSuspend(TestApplicationEngine.kt:207)
+	at io.ktor.server.testing.TestApplicationEngine$handleRequestNonBlocking$2.invokeSuspend(TestApplicationEngine.kt:310)
+	at io.ktor.server.testing.TestApplicationEngine.handleRequestNonBlocking$ktor_server_test_host(TestApplicationEngine.kt:225)
+	at io.ktor.server.testing.TestApplicationEngine$handleRequest$callJob$1.invokeSuspend(TestApplicationEngine.kt:206)
 Caused by: java.lang.IllegalStateException: target host is null
 	at net.ambitious.daigoapi.ApplicationKt$module$6$1.invokeSuspend(Application.kt:97)
 	at net.ambitious.daigoapi.ApplicationKt$module$6$1.invoke(Application.kt)
@@ -388,10 +388,10 @@ Caused by: java.lang.IllegalStateException: target host is null
 	at io.ktor.server.testing.TestApplicationEngine$3$invokeSuspend$$inlined$execute$1.invoke(Pipeline.kt)
 	at io.ktor.server.testing.TestApplicationEngine$3$invokeSuspend$$inlined$execute$1.invoke(Pipeline.kt)
 	at io.ktor.util.debug.ContextUtilsKt.initContextInDebugMode(ContextUtils.kt:17)
-	at io.ktor.server.testing.TestApplicationEngine$3.invokeSuspend(TestApplicationEngine.kt:318)
+	at io.ktor.server.testing.TestApplicationEngine$3.invokeSuspend(TestApplicationEngine.kt:311)
 	at io.ktor.server.testing.TestApplicationEngine$3.invoke(TestApplicationEngine.kt)
 	at io.ktor.server.testing.TestApplicationEngine$3.invoke(TestApplicationEngine.kt)
-	at io.ktor.server.testing.TestApplicationEngine$2.invokeSuspend(TestApplicationEngine.kt:91)
+	at io.ktor.server.testing.TestApplicationEngine$2.invokeSuspend(TestApplicationEngine.kt:90)
 	at io.ktor.server.testing.TestApplicationEngine$2.invoke(TestApplicationEngine.kt)
 	at io.ktor.server.testing.TestApplicationEngine$2.invoke(TestApplicationEngine.kt)
 	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:131)
@@ -402,14 +402,14 @@ Caused by: java.lang.IllegalStateException: target host is null
 	at io.ktor.server.testing.TestApplicationEngine$handleRequestNonBlocking$2$invokeSuspend$$inlined$execute$1.invoke(Pipeline.kt)
 	at io.ktor.server.testing.TestApplicationEngine$handleRequestNonBlocking$2$invokeSuspend$$inlined$execute$1.invoke(Pipeline.kt)
 	at io.ktor.util.debug.ContextUtilsKt.initContextInDebugMode(ContextUtils.kt:17)
-	at io.ktor.server.testing.TestApplicationEngine$handleRequestNonBlocking$2.invokeSuspend(TestApplicationEngine.kt:317)
+	at io.ktor.server.testing.TestApplicationEngine$handleRequestNonBlocking$2.invokeSuspend(TestApplicationEngine.kt:310)
 	at io.ktor.server.testing.TestApplicationEngine$handleRequestNonBlocking$2.invoke(TestApplicationEngine.kt)
 	at io.ktor.server.testing.TestApplicationEngine$handleRequestNonBlocking$2.invoke(TestApplicationEngine.kt)
 	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndispatchedOrReturn(Undispatched.kt:78)
 	at kotlinx.coroutines.BuildersKt__Builders_commonKt.withContext(Builders.common.kt:167)
 	at kotlinx.coroutines.BuildersKt.withContext(Unknown Source)
-	at io.ktor.server.testing.TestApplicationEngine.handleRequestNonBlocking$ktor_server_test_host(TestApplicationEngine.kt:230)
-	at io.ktor.server.testing.TestApplicationEngine$handleRequest$callJob$1.invokeSuspend(TestApplicationEngine.kt:207)
+	at io.ktor.server.testing.TestApplicationEngine.handleRequestNonBlocking$ktor_server_test_host(TestApplicationEngine.kt:225)
+	at io.ktor.server.testing.TestApplicationEngine$handleRequest$callJob$1.invokeSuspend(TestApplicationEngine.kt:206)
 	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
 	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:106)
 	at kotlinx.coroutines.internal.LimitedDispatcher$Worker.run(LimitedDispatcher.kt:115)
@@ -418,8 +418,8 @@ Caused by: java.lang.IllegalStateException: target host is null
 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:793)
 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:697)
 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:684)
-2024-05-26 18:28:58.491 [DefaultDispatcher-worker-2 @request#14] TRACE i.k.s.p.c.ContentNegotiation - Skipping response body transformation from HttpStatusCode to OutgoingContent for the GET /health request because the HttpStatusCode type is ignored. See [ContentNegotiationConfig::ignoreType].
-2024-05-26 18:28:58.496 [DefaultDispatcher-worker-2 @request#16] TRACE io.ktor.routing.Routing - Trace for [health]
+2024-05-26 18:29:39.451 [DefaultDispatcher-worker-2 @request#13] TRACE i.k.s.p.c.ContentNegotiation - Skipping response body transformation from HttpStatusCode to OutgoingContent for the GET /health request because the HttpStatusCode type is ignored. See [ContentNegotiationConfig::ignoreType].
+2024-05-26 18:29:39.454 [DefaultDispatcher-worker-2 @request#15] TRACE io.ktor.routing.Routing - Trace for [health]
 /, segment:0 -&gt; SUCCESS @ /
   /, segment:0 -&gt; SUCCESS @ /
     /{...}, segment:1 -&gt; SUCCESS; Parameters [static-content-path-parameter=[health]] @ /{...}
@@ -440,14 +440,14 @@ Matched routes:
   &quot;&quot; -&gt; &quot;health&quot; -&gt; &quot;(method:GET)&quot;
 Route resolve result:
   SUCCESS @ /health/(method:GET)
-2024-05-26 18:28:58.497 [DefaultDispatcher-worker-2 @request#16] TRACE i.k.s.p.statuspages.StatusPages - No status code found for call: /health
-2024-05-26 18:28:58.500 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@5a0bef24
-2024-05-26 18:28:58.500 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@5a0bef24
-2024-05-26 18:28:58.502 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
-2024-05-26 18:28:58.502 [Test worker] INFO  ktor.test - Application started in 0.0 seconds.
-2024-05-26 18:28:58.506 [DefaultDispatcher-worker-2 @coroutine#21] INFO  ktor.test - Responding at http://localhost:80
-2024-05-26 18:28:58.507 [DefaultDispatcher-worker-2 @coroutine#21] INFO  ktor.test - Responding at https://localhost:443
-2024-05-26 18:28:58.554 [DefaultDispatcher-worker-2 @request#23] TRACE io.ktor.routing.Routing - Trace for [terms_of_use]
+2024-05-26 18:29:39.459 [DefaultDispatcher-worker-2 @request#15] TRACE i.k.s.p.statuspages.StatusPages - No status code found for call: /health
+2024-05-26 18:29:39.461 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@11eed657
+2024-05-26 18:29:39.462 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@11eed657
+2024-05-26 18:29:39.463 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
+2024-05-26 18:29:39.464 [Test worker] INFO  ktor.test - Application started in 0.001 seconds.
+2024-05-26 18:29:39.465 [DefaultDispatcher-worker-2 @coroutine#19] INFO  ktor.test - Responding at http://localhost:80
+2024-05-26 18:29:39.466 [DefaultDispatcher-worker-2 @coroutine#19] INFO  ktor.test - Responding at https://localhost:443
+2024-05-26 18:29:39.498 [DefaultDispatcher-worker-2 @request#21] TRACE io.ktor.routing.Routing - Trace for [terms_of_use]
 /, segment:0 -&gt; SUCCESS @ /
   /, segment:0 -&gt; SUCCESS @ /
     /{...}, segment:1 -&gt; SUCCESS; Parameters [static-content-path-parameter=[terms_of_use]] @ /{...}
@@ -468,9 +468,9 @@ Matched routes:
   &quot;&quot; -&gt; &quot;terms_of_use&quot; -&gt; &quot;(method:GET)&quot;
 Route resolve result:
   SUCCESS @ /terms_of_use/(method:GET)
-2024-05-26 18:28:58.555 [DefaultDispatcher-worker-2 @request#23] INFO  ktor.test - /terms_of_use
-2024-05-26 18:28:58.715 [DefaultDispatcher-worker-2 @request#23] TRACE i.k.s.p.statuspages.StatusPages - No status code found for call: /terms_of_use
-2024-05-26 18:28:58.719 [DefaultDispatcher-worker-3 @request#28] TRACE io.ktor.routing.Routing - Trace for [view, terms_of_use]
+2024-05-26 18:29:39.499 [DefaultDispatcher-worker-2 @request#21] INFO  ktor.test - /terms_of_use
+2024-05-26 18:29:39.644 [DefaultDispatcher-worker-2 @request#21] TRACE i.k.s.p.statuspages.StatusPages - No status code found for call: /terms_of_use
+2024-05-26 18:29:39.648 [DefaultDispatcher-worker-2 @request#25] TRACE io.ktor.routing.Routing - Trace for [view, terms_of_use]
 /, segment:0 -&gt; SUCCESS @ /
   /, segment:0 -&gt; SUCCESS @ /
     /{...}, segment:2 -&gt; SUCCESS; Parameters [static-content-path-parameter=[view, terms_of_use]] @ /{...}
@@ -493,16 +493,16 @@ Matched routes:
   &quot;&quot; -&gt; &quot;view&quot; -&gt; &quot;terms_of_use&quot; -&gt; &quot;(method:GET)&quot;
 Route resolve result:
   SUCCESS @ /view/terms_of_use/(method:GET)
-2024-05-26 18:28:58.722 [DefaultDispatcher-worker-3 @request#28] INFO  ktor.test - /view/terms_of_use
-2024-05-26 18:28:58.728 [DefaultDispatcher-worker-3 @request#28] TRACE i.k.s.p.c.ContentNegotiation - Skipping because body is already converted.
-2024-05-26 18:28:58.729 [DefaultDispatcher-worker-3 @request#28] TRACE i.k.s.p.statuspages.StatusPages - No status code found for call: /view/terms_of_use
-2024-05-26 18:28:58.733 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@15efda6c
-2024-05-26 18:28:58.734 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@15efda6c
-2024-05-26 18:28:58.735 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
-2024-05-26 18:28:58.736 [Test worker] INFO  ktor.test - Application started in 0.001 seconds.
-2024-05-26 18:28:58.740 [DefaultDispatcher-worker-3 @coroutine#33] INFO  ktor.test - Responding at http://localhost:80
-2024-05-26 18:28:58.740 [DefaultDispatcher-worker-3 @coroutine#33] INFO  ktor.test - Responding at https://localhost:443
-2024-05-26 18:28:58.783 [DefaultDispatcher-worker-3 @request#35] TRACE io.ktor.routing.Routing - Trace for [upsert-dai-go]
+2024-05-26 18:29:39.650 [DefaultDispatcher-worker-2 @request#25] INFO  ktor.test - /view/terms_of_use
+2024-05-26 18:29:39.655 [DefaultDispatcher-worker-2 @request#25] TRACE i.k.s.p.c.ContentNegotiation - Skipping because body is already converted.
+2024-05-26 18:29:39.655 [DefaultDispatcher-worker-2 @request#25] TRACE i.k.s.p.statuspages.StatusPages - No status code found for call: /view/terms_of_use
+2024-05-26 18:29:39.658 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@61bcbcce
+2024-05-26 18:29:39.658 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@61bcbcce
+2024-05-26 18:29:39.660 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
+2024-05-26 18:29:39.660 [Test worker] INFO  ktor.test - Application started in 0.001 seconds.
+2024-05-26 18:29:39.661 [DefaultDispatcher-worker-2 @coroutine#29] INFO  ktor.test - Responding at http://localhost:80
+2024-05-26 18:29:39.661 [DefaultDispatcher-worker-2 @coroutine#29] INFO  ktor.test - Responding at https://localhost:443
+2024-05-26 18:29:39.696 [DefaultDispatcher-worker-2 @request#31] TRACE io.ktor.routing.Routing - Trace for [upsert-dai-go]
 /, segment:0 -&gt; SUCCESS @ /
   /, segment:0 -&gt; SUCCESS @ /
     /{...}, segment:1 -&gt; SUCCESS; Parameters [static-content-path-parameter=[upsert-dai-go]] @ /{...}
@@ -522,12 +522,12 @@ Matched routes:
   &quot;&quot; -&gt; &quot;(authenticate &quot;default&quot;)&quot; -&gt; &quot;upsert-dai-go&quot; -&gt; &quot;(method:POST)&quot;
 Route resolve result:
   SUCCESS @ /(authenticate &quot;default&quot;)/upsert-dai-go/(method:POST)
-2024-05-26 18:28:58.785 [DefaultDispatcher-worker-3 @request#35] INFO  ktor.test - /upsert-dai-go
-2024-05-26 18:28:58.785 [DefaultDispatcher-worker-3 @request#35] TRACE io.ktor.server.auth.Authentication - Trying to authenticate /upsert-dai-go with null
-2024-05-26 18:28:58.785 [DefaultDispatcher-worker-3 @request#35] TRACE io.ktor.server.auth.Authentication - Authentication failed for /upsert-dai-go with provider net.ambitious.daigoapi.BearerAuthenticationProvider@4ef60fb7
-2024-05-26 18:28:58.786 [DefaultDispatcher-worker-3 @request#35] TRACE i.k.s.p.c.ContentNegotiation - Skipping because body is already converted.
-2024-05-26 18:28:58.786 [DefaultDispatcher-worker-3 @request#35] TRACE i.k.s.p.statuspages.StatusPages - No handler found for status code 401 Unauthorized for call: /upsert-dai-go
-2024-05-26 18:28:58.790 [DefaultDispatcher-worker-3 @request#37] TRACE io.ktor.routing.Routing - Trace for [upsert-dai-go]
+2024-05-26 18:29:39.696 [DefaultDispatcher-worker-2 @request#31] INFO  ktor.test - /upsert-dai-go
+2024-05-26 18:29:39.697 [DefaultDispatcher-worker-2 @request#31] TRACE io.ktor.server.auth.Authentication - Trying to authenticate /upsert-dai-go with null
+2024-05-26 18:29:39.698 [DefaultDispatcher-worker-2 @request#31] TRACE io.ktor.server.auth.Authentication - Authentication failed for /upsert-dai-go with provider net.ambitious.daigoapi.BearerAuthenticationProvider@2ca04b71
+2024-05-26 18:29:39.698 [DefaultDispatcher-worker-2 @request#31] TRACE i.k.s.p.c.ContentNegotiation - Skipping because body is already converted.
+2024-05-26 18:29:39.698 [DefaultDispatcher-worker-2 @request#31] TRACE i.k.s.p.statuspages.StatusPages - No handler found for status code 401 Unauthorized for call: /upsert-dai-go
+2024-05-26 18:29:39.700 [DefaultDispatcher-worker-2 @request#33] TRACE io.ktor.routing.Routing - Trace for [upsert-dai-go]
 /, segment:0 -&gt; SUCCESS @ /
   /, segment:0 -&gt; SUCCESS @ /
     /{...}, segment:1 -&gt; SUCCESS; Parameters [static-content-path-parameter=[upsert-dai-go]] @ /{...}
@@ -547,12 +547,12 @@ Matched routes:
   &quot;&quot; -&gt; &quot;(authenticate &quot;default&quot;)&quot; -&gt; &quot;upsert-dai-go&quot; -&gt; &quot;(method:POST)&quot;
 Route resolve result:
   SUCCESS @ /(authenticate &quot;default&quot;)/upsert-dai-go/(method:POST)
-2024-05-26 18:28:58.794 [DefaultDispatcher-worker-3 @request#37] INFO  ktor.test - /upsert-dai-go
-2024-05-26 18:28:58.795 [DefaultDispatcher-worker-3 @request#37] TRACE io.ktor.server.auth.Authentication - Trying to authenticate /upsert-dai-go with null
-2024-05-26 18:28:58.795 [DefaultDispatcher-worker-3 @request#37] TRACE io.ktor.server.auth.Authentication - Authentication failed for /upsert-dai-go with provider net.ambitious.daigoapi.BearerAuthenticationProvider@4ef60fb7
-2024-05-26 18:28:58.795 [DefaultDispatcher-worker-3 @request#37] TRACE i.k.s.p.c.ContentNegotiation - Skipping because body is already converted.
-2024-05-26 18:28:58.796 [DefaultDispatcher-worker-3 @request#37] TRACE i.k.s.p.statuspages.StatusPages - No handler found for status code 401 Unauthorized for call: /upsert-dai-go
-2024-05-26 18:28:58.798 [DefaultDispatcher-worker-2 @request#39] TRACE io.ktor.routing.Routing - Trace for [upsert-dai-go]
+2024-05-26 18:29:39.700 [DefaultDispatcher-worker-2 @request#33] INFO  ktor.test - /upsert-dai-go
+2024-05-26 18:29:39.701 [DefaultDispatcher-worker-2 @request#33] TRACE io.ktor.server.auth.Authentication - Trying to authenticate /upsert-dai-go with null
+2024-05-26 18:29:39.701 [DefaultDispatcher-worker-2 @request#33] TRACE io.ktor.server.auth.Authentication - Authentication failed for /upsert-dai-go with provider net.ambitious.daigoapi.BearerAuthenticationProvider@2ca04b71
+2024-05-26 18:29:39.701 [DefaultDispatcher-worker-2 @request#33] TRACE i.k.s.p.c.ContentNegotiation - Skipping because body is already converted.
+2024-05-26 18:29:39.701 [DefaultDispatcher-worker-2 @request#33] TRACE i.k.s.p.statuspages.StatusPages - No handler found for status code 401 Unauthorized for call: /upsert-dai-go
+2024-05-26 18:29:39.702 [DefaultDispatcher-worker-2 @request#35] TRACE io.ktor.routing.Routing - Trace for [upsert-dai-go]
 /, segment:0 -&gt; SUCCESS @ /
   /, segment:0 -&gt; SUCCESS @ /
     /{...}, segment:1 -&gt; SUCCESS; Parameters [static-content-path-parameter=[upsert-dai-go]] @ /{...}
@@ -572,15 +572,15 @@ Matched routes:
   &quot;&quot; -&gt; &quot;(authenticate &quot;default&quot;)&quot; -&gt; &quot;upsert-dai-go&quot; -&gt; &quot;(method:POST)&quot;
 Route resolve result:
   SUCCESS @ /(authenticate &quot;default&quot;)/upsert-dai-go/(method:POST)
-2024-05-26 18:28:58.798 [DefaultDispatcher-worker-2 @request#39] INFO  ktor.test - /upsert-dai-go
-2024-05-26 18:28:58.799 [DefaultDispatcher-worker-2 @request#39] TRACE io.ktor.server.auth.Authentication - Trying to authenticate /upsert-dai-go with null
-2024-05-26 18:28:58.799 [DefaultDispatcher-worker-2 @request#39] TRACE io.ktor.server.auth.Authentication - Authentication succeeded for /upsert-dai-go with provider net.ambitious.daigoapi.BearerAuthenticationProvider@4ef60fb7
-2024-05-26 18:28:58.803 [DefaultDispatcher-worker-2 @request#39] TRACE i.k.server.engine.DefaultTransform - No Default Transformations found for class io.ktor.utils.io.ByteBufferChannel and expected type TypeInfo(type=class net.ambitious.daigoapi.SaveRequest, reifiedType=class net.ambitious.daigoapi.SaveRequest, kotlinType=net.ambitious.daigoapi.SaveRequest) for call /upsert-dai-go
-2024-05-26 18:28:58.810 [DefaultDispatcher-worker-2 @request#39] TRACE i.k.s.p.c.ContentNegotiation - Skipping content converter for request type class net.ambitious.daigoapi.SaveRequest because content type */* does not match application/json
-2024-05-26 18:28:58.810 [DefaultDispatcher-worker-2 @request#39] TRACE i.k.s.p.c.ContentNegotiation - No suitable content converter found for request type class net.ambitious.daigoapi.SaveRequest
-2024-05-26 18:28:58.812 [DefaultDispatcher-worker-2 @request#39] TRACE i.k.s.p.c.ContentNegotiation - Skipping response body transformation from HttpStatusCode to OutgoingContent for the POST /upsert-dai-go request because the HttpStatusCode type is ignored. See [ContentNegotiationConfig::ignoreType].
-2024-05-26 18:28:58.812 [DefaultDispatcher-worker-2 @request#39] TRACE i.k.s.p.statuspages.StatusPages - No handler found for status code 415 Unsupported Media Type for call: /upsert-dai-go
-2024-05-26 18:28:58.815 [DefaultDispatcher-worker-2 @request#41] TRACE io.ktor.routing.Routing - Trace for [upsert-dai-go]
+2024-05-26 18:29:39.703 [DefaultDispatcher-worker-2 @request#35] INFO  ktor.test - /upsert-dai-go
+2024-05-26 18:29:39.703 [DefaultDispatcher-worker-2 @request#35] TRACE io.ktor.server.auth.Authentication - Trying to authenticate /upsert-dai-go with null
+2024-05-26 18:29:39.703 [DefaultDispatcher-worker-2 @request#35] TRACE io.ktor.server.auth.Authentication - Authentication succeeded for /upsert-dai-go with provider net.ambitious.daigoapi.BearerAuthenticationProvider@2ca04b71
+2024-05-26 18:29:39.707 [DefaultDispatcher-worker-2 @request#35] TRACE i.k.server.engine.DefaultTransform - No Default Transformations found for class io.ktor.utils.io.ByteBufferChannel and expected type TypeInfo(type=class net.ambitious.daigoapi.SaveRequest, reifiedType=class net.ambitious.daigoapi.SaveRequest, kotlinType=net.ambitious.daigoapi.SaveRequest) for call /upsert-dai-go
+2024-05-26 18:29:39.713 [DefaultDispatcher-worker-2 @request#35] TRACE i.k.s.p.c.ContentNegotiation - Skipping content converter for request type class net.ambitious.daigoapi.SaveRequest because content type */* does not match application/json
+2024-05-26 18:29:39.713 [DefaultDispatcher-worker-2 @request#35] TRACE i.k.s.p.c.ContentNegotiation - No suitable content converter found for request type class net.ambitious.daigoapi.SaveRequest
+2024-05-26 18:29:39.714 [DefaultDispatcher-worker-2 @request#35] TRACE i.k.s.p.c.ContentNegotiation - Skipping response body transformation from HttpStatusCode to OutgoingContent for the POST /upsert-dai-go request because the HttpStatusCode type is ignored. See [ContentNegotiationConfig::ignoreType].
+2024-05-26 18:29:39.715 [DefaultDispatcher-worker-2 @request#35] TRACE i.k.s.p.statuspages.StatusPages - No handler found for status code 415 Unsupported Media Type for call: /upsert-dai-go
+2024-05-26 18:29:39.717 [DefaultDispatcher-worker-4 @request#37] TRACE io.ktor.routing.Routing - Trace for [upsert-dai-go]
 /, segment:0 -&gt; SUCCESS @ /
   /, segment:0 -&gt; SUCCESS @ /
     /{...}, segment:1 -&gt; SUCCESS; Parameters [static-content-path-parameter=[upsert-dai-go]] @ /{...}
@@ -600,12 +600,12 @@ Matched routes:
   &quot;&quot; -&gt; &quot;(authenticate &quot;default&quot;)&quot; -&gt; &quot;upsert-dai-go&quot; -&gt; &quot;(method:POST)&quot;
 Route resolve result:
   SUCCESS @ /(authenticate &quot;default&quot;)/upsert-dai-go/(method:POST)
-2024-05-26 18:28:58.816 [DefaultDispatcher-worker-2 @request#41] INFO  ktor.test - /upsert-dai-go
-2024-05-26 18:28:58.816 [DefaultDispatcher-worker-2 @request#41] TRACE io.ktor.server.auth.Authentication - Trying to authenticate /upsert-dai-go with null
-2024-05-26 18:28:58.817 [DefaultDispatcher-worker-2 @request#41] TRACE io.ktor.server.auth.Authentication - Authentication succeeded for /upsert-dai-go with provider net.ambitious.daigoapi.BearerAuthenticationProvider@4ef60fb7
-2024-05-26 18:28:58.817 [DefaultDispatcher-worker-2 @request#41] TRACE i.k.server.engine.DefaultTransform - No Default Transformations found for class io.ktor.utils.io.ByteBufferChannel and expected type TypeInfo(type=class net.ambitious.daigoapi.SaveRequest, reifiedType=class net.ambitious.daigoapi.SaveRequest, kotlinType=net.ambitious.daigoapi.SaveRequest) for call /upsert-dai-go
-2024-05-26 18:28:58.890 [DefaultDispatcher-worker-2 @request#41] TRACE i.k.s.p.statuspages.StatusPages - No handler found for status code 400 Bad Request for call: /upsert-dai-go
-2024-05-26 18:28:58.894 [DefaultDispatcher-worker-2 @request#46] TRACE io.ktor.routing.Routing - Trace for [upsert-dai-go]
+2024-05-26 18:29:39.718 [DefaultDispatcher-worker-4 @request#37] INFO  ktor.test - /upsert-dai-go
+2024-05-26 18:29:39.718 [DefaultDispatcher-worker-4 @request#37] TRACE io.ktor.server.auth.Authentication - Trying to authenticate /upsert-dai-go with null
+2024-05-26 18:29:39.718 [DefaultDispatcher-worker-4 @request#37] TRACE io.ktor.server.auth.Authentication - Authentication succeeded for /upsert-dai-go with provider net.ambitious.daigoapi.BearerAuthenticationProvider@2ca04b71
+2024-05-26 18:29:39.718 [DefaultDispatcher-worker-4 @request#37] TRACE i.k.server.engine.DefaultTransform - No Default Transformations found for class io.ktor.utils.io.ByteBufferChannel and expected type TypeInfo(type=class net.ambitious.daigoapi.SaveRequest, reifiedType=class net.ambitious.daigoapi.SaveRequest, kotlinType=net.ambitious.daigoapi.SaveRequest) for call /upsert-dai-go
+2024-05-26 18:29:39.789 [DefaultDispatcher-worker-4 @request#37] TRACE i.k.s.p.statuspages.StatusPages - No handler found for status code 400 Bad Request for call: /upsert-dai-go
+2024-05-26 18:29:39.793 [DefaultDispatcher-worker-4 @request#41] TRACE io.ktor.routing.Routing - Trace for [upsert-dai-go]
 /, segment:0 -&gt; SUCCESS @ /
   /, segment:0 -&gt; SUCCESS @ /
     /{...}, segment:1 -&gt; SUCCESS; Parameters [static-content-path-parameter=[upsert-dai-go]] @ /{...}
@@ -625,12 +625,12 @@ Matched routes:
   &quot;&quot; -&gt; &quot;(authenticate &quot;default&quot;)&quot; -&gt; &quot;upsert-dai-go&quot; -&gt; &quot;(method:POST)&quot;
 Route resolve result:
   SUCCESS @ /(authenticate &quot;default&quot;)/upsert-dai-go/(method:POST)
-2024-05-26 18:28:58.895 [DefaultDispatcher-worker-2 @request#46] INFO  ktor.test - /upsert-dai-go
-2024-05-26 18:28:58.896 [DefaultDispatcher-worker-2 @request#46] TRACE io.ktor.server.auth.Authentication - Trying to authenticate /upsert-dai-go with null
-2024-05-26 18:28:58.896 [DefaultDispatcher-worker-2 @request#46] TRACE io.ktor.server.auth.Authentication - Authentication succeeded for /upsert-dai-go with provider net.ambitious.daigoapi.BearerAuthenticationProvider@4ef60fb7
-2024-05-26 18:28:58.897 [DefaultDispatcher-worker-2 @request#46] TRACE i.k.server.engine.DefaultTransform - No Default Transformations found for class io.ktor.utils.io.ByteBufferChannel and expected type TypeInfo(type=class net.ambitious.daigoapi.SaveRequest, reifiedType=class net.ambitious.daigoapi.SaveRequest, kotlinType=net.ambitious.daigoapi.SaveRequest) for call /upsert-dai-go
-2024-05-26 18:28:58.899 [DefaultDispatcher-worker-2 @request#46] TRACE i.k.s.p.statuspages.StatusPages - No handler found for status code 400 Bad Request for call: /upsert-dai-go
-2024-05-26 18:28:58.903 [DefaultDispatcher-worker-2 @request#51] TRACE io.ktor.routing.Routing - Trace for [upsert-dai-go]
+2024-05-26 18:29:39.793 [DefaultDispatcher-worker-4 @request#41] INFO  ktor.test - /upsert-dai-go
+2024-05-26 18:29:39.793 [DefaultDispatcher-worker-4 @request#41] TRACE io.ktor.server.auth.Authentication - Trying to authenticate /upsert-dai-go with null
+2024-05-26 18:29:39.794 [DefaultDispatcher-worker-4 @request#41] TRACE io.ktor.server.auth.Authentication - Authentication succeeded for /upsert-dai-go with provider net.ambitious.daigoapi.BearerAuthenticationProvider@2ca04b71
+2024-05-26 18:29:39.794 [DefaultDispatcher-worker-4 @request#41] TRACE i.k.server.engine.DefaultTransform - No Default Transformations found for class io.ktor.utils.io.ByteBufferChannel and expected type TypeInfo(type=class net.ambitious.daigoapi.SaveRequest, reifiedType=class net.ambitious.daigoapi.SaveRequest, kotlinType=net.ambitious.daigoapi.SaveRequest) for call /upsert-dai-go
+2024-05-26 18:29:39.795 [DefaultDispatcher-worker-4 @request#41] TRACE i.k.s.p.statuspages.StatusPages - No handler found for status code 400 Bad Request for call: /upsert-dai-go
+2024-05-26 18:29:39.798 [DefaultDispatcher-worker-2 @request#45] TRACE io.ktor.routing.Routing - Trace for [upsert-dai-go]
 /, segment:0 -&gt; SUCCESS @ /
   /, segment:0 -&gt; SUCCESS @ /
     /{...}, segment:1 -&gt; SUCCESS; Parameters [static-content-path-parameter=[upsert-dai-go]] @ /{...}
@@ -650,12 +650,12 @@ Matched routes:
   &quot;&quot; -&gt; &quot;(authenticate &quot;default&quot;)&quot; -&gt; &quot;upsert-dai-go&quot; -&gt; &quot;(method:POST)&quot;
 Route resolve result:
   SUCCESS @ /(authenticate &quot;default&quot;)/upsert-dai-go/(method:POST)
-2024-05-26 18:28:58.904 [DefaultDispatcher-worker-2 @request#51] INFO  ktor.test - /upsert-dai-go
-2024-05-26 18:28:58.905 [DefaultDispatcher-worker-2 @request#51] TRACE io.ktor.server.auth.Authentication - Trying to authenticate /upsert-dai-go with null
-2024-05-26 18:28:58.905 [DefaultDispatcher-worker-2 @request#51] TRACE io.ktor.server.auth.Authentication - Authentication succeeded for /upsert-dai-go with provider net.ambitious.daigoapi.BearerAuthenticationProvider@4ef60fb7
-2024-05-26 18:28:58.905 [DefaultDispatcher-worker-2 @request#51] TRACE i.k.server.engine.DefaultTransform - No Default Transformations found for class io.ktor.utils.io.ByteBufferChannel and expected type TypeInfo(type=class net.ambitious.daigoapi.SaveRequest, reifiedType=class net.ambitious.daigoapi.SaveRequest, kotlinType=net.ambitious.daigoapi.SaveRequest) for call /upsert-dai-go
-2024-05-26 18:28:58.906 [DefaultDispatcher-worker-2 @request#51] TRACE i.k.s.p.statuspages.StatusPages - No handler found for status code 400 Bad Request for call: /upsert-dai-go
-2024-05-26 18:28:58.910 [DefaultDispatcher-worker-2 @request#56] TRACE io.ktor.routing.Routing - Trace for [upsert-dai-go]
+2024-05-26 18:29:39.799 [DefaultDispatcher-worker-2 @request#45] INFO  ktor.test - /upsert-dai-go
+2024-05-26 18:29:39.799 [DefaultDispatcher-worker-2 @request#45] TRACE io.ktor.server.auth.Authentication - Trying to authenticate /upsert-dai-go with null
+2024-05-26 18:29:39.799 [DefaultDispatcher-worker-2 @request#45] TRACE io.ktor.server.auth.Authentication - Authentication succeeded for /upsert-dai-go with provider net.ambitious.daigoapi.BearerAuthenticationProvider@2ca04b71
+2024-05-26 18:29:39.799 [DefaultDispatcher-worker-2 @request#45] TRACE i.k.server.engine.DefaultTransform - No Default Transformations found for class io.ktor.utils.io.ByteBufferChannel and expected type TypeInfo(type=class net.ambitious.daigoapi.SaveRequest, reifiedType=class net.ambitious.daigoapi.SaveRequest, kotlinType=net.ambitious.daigoapi.SaveRequest) for call /upsert-dai-go
+2024-05-26 18:29:39.800 [DefaultDispatcher-worker-2 @request#45] TRACE i.k.s.p.statuspages.StatusPages - No handler found for status code 400 Bad Request for call: /upsert-dai-go
+2024-05-26 18:29:39.812 [DefaultDispatcher-worker-1 @request#49] TRACE io.ktor.routing.Routing - Trace for [upsert-dai-go]
 /, segment:0 -&gt; SUCCESS @ /
   /, segment:0 -&gt; SUCCESS @ /
     /{...}, segment:1 -&gt; SUCCESS; Parameters [static-content-path-parameter=[upsert-dai-go]] @ /{...}
@@ -675,12 +675,12 @@ Matched routes:
   &quot;&quot; -&gt; &quot;(authenticate &quot;default&quot;)&quot; -&gt; &quot;upsert-dai-go&quot; -&gt; &quot;(method:POST)&quot;
 Route resolve result:
   SUCCESS @ /(authenticate &quot;default&quot;)/upsert-dai-go/(method:POST)
-2024-05-26 18:28:58.911 [DefaultDispatcher-worker-2 @request#56] INFO  ktor.test - /upsert-dai-go
-2024-05-26 18:28:58.911 [DefaultDispatcher-worker-2 @request#56] TRACE io.ktor.server.auth.Authentication - Trying to authenticate /upsert-dai-go with null
-2024-05-26 18:28:58.911 [DefaultDispatcher-worker-2 @request#56] TRACE io.ktor.server.auth.Authentication - Authentication succeeded for /upsert-dai-go with provider net.ambitious.daigoapi.BearerAuthenticationProvider@4ef60fb7
-2024-05-26 18:28:58.912 [DefaultDispatcher-worker-2 @request#56] TRACE i.k.server.engine.DefaultTransform - No Default Transformations found for class io.ktor.utils.io.ByteBufferChannel and expected type TypeInfo(type=class net.ambitious.daigoapi.SaveRequest, reifiedType=class net.ambitious.daigoapi.SaveRequest, kotlinType=net.ambitious.daigoapi.SaveRequest) for call /upsert-dai-go
-2024-05-26 18:28:58.913 [DefaultDispatcher-worker-2 @request#56] TRACE i.k.s.p.statuspages.StatusPages - No handler found for status code 400 Bad Request for call: /upsert-dai-go
-2024-05-26 18:28:58.917 [DefaultDispatcher-worker-2 @request#61] TRACE io.ktor.routing.Routing - Trace for [get-dai-go]
+2024-05-26 18:29:39.812 [DefaultDispatcher-worker-1 @request#49] INFO  ktor.test - /upsert-dai-go
+2024-05-26 18:29:39.812 [DefaultDispatcher-worker-1 @request#49] TRACE io.ktor.server.auth.Authentication - Trying to authenticate /upsert-dai-go with null
+2024-05-26 18:29:39.812 [DefaultDispatcher-worker-1 @request#49] TRACE io.ktor.server.auth.Authentication - Authentication succeeded for /upsert-dai-go with provider net.ambitious.daigoapi.BearerAuthenticationProvider@2ca04b71
+2024-05-26 18:29:39.813 [DefaultDispatcher-worker-1 @request#49] TRACE i.k.server.engine.DefaultTransform - No Default Transformations found for class io.ktor.utils.io.ByteBufferChannel and expected type TypeInfo(type=class net.ambitious.daigoapi.SaveRequest, reifiedType=class net.ambitious.daigoapi.SaveRequest, kotlinType=net.ambitious.daigoapi.SaveRequest) for call /upsert-dai-go
+2024-05-26 18:29:39.813 [DefaultDispatcher-worker-1 @request#49] TRACE i.k.s.p.statuspages.StatusPages - No handler found for status code 400 Bad Request for call: /upsert-dai-go
+2024-05-26 18:29:39.819 [DefaultDispatcher-worker-4 @request#53] TRACE io.ktor.routing.Routing - Trace for [get-dai-go]
 /, segment:0 -&gt; SUCCESS @ /
   /, segment:0 -&gt; SUCCESS @ /
     /{...}, segment:1 -&gt; SUCCESS; Parameters [static-content-path-parameter=[get-dai-go]] @ /{...}
@@ -701,13 +701,13 @@ Matched routes:
   &quot;&quot; -&gt; &quot;(authenticate &quot;default&quot;)&quot; -&gt; &quot;get-dai-go&quot; -&gt; &quot;(method:GET)&quot;
 Route resolve result:
   SUCCESS @ /(authenticate &quot;default&quot;)/get-dai-go/(method:GET)
-2024-05-26 18:28:58.917 [DefaultDispatcher-worker-2 @request#61] INFO  ktor.test - /get-dai-go?target=大好物
-2024-05-26 18:28:58.918 [DefaultDispatcher-worker-2 @request#61] TRACE io.ktor.server.auth.Authentication - Trying to authenticate /get-dai-go?target=大好物 with null
-2024-05-26 18:28:58.918 [DefaultDispatcher-worker-2 @request#61] TRACE io.ktor.server.auth.Authentication - Authentication succeeded for /get-dai-go?target=大好物 with provider net.ambitious.daigoapi.BearerAuthenticationProvider@4ef60fb7
-2024-05-26 18:28:59.146 [DefaultDispatcher-worker-2 @request#61] INFO  ktor.test - 接頭詞,名詞接続,*,*,*,*,大,ダイ,ダイ
-2024-05-26 18:28:59.147 [DefaultDispatcher-worker-2 @request#61] INFO  ktor.test - 名詞,一般,*,*,*,*,好物,コウブツ,コーブツ
-2024-05-26 18:28:59.147 [DefaultDispatcher-worker-2 @request#61] TRACE i.k.s.p.statuspages.StatusPages - No status code found for call: /get-dai-go?target=大好物
-2024-05-26 18:28:59.151 [DefaultDispatcher-worker-6 @request#66] TRACE io.ktor.routing.Routing - Trace for [upsert-dai-go]
+2024-05-26 18:29:39.820 [DefaultDispatcher-worker-4 @request#53] INFO  ktor.test - /get-dai-go?target=大好物
+2024-05-26 18:29:39.820 [DefaultDispatcher-worker-4 @request#53] TRACE io.ktor.server.auth.Authentication - Trying to authenticate /get-dai-go?target=大好物 with null
+2024-05-26 18:29:39.820 [DefaultDispatcher-worker-4 @request#53] TRACE io.ktor.server.auth.Authentication - Authentication succeeded for /get-dai-go?target=大好物 with provider net.ambitious.daigoapi.BearerAuthenticationProvider@2ca04b71
+2024-05-26 18:29:40.064 [DefaultDispatcher-worker-4 @request#53] INFO  ktor.test - 接頭詞,名詞接続,*,*,*,*,大,ダイ,ダイ
+2024-05-26 18:29:40.064 [DefaultDispatcher-worker-4 @request#53] INFO  ktor.test - 名詞,一般,*,*,*,*,好物,コウブツ,コーブツ
+2024-05-26 18:29:40.065 [DefaultDispatcher-worker-4 @request#53] TRACE i.k.s.p.statuspages.StatusPages - No status code found for call: /get-dai-go?target=大好物
+2024-05-26 18:29:40.067 [DefaultDispatcher-worker-4 @request#57] TRACE io.ktor.routing.Routing - Trace for [upsert-dai-go]
 /, segment:0 -&gt; SUCCESS @ /
   /, segment:0 -&gt; SUCCESS @ /
     /{...}, segment:1 -&gt; SUCCESS; Parameters [static-content-path-parameter=[upsert-dai-go]] @ /{...}
@@ -727,12 +727,12 @@ Matched routes:
   &quot;&quot; -&gt; &quot;(authenticate &quot;default&quot;)&quot; -&gt; &quot;upsert-dai-go&quot; -&gt; &quot;(method:POST)&quot;
 Route resolve result:
   SUCCESS @ /(authenticate &quot;default&quot;)/upsert-dai-go/(method:POST)
-2024-05-26 18:28:59.151 [DefaultDispatcher-worker-6 @request#66] INFO  ktor.test - /upsert-dai-go
-2024-05-26 18:28:59.151 [DefaultDispatcher-worker-6 @request#66] TRACE io.ktor.server.auth.Authentication - Trying to authenticate /upsert-dai-go with null
-2024-05-26 18:28:59.151 [DefaultDispatcher-worker-6 @request#66] TRACE io.ktor.server.auth.Authentication - Authentication succeeded for /upsert-dai-go with provider net.ambitious.daigoapi.BearerAuthenticationProvider@4ef60fb7
-2024-05-26 18:28:59.152 [DefaultDispatcher-worker-6 @request#66] TRACE i.k.server.engine.DefaultTransform - No Default Transformations found for class io.ktor.utils.io.ByteBufferChannel and expected type TypeInfo(type=class net.ambitious.daigoapi.SaveRequest, reifiedType=class net.ambitious.daigoapi.SaveRequest, kotlinType=net.ambitious.daigoapi.SaveRequest) for call /upsert-dai-go
-2024-05-26 18:28:59.226 [DefaultDispatcher-worker-6 @request#66] TRACE i.k.s.p.statuspages.StatusPages - No status code found for call: /upsert-dai-go
-2024-05-26 18:29:01.230 [DefaultDispatcher-worker-3 @request#71] TRACE io.ktor.routing.Routing - Trace for [get-dai-go]
+2024-05-26 18:29:40.068 [DefaultDispatcher-worker-4 @request#57] INFO  ktor.test - /upsert-dai-go
+2024-05-26 18:29:40.068 [DefaultDispatcher-worker-4 @request#57] TRACE io.ktor.server.auth.Authentication - Trying to authenticate /upsert-dai-go with null
+2024-05-26 18:29:40.068 [DefaultDispatcher-worker-4 @request#57] TRACE io.ktor.server.auth.Authentication - Authentication succeeded for /upsert-dai-go with provider net.ambitious.daigoapi.BearerAuthenticationProvider@2ca04b71
+2024-05-26 18:29:40.068 [DefaultDispatcher-worker-4 @request#57] TRACE i.k.server.engine.DefaultTransform - No Default Transformations found for class io.ktor.utils.io.ByteBufferChannel and expected type TypeInfo(type=class net.ambitious.daigoapi.SaveRequest, reifiedType=class net.ambitious.daigoapi.SaveRequest, kotlinType=net.ambitious.daigoapi.SaveRequest) for call /upsert-dai-go
+2024-05-26 18:29:40.123 [DefaultDispatcher-worker-4 @request#57] TRACE i.k.s.p.statuspages.StatusPages - No status code found for call: /upsert-dai-go
+2024-05-26 18:29:42.126 [DefaultDispatcher-worker-6 @request#61] TRACE io.ktor.routing.Routing - Trace for [get-dai-go]
 /, segment:0 -&gt; SUCCESS @ /
   /, segment:0 -&gt; SUCCESS @ /
     /{...}, segment:1 -&gt; SUCCESS; Parameters [static-content-path-parameter=[get-dai-go]] @ /{...}
@@ -753,11 +753,11 @@ Matched routes:
   &quot;&quot; -&gt; &quot;(authenticate &quot;default&quot;)&quot; -&gt; &quot;get-dai-go&quot; -&gt; &quot;(method:GET)&quot;
 Route resolve result:
   SUCCESS @ /(authenticate &quot;default&quot;)/get-dai-go/(method:GET)
-2024-05-26 18:29:01.230 [DefaultDispatcher-worker-3 @request#71] INFO  ktor.test - /get-dai-go?target=大好物
-2024-05-26 18:29:01.230 [DefaultDispatcher-worker-3 @request#71] TRACE io.ktor.server.auth.Authentication - Trying to authenticate /get-dai-go?target=大好物 with null
-2024-05-26 18:29:01.231 [DefaultDispatcher-worker-3 @request#71] TRACE io.ktor.server.auth.Authentication - Authentication succeeded for /get-dai-go?target=大好物 with provider net.ambitious.daigoapi.BearerAuthenticationProvider@4ef60fb7
-2024-05-26 18:29:01.231 [DefaultDispatcher-worker-3 @request#71] TRACE i.k.s.p.statuspages.StatusPages - No status code found for call: /get-dai-go?target=大好物
-2024-05-26 18:29:01.234 [DefaultDispatcher-worker-3 @request#76] TRACE io.ktor.routing.Routing - Trace for [upsert-dai-go]
+2024-05-26 18:29:42.127 [DefaultDispatcher-worker-6 @request#61] INFO  ktor.test - /get-dai-go?target=大好物
+2024-05-26 18:29:42.127 [DefaultDispatcher-worker-6 @request#61] TRACE io.ktor.server.auth.Authentication - Trying to authenticate /get-dai-go?target=大好物 with null
+2024-05-26 18:29:42.127 [DefaultDispatcher-worker-6 @request#61] TRACE io.ktor.server.auth.Authentication - Authentication succeeded for /get-dai-go?target=大好物 with provider net.ambitious.daigoapi.BearerAuthenticationProvider@2ca04b71
+2024-05-26 18:29:42.128 [DefaultDispatcher-worker-6 @request#61] TRACE i.k.s.p.statuspages.StatusPages - No status code found for call: /get-dai-go?target=大好物
+2024-05-26 18:29:42.130 [DefaultDispatcher-worker-1 @request#65] TRACE io.ktor.routing.Routing - Trace for [upsert-dai-go]
 /, segment:0 -&gt; SUCCESS @ /
   /, segment:0 -&gt; SUCCESS @ /
     /{...}, segment:1 -&gt; SUCCESS; Parameters [static-content-path-parameter=[upsert-dai-go]] @ /{...}
@@ -777,12 +777,12 @@ Matched routes:
   &quot;&quot; -&gt; &quot;(authenticate &quot;default&quot;)&quot; -&gt; &quot;upsert-dai-go&quot; -&gt; &quot;(method:POST)&quot;
 Route resolve result:
   SUCCESS @ /(authenticate &quot;default&quot;)/upsert-dai-go/(method:POST)
-2024-05-26 18:29:01.234 [DefaultDispatcher-worker-3 @request#76] INFO  ktor.test - /upsert-dai-go
-2024-05-26 18:29:01.235 [DefaultDispatcher-worker-3 @request#76] TRACE io.ktor.server.auth.Authentication - Trying to authenticate /upsert-dai-go with null
-2024-05-26 18:29:01.235 [DefaultDispatcher-worker-3 @request#76] TRACE io.ktor.server.auth.Authentication - Authentication succeeded for /upsert-dai-go with provider net.ambitious.daigoapi.BearerAuthenticationProvider@4ef60fb7
-2024-05-26 18:29:01.235 [DefaultDispatcher-worker-3 @request#76] TRACE i.k.server.engine.DefaultTransform - No Default Transformations found for class io.ktor.utils.io.ByteBufferChannel and expected type TypeInfo(type=class net.ambitious.daigoapi.SaveRequest, reifiedType=class net.ambitious.daigoapi.SaveRequest, kotlinType=net.ambitious.daigoapi.SaveRequest) for call /upsert-dai-go
-2024-05-26 18:29:01.237 [DefaultDispatcher-worker-3 @request#76] TRACE i.k.s.p.statuspages.StatusPages - No status code found for call: /upsert-dai-go
-2024-05-26 18:29:03.242 [DefaultDispatcher-worker-3 @request#81] TRACE io.ktor.routing.Routing - Trace for [get-dai-go]
+2024-05-26 18:29:42.131 [DefaultDispatcher-worker-1 @request#65] INFO  ktor.test - /upsert-dai-go
+2024-05-26 18:29:42.131 [DefaultDispatcher-worker-1 @request#65] TRACE io.ktor.server.auth.Authentication - Trying to authenticate /upsert-dai-go with null
+2024-05-26 18:29:42.131 [DefaultDispatcher-worker-1 @request#65] TRACE io.ktor.server.auth.Authentication - Authentication succeeded for /upsert-dai-go with provider net.ambitious.daigoapi.BearerAuthenticationProvider@2ca04b71
+2024-05-26 18:29:42.132 [DefaultDispatcher-worker-1 @request#65] TRACE i.k.server.engine.DefaultTransform - No Default Transformations found for class io.ktor.utils.io.ByteBufferChannel and expected type TypeInfo(type=class net.ambitious.daigoapi.SaveRequest, reifiedType=class net.ambitious.daigoapi.SaveRequest, kotlinType=net.ambitious.daigoapi.SaveRequest) for call /upsert-dai-go
+2024-05-26 18:29:42.137 [DefaultDispatcher-worker-1 @request#65] TRACE i.k.s.p.statuspages.StatusPages - No status code found for call: /upsert-dai-go
+2024-05-26 18:29:44.140 [DefaultDispatcher-worker-1 @request#69] TRACE io.ktor.routing.Routing - Trace for [get-dai-go]
 /, segment:0 -&gt; SUCCESS @ /
   /, segment:0 -&gt; SUCCESS @ /
     /{...}, segment:1 -&gt; SUCCESS; Parameters [static-content-path-parameter=[get-dai-go]] @ /{...}
@@ -803,17 +803,17 @@ Matched routes:
   &quot;&quot; -&gt; &quot;(authenticate &quot;default&quot;)&quot; -&gt; &quot;get-dai-go&quot; -&gt; &quot;(method:GET)&quot;
 Route resolve result:
   SUCCESS @ /(authenticate &quot;default&quot;)/get-dai-go/(method:GET)
-2024-05-26 18:29:03.242 [DefaultDispatcher-worker-3 @request#81] INFO  ktor.test - /get-dai-go?target=大好物
-2024-05-26 18:29:03.242 [DefaultDispatcher-worker-3 @request#81] TRACE io.ktor.server.auth.Authentication - Trying to authenticate /get-dai-go?target=大好物 with null
-2024-05-26 18:29:03.243 [DefaultDispatcher-worker-3 @request#81] TRACE io.ktor.server.auth.Authentication - Authentication succeeded for /get-dai-go?target=大好物 with provider net.ambitious.daigoapi.BearerAuthenticationProvider@4ef60fb7
-2024-05-26 18:29:03.243 [DefaultDispatcher-worker-3 @request#81] TRACE i.k.s.p.statuspages.StatusPages - No status code found for call: /get-dai-go?target=大好物
-2024-05-26 18:29:03.245 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@22c75c01
-2024-05-26 18:29:03.245 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@22c75c01
-2024-05-26 18:29:03.247 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
-2024-05-26 18:29:03.247 [Test worker] INFO  ktor.test - Application started in 0.001 seconds.
-2024-05-26 18:29:03.247 [DefaultDispatcher-worker-6 @coroutine#86] INFO  ktor.test - Responding at http://localhost:80
-2024-05-26 18:29:03.247 [DefaultDispatcher-worker-6 @coroutine#86] INFO  ktor.test - Responding at https://localhost:443
-2024-05-26 18:29:03.287 [DefaultDispatcher-worker-6 @request#88] TRACE io.ktor.routing.Routing - Trace for [update-samples]
+2024-05-26 18:29:44.141 [DefaultDispatcher-worker-1 @request#69] INFO  ktor.test - /get-dai-go?target=大好物
+2024-05-26 18:29:44.141 [DefaultDispatcher-worker-1 @request#69] TRACE io.ktor.server.auth.Authentication - Trying to authenticate /get-dai-go?target=大好物 with null
+2024-05-26 18:29:44.141 [DefaultDispatcher-worker-1 @request#69] TRACE io.ktor.server.auth.Authentication - Authentication succeeded for /get-dai-go?target=大好物 with provider net.ambitious.daigoapi.BearerAuthenticationProvider@2ca04b71
+2024-05-26 18:29:44.142 [DefaultDispatcher-worker-1 @request#69] TRACE i.k.s.p.statuspages.StatusPages - No status code found for call: /get-dai-go?target=大好物
+2024-05-26 18:29:44.143 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@49f40c00
+2024-05-26 18:29:44.144 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@49f40c00
+2024-05-26 18:29:44.145 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
+2024-05-26 18:29:44.146 [Test worker] INFO  ktor.test - Application started in 0.001 seconds.
+2024-05-26 18:29:44.146 [DefaultDispatcher-worker-3 @coroutine#73] INFO  ktor.test - Responding at http://localhost:80
+2024-05-26 18:29:44.146 [DefaultDispatcher-worker-3 @coroutine#73] INFO  ktor.test - Responding at https://localhost:443
+2024-05-26 18:29:44.183 [DefaultDispatcher-worker-3 @request#75] TRACE io.ktor.routing.Routing - Trace for [update-samples]
 /, segment:0 -&gt; SUCCESS @ /
   /, segment:0 -&gt; SUCCESS @ /
     /{...}, segment:1 -&gt; SUCCESS; Parameters [static-content-path-parameter=[update-samples]] @ /{...}
@@ -833,12 +833,12 @@ Matched routes:
   &quot;&quot; -&gt; &quot;(authenticate &quot;default&quot;)&quot; -&gt; &quot;update-samples&quot; -&gt; &quot;(method:POST)&quot;
 Route resolve result:
   SUCCESS @ /(authenticate &quot;default&quot;)/update-samples/(method:POST)
-2024-05-26 18:29:03.288 [DefaultDispatcher-worker-6 @request#88] INFO  ktor.test - /update-samples
-2024-05-26 18:29:03.288 [DefaultDispatcher-worker-6 @request#88] TRACE io.ktor.server.auth.Authentication - Trying to authenticate /update-samples with null
-2024-05-26 18:29:03.288 [DefaultDispatcher-worker-6 @request#88] TRACE io.ktor.server.auth.Authentication - Authentication failed for /update-samples with provider net.ambitious.daigoapi.BearerAuthenticationProvider@582e6400
-2024-05-26 18:29:03.288 [DefaultDispatcher-worker-6 @request#88] TRACE i.k.s.p.c.ContentNegotiation - Skipping because body is already converted.
-2024-05-26 18:29:03.288 [DefaultDispatcher-worker-6 @request#88] TRACE i.k.s.p.statuspages.StatusPages - No handler found for status code 401 Unauthorized for call: /update-samples
-2024-05-26 18:29:03.290 [DefaultDispatcher-worker-6 @request#90] TRACE io.ktor.routing.Routing - Trace for [update-samples]
+2024-05-26 18:29:44.184 [DefaultDispatcher-worker-3 @request#75] INFO  ktor.test - /update-samples
+2024-05-26 18:29:44.184 [DefaultDispatcher-worker-3 @request#75] TRACE io.ktor.server.auth.Authentication - Trying to authenticate /update-samples with null
+2024-05-26 18:29:44.184 [DefaultDispatcher-worker-3 @request#75] TRACE io.ktor.server.auth.Authentication - Authentication failed for /update-samples with provider net.ambitious.daigoapi.BearerAuthenticationProvider@239c7111
+2024-05-26 18:29:44.184 [DefaultDispatcher-worker-3 @request#75] TRACE i.k.s.p.c.ContentNegotiation - Skipping because body is already converted.
+2024-05-26 18:29:44.184 [DefaultDispatcher-worker-3 @request#75] TRACE i.k.s.p.statuspages.StatusPages - No handler found for status code 401 Unauthorized for call: /update-samples
+2024-05-26 18:29:44.185 [DefaultDispatcher-worker-3 @request#77] TRACE io.ktor.routing.Routing - Trace for [update-samples]
 /, segment:0 -&gt; SUCCESS @ /
   /, segment:0 -&gt; SUCCESS @ /
     /{...}, segment:1 -&gt; SUCCESS; Parameters [static-content-path-parameter=[update-samples]] @ /{...}
@@ -858,12 +858,12 @@ Matched routes:
   &quot;&quot; -&gt; &quot;(authenticate &quot;default&quot;)&quot; -&gt; &quot;update-samples&quot; -&gt; &quot;(method:POST)&quot;
 Route resolve result:
   SUCCESS @ /(authenticate &quot;default&quot;)/update-samples/(method:POST)
-2024-05-26 18:29:03.290 [DefaultDispatcher-worker-6 @request#90] INFO  ktor.test - /update-samples
-2024-05-26 18:29:03.291 [DefaultDispatcher-worker-6 @request#90] TRACE io.ktor.server.auth.Authentication - Trying to authenticate /update-samples with null
-2024-05-26 18:29:03.291 [DefaultDispatcher-worker-6 @request#90] TRACE io.ktor.server.auth.Authentication - Authentication failed for /update-samples with provider net.ambitious.daigoapi.BearerAuthenticationProvider@582e6400
-2024-05-26 18:29:03.291 [DefaultDispatcher-worker-6 @request#90] TRACE i.k.s.p.c.ContentNegotiation - Skipping because body is already converted.
-2024-05-26 18:29:03.291 [DefaultDispatcher-worker-6 @request#90] TRACE i.k.s.p.statuspages.StatusPages - No handler found for status code 401 Unauthorized for call: /update-samples
-2024-05-26 18:29:03.292 [DefaultDispatcher-worker-6 @request#92] TRACE io.ktor.routing.Routing - Trace for [update-samples]
+2024-05-26 18:29:44.186 [DefaultDispatcher-worker-3 @request#77] INFO  ktor.test - /update-samples
+2024-05-26 18:29:44.186 [DefaultDispatcher-worker-3 @request#77] TRACE io.ktor.server.auth.Authentication - Trying to authenticate /update-samples with null
+2024-05-26 18:29:44.186 [DefaultDispatcher-worker-3 @request#77] TRACE io.ktor.server.auth.Authentication - Authentication failed for /update-samples with provider net.ambitious.daigoapi.BearerAuthenticationProvider@239c7111
+2024-05-26 18:29:44.186 [DefaultDispatcher-worker-3 @request#77] TRACE i.k.s.p.c.ContentNegotiation - Skipping because body is already converted.
+2024-05-26 18:29:44.186 [DefaultDispatcher-worker-3 @request#77] TRACE i.k.s.p.statuspages.StatusPages - No handler found for status code 401 Unauthorized for call: /update-samples
+2024-05-26 18:29:44.187 [DefaultDispatcher-worker-3 @request#79] TRACE io.ktor.routing.Routing - Trace for [update-samples]
 /, segment:0 -&gt; SUCCESS @ /
   /, segment:0 -&gt; SUCCESS @ /
     /{...}, segment:1 -&gt; SUCCESS; Parameters [static-content-path-parameter=[update-samples]] @ /{...}
@@ -883,17 +883,17 @@ Matched routes:
   &quot;&quot; -&gt; &quot;(authenticate &quot;default&quot;)&quot; -&gt; &quot;update-samples&quot; -&gt; &quot;(method:POST)&quot;
 Route resolve result:
   SUCCESS @ /(authenticate &quot;default&quot;)/update-samples/(method:POST)
-2024-05-26 18:29:03.293 [DefaultDispatcher-worker-6 @request#92] INFO  ktor.test - /update-samples
-2024-05-26 18:29:03.293 [DefaultDispatcher-worker-6 @request#92] TRACE io.ktor.server.auth.Authentication - Trying to authenticate /update-samples with null
-2024-05-26 18:29:03.293 [DefaultDispatcher-worker-6 @request#92] TRACE io.ktor.server.auth.Authentication - Authentication succeeded for /update-samples with provider net.ambitious.daigoapi.BearerAuthenticationProvider@582e6400
-2024-05-26 18:29:03.309 [DefaultDispatcher-worker-6 @request#92] TRACE i.k.s.p.statuspages.StatusPages - No status code found for call: /update-samples
-2024-05-26 18:29:03.358 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@6419a0e1
-2024-05-26 18:29:03.359 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@6419a0e1
-2024-05-26 18:29:03.361 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
-2024-05-26 18:29:03.361 [Test worker] INFO  ktor.test - Application started in 0.001 seconds.
-2024-05-26 18:29:03.363 [DefaultDispatcher-worker-6 @coroutine#97] INFO  ktor.test - Responding at http://localhost:80
-2024-05-26 18:29:03.364 [DefaultDispatcher-worker-6 @coroutine#97] INFO  ktor.test - Responding at https://localhost:443
-2024-05-26 18:29:03.395 [DefaultDispatcher-worker-6 @request#99] TRACE io.ktor.routing.Routing - Trace for [app, rules]
+2024-05-26 18:29:44.188 [DefaultDispatcher-worker-3 @request#79] INFO  ktor.test - /update-samples
+2024-05-26 18:29:44.188 [DefaultDispatcher-worker-3 @request#79] TRACE io.ktor.server.auth.Authentication - Trying to authenticate /update-samples with null
+2024-05-26 18:29:44.188 [DefaultDispatcher-worker-3 @request#79] TRACE io.ktor.server.auth.Authentication - Authentication succeeded for /update-samples with provider net.ambitious.daigoapi.BearerAuthenticationProvider@239c7111
+2024-05-26 18:29:44.198 [DefaultDispatcher-worker-3 @request#79] TRACE i.k.s.p.statuspages.StatusPages - No status code found for call: /update-samples
+2024-05-26 18:29:44.235 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@141d3d43
+2024-05-26 18:29:44.236 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@141d3d43
+2024-05-26 18:29:44.237 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
+2024-05-26 18:29:44.238 [Test worker] INFO  ktor.test - Application started in 0.001 seconds.
+2024-05-26 18:29:44.238 [DefaultDispatcher-worker-3 @coroutine#83] INFO  ktor.test - Responding at http://localhost:80
+2024-05-26 18:29:44.238 [DefaultDispatcher-worker-3 @coroutine#83] INFO  ktor.test - Responding at https://localhost:443
+2024-05-26 18:29:44.262 [DefaultDispatcher-worker-3 @request#85] TRACE io.ktor.routing.Routing - Trace for [app, rules]
 /, segment:0 -&gt; SUCCESS @ /
   /, segment:0 -&gt; SUCCESS @ /
     /{...}, segment:2 -&gt; SUCCESS; Parameters [static-content-path-parameter=[app, rules]] @ /{...}
@@ -915,10 +915,10 @@ Matched routes:
   &quot;&quot; -&gt; &quot;app&quot; -&gt; &quot;rules&quot; -&gt; &quot;(method:GET)&quot;
 Route resolve result:
   SUCCESS @ /app/rules/(method:GET)
-2024-05-26 18:29:03.398 [DefaultDispatcher-worker-6 @request#99] INFO  ktor.test - /app/rules
-2024-05-26 18:29:03.399 [DefaultDispatcher-worker-6 @request#99] TRACE i.k.s.p.c.ContentNegotiation - Skipping response body transformation from HttpStatusCode to OutgoingContent for the GET /app/rules request because the HttpStatusCode type is ignored. See [ContentNegotiationConfig::ignoreType].
-2024-05-26 18:29:03.400 [DefaultDispatcher-worker-6 @request#99] TRACE i.k.s.p.statuspages.StatusPages - No handler found for status code 404 Not Found for call: /app/rules
-2024-05-26 18:29:03.401 [DefaultDispatcher-worker-6 @request#101] TRACE io.ktor.routing.Routing - Trace for [app, rules]
+2024-05-26 18:29:44.263 [DefaultDispatcher-worker-3 @request#85] INFO  ktor.test - /app/rules
+2024-05-26 18:29:44.264 [DefaultDispatcher-worker-3 @request#85] TRACE i.k.s.p.c.ContentNegotiation - Skipping response body transformation from HttpStatusCode to OutgoingContent for the GET /app/rules request because the HttpStatusCode type is ignored. See [ContentNegotiationConfig::ignoreType].
+2024-05-26 18:29:44.264 [DefaultDispatcher-worker-3 @request#85] TRACE i.k.s.p.statuspages.StatusPages - No handler found for status code 404 Not Found for call: /app/rules
+2024-05-26 18:29:44.265 [DefaultDispatcher-worker-3 @request#87] TRACE io.ktor.routing.Routing - Trace for [app, rules]
 /, segment:0 -&gt; SUCCESS @ /
   /, segment:0 -&gt; SUCCESS @ /
     /{...}, segment:2 -&gt; SUCCESS; Parameters [static-content-path-parameter=[app, rules]] @ /{...}
@@ -940,10 +940,10 @@ Matched routes:
   &quot;&quot; -&gt; &quot;app&quot; -&gt; &quot;rules&quot; -&gt; &quot;(method:GET)&quot;
 Route resolve result:
   SUCCESS @ /app/rules/(method:GET)
-2024-05-26 18:29:03.404 [DefaultDispatcher-worker-6 @request#101] INFO  ktor.test - /app/rules?isPrivacyPolicy=true
-2024-05-26 18:29:03.405 [DefaultDispatcher-worker-6 @request#101] TRACE i.k.s.p.c.ContentNegotiation - Skipping response body transformation from HttpStatusCode to OutgoingContent for the GET /app/rules?isPrivacyPolicy=true request because the HttpStatusCode type is ignored. See [ContentNegotiationConfig::ignoreType].
-2024-05-26 18:29:03.406 [DefaultDispatcher-worker-6 @request#101] TRACE i.k.s.p.statuspages.StatusPages - No handler found for status code 404 Not Found for call: /app/rules?isPrivacyPolicy=true
-2024-05-26 18:29:03.407 [DefaultDispatcher-worker-6 @request#103] TRACE io.ktor.routing.Routing - Trace for [app, rules]
+2024-05-26 18:29:44.265 [DefaultDispatcher-worker-3 @request#87] INFO  ktor.test - /app/rules?isPrivacyPolicy=true
+2024-05-26 18:29:44.266 [DefaultDispatcher-worker-3 @request#87] TRACE i.k.s.p.c.ContentNegotiation - Skipping response body transformation from HttpStatusCode to OutgoingContent for the GET /app/rules?isPrivacyPolicy=true request because the HttpStatusCode type is ignored. See [ContentNegotiationConfig::ignoreType].
+2024-05-26 18:29:44.266 [DefaultDispatcher-worker-3 @request#87] TRACE i.k.s.p.statuspages.StatusPages - No handler found for status code 404 Not Found for call: /app/rules?isPrivacyPolicy=true
+2024-05-26 18:29:44.267 [DefaultDispatcher-worker-3 @request#89] TRACE io.ktor.routing.Routing - Trace for [app, rules]
 /, segment:0 -&gt; SUCCESS @ /
   /, segment:0 -&gt; SUCCESS @ /
     /{...}, segment:2 -&gt; SUCCESS; Parameters [static-content-path-parameter=[app, rules]] @ /{...}
@@ -965,10 +965,10 @@ Matched routes:
   &quot;&quot; -&gt; &quot;app&quot; -&gt; &quot;rules&quot; -&gt; &quot;(method:GET)&quot;
 Route resolve result:
   SUCCESS @ /app/rules/(method:GET)
-2024-05-26 18:29:03.412 [DefaultDispatcher-worker-6 @request#103] INFO  ktor.test - /app/rules?backColor=#FFFFFF
-2024-05-26 18:29:03.413 [DefaultDispatcher-worker-6 @request#103] TRACE i.k.s.p.c.ContentNegotiation - Skipping response body transformation from HttpStatusCode to OutgoingContent for the GET /app/rules?backColor=%23FFFFFF request because the HttpStatusCode type is ignored. See [ContentNegotiationConfig::ignoreType].
-2024-05-26 18:29:03.414 [DefaultDispatcher-worker-6 @request#103] TRACE i.k.s.p.statuspages.StatusPages - No handler found for status code 404 Not Found for call: /app/rules?backColor=%23FFFFFF
-2024-05-26 18:29:03.416 [DefaultDispatcher-worker-6 @request#105] TRACE io.ktor.routing.Routing - Trace for [app, rules]
+2024-05-26 18:29:44.267 [DefaultDispatcher-worker-3 @request#89] INFO  ktor.test - /app/rules?backColor=#FFFFFF
+2024-05-26 18:29:44.267 [DefaultDispatcher-worker-3 @request#89] TRACE i.k.s.p.c.ContentNegotiation - Skipping response body transformation from HttpStatusCode to OutgoingContent for the GET /app/rules?backColor=%23FFFFFF request because the HttpStatusCode type is ignored. See [ContentNegotiationConfig::ignoreType].
+2024-05-26 18:29:44.268 [DefaultDispatcher-worker-3 @request#89] TRACE i.k.s.p.statuspages.StatusPages - No handler found for status code 404 Not Found for call: /app/rules?backColor=%23FFFFFF
+2024-05-26 18:29:44.269 [DefaultDispatcher-worker-3 @request#91] TRACE io.ktor.routing.Routing - Trace for [app, rules]
 /, segment:0 -&gt; SUCCESS @ /
   /, segment:0 -&gt; SUCCESS @ /
     /{...}, segment:2 -&gt; SUCCESS; Parameters [static-content-path-parameter=[app, rules]] @ /{...}
@@ -990,10 +990,10 @@ Matched routes:
   &quot;&quot; -&gt; &quot;app&quot; -&gt; &quot;rules&quot; -&gt; &quot;(method:GET)&quot;
 Route resolve result:
   SUCCESS @ /app/rules/(method:GET)
-2024-05-26 18:29:03.416 [DefaultDispatcher-worker-6 @request#105] INFO  ktor.test - /app/rules?textColor=#000000
-2024-05-26 18:29:03.417 [DefaultDispatcher-worker-6 @request#105] TRACE i.k.s.p.c.ContentNegotiation - Skipping response body transformation from HttpStatusCode to OutgoingContent for the GET /app/rules?textColor=%23000000 request because the HttpStatusCode type is ignored. See [ContentNegotiationConfig::ignoreType].
-2024-05-26 18:29:03.417 [DefaultDispatcher-worker-6 @request#105] TRACE i.k.s.p.statuspages.StatusPages - No handler found for status code 404 Not Found for call: /app/rules?textColor=%23000000
-2024-05-26 18:29:03.418 [DefaultDispatcher-worker-3 @request#107] TRACE io.ktor.routing.Routing - Trace for [app, rules]
+2024-05-26 18:29:44.270 [DefaultDispatcher-worker-3 @request#91] INFO  ktor.test - /app/rules?textColor=#000000
+2024-05-26 18:29:44.270 [DefaultDispatcher-worker-3 @request#91] TRACE i.k.s.p.c.ContentNegotiation - Skipping response body transformation from HttpStatusCode to OutgoingContent for the GET /app/rules?textColor=%23000000 request because the HttpStatusCode type is ignored. See [ContentNegotiationConfig::ignoreType].
+2024-05-26 18:29:44.270 [DefaultDispatcher-worker-3 @request#91] TRACE i.k.s.p.statuspages.StatusPages - No handler found for status code 404 Not Found for call: /app/rules?textColor=%23000000
+2024-05-26 18:29:44.274 [DefaultDispatcher-worker-3 @request#93] TRACE io.ktor.routing.Routing - Trace for [app, rules]
 /, segment:0 -&gt; SUCCESS @ /
   /, segment:0 -&gt; SUCCESS @ /
     /{...}, segment:2 -&gt; SUCCESS; Parameters [static-content-path-parameter=[app, rules]] @ /{...}
@@ -1015,10 +1015,10 @@ Matched routes:
   &quot;&quot; -&gt; &quot;app&quot; -&gt; &quot;rules&quot; -&gt; &quot;(method:GET)&quot;
 Route resolve result:
   SUCCESS @ /app/rules/(method:GET)
-2024-05-26 18:29:03.418 [DefaultDispatcher-worker-3 @request#107] INFO  ktor.test - /app/rules?backColor=#FFFFFF&amp;textColor=#000000
-2024-05-26 18:29:03.419 [DefaultDispatcher-worker-3 @request#107] TRACE i.k.s.p.c.ContentNegotiation - Skipping response body transformation from HttpStatusCode to OutgoingContent for the GET /app/rules?backColor=%23FFFFFF&amp;textColor=%23000000 request because the HttpStatusCode type is ignored. See [ContentNegotiationConfig::ignoreType].
-2024-05-26 18:29:03.419 [DefaultDispatcher-worker-3 @request#107] TRACE i.k.s.p.statuspages.StatusPages - No handler found for status code 404 Not Found for call: /app/rules?backColor=%23FFFFFF&amp;textColor=%23000000
-2024-05-26 18:29:03.420 [DefaultDispatcher-worker-3 @request#109] TRACE io.ktor.routing.Routing - Trace for [app, rules]
+2024-05-26 18:29:44.276 [DefaultDispatcher-worker-3 @request#93] INFO  ktor.test - /app/rules?backColor=#FFFFFF&amp;textColor=#000000
+2024-05-26 18:29:44.277 [DefaultDispatcher-worker-3 @request#93] TRACE i.k.s.p.c.ContentNegotiation - Skipping response body transformation from HttpStatusCode to OutgoingContent for the GET /app/rules?backColor=%23FFFFFF&amp;textColor=%23000000 request because the HttpStatusCode type is ignored. See [ContentNegotiationConfig::ignoreType].
+2024-05-26 18:29:44.277 [DefaultDispatcher-worker-3 @request#93] TRACE i.k.s.p.statuspages.StatusPages - No handler found for status code 404 Not Found for call: /app/rules?backColor=%23FFFFFF&amp;textColor=%23000000
+2024-05-26 18:29:44.278 [DefaultDispatcher-worker-3 @request#95] TRACE io.ktor.routing.Routing - Trace for [app, rules]
 /, segment:0 -&gt; SUCCESS @ /
   /, segment:0 -&gt; SUCCESS @ /
     /{...}, segment:2 -&gt; SUCCESS; Parameters [static-content-path-parameter=[app, rules]] @ /{...}
@@ -1040,10 +1040,10 @@ Matched routes:
   &quot;&quot; -&gt; &quot;app&quot; -&gt; &quot;rules&quot; -&gt; &quot;(method:GET)&quot;
 Route resolve result:
   SUCCESS @ /app/rules/(method:GET)
-2024-05-26 18:29:03.421 [DefaultDispatcher-worker-3 @request#109] INFO  ktor.test - /app/rules?textColor=#000000&amp;isPrivacyPolicy=true
-2024-05-26 18:29:03.421 [DefaultDispatcher-worker-3 @request#109] TRACE i.k.s.p.c.ContentNegotiation - Skipping response body transformation from HttpStatusCode to OutgoingContent for the GET /app/rules?textColor=%23000000&amp;isPrivacyPolicy=true request because the HttpStatusCode type is ignored. See [ContentNegotiationConfig::ignoreType].
-2024-05-26 18:29:03.421 [DefaultDispatcher-worker-3 @request#109] TRACE i.k.s.p.statuspages.StatusPages - No handler found for status code 404 Not Found for call: /app/rules?textColor=%23000000&amp;isPrivacyPolicy=true
-2024-05-26 18:29:03.422 [DefaultDispatcher-worker-4 @request#111] TRACE io.ktor.routing.Routing - Trace for [app, rules]
+2024-05-26 18:29:44.278 [DefaultDispatcher-worker-3 @request#95] INFO  ktor.test - /app/rules?textColor=#000000&amp;isPrivacyPolicy=true
+2024-05-26 18:29:44.278 [DefaultDispatcher-worker-3 @request#95] TRACE i.k.s.p.c.ContentNegotiation - Skipping response body transformation from HttpStatusCode to OutgoingContent for the GET /app/rules?textColor=%23000000&amp;isPrivacyPolicy=true request because the HttpStatusCode type is ignored. See [ContentNegotiationConfig::ignoreType].
+2024-05-26 18:29:44.278 [DefaultDispatcher-worker-3 @request#95] TRACE i.k.s.p.statuspages.StatusPages - No handler found for status code 404 Not Found for call: /app/rules?textColor=%23000000&amp;isPrivacyPolicy=true
+2024-05-26 18:29:44.279 [DefaultDispatcher-worker-3 @request#97] TRACE io.ktor.routing.Routing - Trace for [app, rules]
 /, segment:0 -&gt; SUCCESS @ /
   /, segment:0 -&gt; SUCCESS @ /
     /{...}, segment:2 -&gt; SUCCESS; Parameters [static-content-path-parameter=[app, rules]] @ /{...}
@@ -1065,10 +1065,10 @@ Matched routes:
   &quot;&quot; -&gt; &quot;app&quot; -&gt; &quot;rules&quot; -&gt; &quot;(method:GET)&quot;
 Route resolve result:
   SUCCESS @ /app/rules/(method:GET)
-2024-05-26 18:29:03.423 [DefaultDispatcher-worker-4 @request#111] INFO  ktor.test - /app/rules?backColor=#FFFFFF&amp;isPrivacyPolicy=true
-2024-05-26 18:29:03.423 [DefaultDispatcher-worker-4 @request#111] TRACE i.k.s.p.c.ContentNegotiation - Skipping response body transformation from HttpStatusCode to OutgoingContent for the GET /app/rules?backColor=%23FFFFFF&amp;isPrivacyPolicy=true request because the HttpStatusCode type is ignored. See [ContentNegotiationConfig::ignoreType].
-2024-05-26 18:29:03.423 [DefaultDispatcher-worker-4 @request#111] TRACE i.k.s.p.statuspages.StatusPages - No handler found for status code 404 Not Found for call: /app/rules?backColor=%23FFFFFF&amp;isPrivacyPolicy=true
-2024-05-26 18:29:03.424 [DefaultDispatcher-worker-4 @request#113] TRACE io.ktor.routing.Routing - Trace for [app, rules]
+2024-05-26 18:29:44.280 [DefaultDispatcher-worker-3 @request#97] INFO  ktor.test - /app/rules?backColor=#FFFFFF&amp;isPrivacyPolicy=true
+2024-05-26 18:29:44.280 [DefaultDispatcher-worker-3 @request#97] TRACE i.k.s.p.c.ContentNegotiation - Skipping response body transformation from HttpStatusCode to OutgoingContent for the GET /app/rules?backColor=%23FFFFFF&amp;isPrivacyPolicy=true request because the HttpStatusCode type is ignored. See [ContentNegotiationConfig::ignoreType].
+2024-05-26 18:29:44.280 [DefaultDispatcher-worker-3 @request#97] TRACE i.k.s.p.statuspages.StatusPages - No handler found for status code 404 Not Found for call: /app/rules?backColor=%23FFFFFF&amp;isPrivacyPolicy=true
+2024-05-26 18:29:44.281 [DefaultDispatcher-worker-3 @request#99] TRACE io.ktor.routing.Routing - Trace for [app, rules]
 /, segment:0 -&gt; SUCCESS @ /
   /, segment:0 -&gt; SUCCESS @ /
     /{...}, segment:2 -&gt; SUCCESS; Parameters [static-content-path-parameter=[app, rules]] @ /{...}
@@ -1090,10 +1090,10 @@ Matched routes:
   &quot;&quot; -&gt; &quot;app&quot; -&gt; &quot;rules&quot; -&gt; &quot;(method:GET)&quot;
 Route resolve result:
   SUCCESS @ /app/rules/(method:GET)
-2024-05-26 18:29:03.424 [DefaultDispatcher-worker-4 @request#113] INFO  ktor.test - /app/rules?backColor=#FFFFFF&amp;textColor=#000000&amp;isPrivacyPolicy=true
-2024-05-26 18:29:03.428 [DefaultDispatcher-worker-4 @request#113] TRACE i.k.s.p.c.ContentNegotiation - Skipping because body is already converted.
-2024-05-26 18:29:03.428 [DefaultDispatcher-worker-4 @request#113] TRACE i.k.s.p.statuspages.StatusPages - No status code found for call: /app/rules?backColor=%23FFFFFF&amp;textColor=%23000000&amp;isPrivacyPolicy=true
-2024-05-26 18:29:03.432 [DefaultDispatcher-worker-4 @request#118] TRACE io.ktor.routing.Routing - Trace for [app, rules]
+2024-05-26 18:29:44.281 [DefaultDispatcher-worker-3 @request#99] INFO  ktor.test - /app/rules?backColor=#FFFFFF&amp;textColor=#000000&amp;isPrivacyPolicy=true
+2024-05-26 18:29:44.285 [DefaultDispatcher-worker-3 @request#99] TRACE i.k.s.p.c.ContentNegotiation - Skipping because body is already converted.
+2024-05-26 18:29:44.285 [DefaultDispatcher-worker-3 @request#99] TRACE i.k.s.p.statuspages.StatusPages - No status code found for call: /app/rules?backColor=%23FFFFFF&amp;textColor=%23000000&amp;isPrivacyPolicy=true
+2024-05-26 18:29:44.287 [DefaultDispatcher-worker-3 @request#103] TRACE io.ktor.routing.Routing - Trace for [app, rules]
 /, segment:0 -&gt; SUCCESS @ /
   /, segment:0 -&gt; SUCCESS @ /
     /{...}, segment:2 -&gt; SUCCESS; Parameters [static-content-path-parameter=[app, rules]] @ /{...}
@@ -1115,16 +1115,16 @@ Matched routes:
   &quot;&quot; -&gt; &quot;app&quot; -&gt; &quot;rules&quot; -&gt; &quot;(method:GET)&quot;
 Route resolve result:
   SUCCESS @ /app/rules/(method:GET)
-2024-05-26 18:29:03.435 [DefaultDispatcher-worker-4 @request#118] INFO  ktor.test - /app/rules?backColor=#FFFFFF&amp;textColor=#000000&amp;isPrivacyPolicy=false
-2024-05-26 18:29:03.438 [DefaultDispatcher-worker-4 @request#118] TRACE i.k.s.p.c.ContentNegotiation - Skipping because body is already converted.
-2024-05-26 18:29:03.438 [DefaultDispatcher-worker-4 @request#118] TRACE i.k.s.p.statuspages.StatusPages - No status code found for call: /app/rules?backColor=%23FFFFFF&amp;textColor=%23000000&amp;isPrivacyPolicy=false
-2024-05-26 18:29:03.442 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@575e572f
-2024-05-26 18:29:03.442 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@575e572f
-2024-05-26 18:29:03.445 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
-2024-05-26 18:29:03.446 [Test worker] INFO  ktor.test - Application started in 0.001 seconds.
-2024-05-26 18:29:03.447 [DefaultDispatcher-worker-4 @coroutine#123] INFO  ktor.test - Responding at http://localhost:80
-2024-05-26 18:29:03.447 [DefaultDispatcher-worker-4 @coroutine#123] INFO  ktor.test - Responding at https://localhost:443
-2024-05-26 18:29:03.478 [DefaultDispatcher-worker-4 @request#125] TRACE io.ktor.routing.Routing - Trace for [privacy_policy]
+2024-05-26 18:29:44.287 [DefaultDispatcher-worker-3 @request#103] INFO  ktor.test - /app/rules?backColor=#FFFFFF&amp;textColor=#000000&amp;isPrivacyPolicy=false
+2024-05-26 18:29:44.289 [DefaultDispatcher-worker-3 @request#103] TRACE i.k.s.p.c.ContentNegotiation - Skipping because body is already converted.
+2024-05-26 18:29:44.290 [DefaultDispatcher-worker-3 @request#103] TRACE i.k.s.p.statuspages.StatusPages - No status code found for call: /app/rules?backColor=%23FFFFFF&amp;textColor=%23000000&amp;isPrivacyPolicy=false
+2024-05-26 18:29:44.294 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@42aae04d
+2024-05-26 18:29:44.294 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@42aae04d
+2024-05-26 18:29:44.297 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
+2024-05-26 18:29:44.297 [Test worker] INFO  ktor.test - Application started in 0.001 seconds.
+2024-05-26 18:29:44.297 [DefaultDispatcher-worker-3 @coroutine#107] INFO  ktor.test - Responding at http://localhost:80
+2024-05-26 18:29:44.297 [DefaultDispatcher-worker-3 @coroutine#107] INFO  ktor.test - Responding at https://localhost:443
+2024-05-26 18:29:44.331 [DefaultDispatcher-worker-3 @request#109] TRACE io.ktor.routing.Routing - Trace for [privacy_policy]
 /, segment:0 -&gt; SUCCESS @ /
   /, segment:0 -&gt; SUCCESS @ /
     /{...}, segment:1 -&gt; SUCCESS; Parameters [static-content-path-parameter=[privacy_policy]] @ /{...}
@@ -1145,9 +1145,9 @@ Matched routes:
   &quot;&quot; -&gt; &quot;privacy_policy&quot; -&gt; &quot;(method:GET)&quot;
 Route resolve result:
   SUCCESS @ /privacy_policy/(method:GET)
-2024-05-26 18:29:03.478 [DefaultDispatcher-worker-4 @request#125] INFO  ktor.test - /privacy_policy
-2024-05-26 18:29:03.481 [DefaultDispatcher-worker-4 @request#125] TRACE i.k.s.p.statuspages.StatusPages - No status code found for call: /privacy_policy
-2024-05-26 18:29:03.485 [DefaultDispatcher-worker-5 @request#130] TRACE io.ktor.routing.Routing - Trace for [view, privacy_policy]
+2024-05-26 18:29:44.332 [DefaultDispatcher-worker-3 @request#109] INFO  ktor.test - /privacy_policy
+2024-05-26 18:29:44.335 [DefaultDispatcher-worker-3 @request#109] TRACE i.k.s.p.statuspages.StatusPages - No status code found for call: /privacy_policy
+2024-05-26 18:29:44.338 [DefaultDispatcher-worker-3 @request#113] TRACE io.ktor.routing.Routing - Trace for [view, privacy_policy]
 /, segment:0 -&gt; SUCCESS @ /
   /, segment:0 -&gt; SUCCESS @ /
     /{...}, segment:2 -&gt; SUCCESS; Parameters [static-content-path-parameter=[view, privacy_policy]] @ /{...}
@@ -1170,16 +1170,16 @@ Matched routes:
   &quot;&quot; -&gt; &quot;view&quot; -&gt; &quot;privacy_policy&quot; -&gt; &quot;(method:GET)&quot;
 Route resolve result:
   SUCCESS @ /view/privacy_policy/(method:GET)
-2024-05-26 18:29:03.486 [DefaultDispatcher-worker-5 @request#130] INFO  ktor.test - /view/privacy_policy
-2024-05-26 18:29:03.489 [DefaultDispatcher-worker-5 @request#130] TRACE i.k.s.p.c.ContentNegotiation - Skipping because body is already converted.
-2024-05-26 18:29:03.489 [DefaultDispatcher-worker-5 @request#130] TRACE i.k.s.p.statuspages.StatusPages - No status code found for call: /view/privacy_policy
-2024-05-26 18:29:03.491 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@47b11ec7
-2024-05-26 18:29:03.491 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@47b11ec7
-2024-05-26 18:29:03.493 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
-2024-05-26 18:29:03.493 [Test worker] INFO  ktor.test - Application started in 0.0 seconds.
-2024-05-26 18:29:03.494 [DefaultDispatcher-worker-5 @coroutine#135] INFO  ktor.test - Responding at http://localhost:80
-2024-05-26 18:29:03.494 [DefaultDispatcher-worker-5 @coroutine#135] INFO  ktor.test - Responding at https://localhost:443
-2024-05-26 18:29:03.522 [DefaultDispatcher-worker-5 @request#137] TRACE io.ktor.routing.Routing - Trace for [get-dai-go]
+2024-05-26 18:29:44.338 [DefaultDispatcher-worker-3 @request#113] INFO  ktor.test - /view/privacy_policy
+2024-05-26 18:29:44.341 [DefaultDispatcher-worker-3 @request#113] TRACE i.k.s.p.c.ContentNegotiation - Skipping because body is already converted.
+2024-05-26 18:29:44.341 [DefaultDispatcher-worker-3 @request#113] TRACE i.k.s.p.statuspages.StatusPages - No status code found for call: /view/privacy_policy
+2024-05-26 18:29:44.342 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@1e3e1014
+2024-05-26 18:29:44.342 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@1e3e1014
+2024-05-26 18:29:44.344 [Test worker] INFO  ktor.test - Autoreload is disabled because the development mode is off.
+2024-05-26 18:29:44.344 [Test worker] INFO  ktor.test - Application started in 0.001 seconds.
+2024-05-26 18:29:44.344 [DefaultDispatcher-worker-6 @coroutine#117] INFO  ktor.test - Responding at http://localhost:80
+2024-05-26 18:29:44.344 [DefaultDispatcher-worker-6 @coroutine#117] INFO  ktor.test - Responding at https://localhost:443
+2024-05-26 18:29:44.364 [DefaultDispatcher-worker-6 @request#119] TRACE io.ktor.routing.Routing - Trace for [get-dai-go]
 /, segment:0 -&gt; SUCCESS @ /
   /, segment:0 -&gt; SUCCESS @ /
     /{...}, segment:1 -&gt; SUCCESS; Parameters [static-content-path-parameter=[get-dai-go]] @ /{...}
@@ -1200,12 +1200,12 @@ Matched routes:
   &quot;&quot; -&gt; &quot;(authenticate &quot;default&quot;)&quot; -&gt; &quot;get-dai-go&quot; -&gt; &quot;(method:GET)&quot;
 Route resolve result:
   SUCCESS @ /(authenticate &quot;default&quot;)/get-dai-go/(method:GET)
-2024-05-26 18:29:03.523 [DefaultDispatcher-worker-5 @request#137] INFO  ktor.test - /get-dai-go
-2024-05-26 18:29:03.523 [DefaultDispatcher-worker-5 @request#137] TRACE io.ktor.server.auth.Authentication - Trying to authenticate /get-dai-go with null
-2024-05-26 18:29:03.523 [DefaultDispatcher-worker-5 @request#137] TRACE io.ktor.server.auth.Authentication - Authentication failed for /get-dai-go with provider net.ambitious.daigoapi.BearerAuthenticationProvider@163868f7
-2024-05-26 18:29:03.523 [DefaultDispatcher-worker-5 @request#137] TRACE i.k.s.p.c.ContentNegotiation - Skipping because body is already converted.
-2024-05-26 18:29:03.523 [DefaultDispatcher-worker-5 @request#137] TRACE i.k.s.p.statuspages.StatusPages - No handler found for status code 401 Unauthorized for call: /get-dai-go
-2024-05-26 18:29:03.525 [DefaultDispatcher-worker-5 @request#139] TRACE io.ktor.routing.Routing - Trace for [get-dai-go]
+2024-05-26 18:29:44.364 [DefaultDispatcher-worker-6 @request#119] INFO  ktor.test - /get-dai-go
+2024-05-26 18:29:44.364 [DefaultDispatcher-worker-6 @request#119] TRACE io.ktor.server.auth.Authentication - Trying to authenticate /get-dai-go with null
+2024-05-26 18:29:44.365 [DefaultDispatcher-worker-6 @request#119] TRACE io.ktor.server.auth.Authentication - Authentication failed for /get-dai-go with provider net.ambitious.daigoapi.BearerAuthenticationProvider@4ea0c72a
+2024-05-26 18:29:44.365 [DefaultDispatcher-worker-6 @request#119] TRACE i.k.s.p.c.ContentNegotiation - Skipping because body is already converted.
+2024-05-26 18:29:44.365 [DefaultDispatcher-worker-6 @request#119] TRACE i.k.s.p.statuspages.StatusPages - No handler found for status code 401 Unauthorized for call: /get-dai-go
+2024-05-26 18:29:44.366 [DefaultDispatcher-worker-6 @request#121] TRACE io.ktor.routing.Routing - Trace for [get-dai-go]
 /, segment:0 -&gt; SUCCESS @ /
   /, segment:0 -&gt; SUCCESS @ /
     /{...}, segment:1 -&gt; SUCCESS; Parameters [static-content-path-parameter=[get-dai-go]] @ /{...}
@@ -1226,12 +1226,12 @@ Matched routes:
   &quot;&quot; -&gt; &quot;(authenticate &quot;default&quot;)&quot; -&gt; &quot;get-dai-go&quot; -&gt; &quot;(method:GET)&quot;
 Route resolve result:
   SUCCESS @ /(authenticate &quot;default&quot;)/get-dai-go/(method:GET)
-2024-05-26 18:29:03.525 [DefaultDispatcher-worker-5 @request#139] INFO  ktor.test - /get-dai-go
-2024-05-26 18:29:03.525 [DefaultDispatcher-worker-5 @request#139] TRACE io.ktor.server.auth.Authentication - Trying to authenticate /get-dai-go with null
-2024-05-26 18:29:03.525 [DefaultDispatcher-worker-5 @request#139] TRACE io.ktor.server.auth.Authentication - Authentication failed for /get-dai-go with provider net.ambitious.daigoapi.BearerAuthenticationProvider@163868f7
-2024-05-26 18:29:03.526 [DefaultDispatcher-worker-5 @request#139] TRACE i.k.s.p.c.ContentNegotiation - Skipping because body is already converted.
-2024-05-26 18:29:03.526 [DefaultDispatcher-worker-5 @request#139] TRACE i.k.s.p.statuspages.StatusPages - No handler found for status code 401 Unauthorized for call: /get-dai-go
-2024-05-26 18:29:03.527 [DefaultDispatcher-worker-5 @request#141] TRACE io.ktor.routing.Routing - Trace for [get-dai-go]
+2024-05-26 18:29:44.366 [DefaultDispatcher-worker-6 @request#121] INFO  ktor.test - /get-dai-go
+2024-05-26 18:29:44.367 [DefaultDispatcher-worker-6 @request#121] TRACE io.ktor.server.auth.Authentication - Trying to authenticate /get-dai-go with null
+2024-05-26 18:29:44.367 [DefaultDispatcher-worker-6 @request#121] TRACE io.ktor.server.auth.Authentication - Authentication failed for /get-dai-go with provider net.ambitious.daigoapi.BearerAuthenticationProvider@4ea0c72a
+2024-05-26 18:29:44.367 [DefaultDispatcher-worker-6 @request#121] TRACE i.k.s.p.c.ContentNegotiation - Skipping because body is already converted.
+2024-05-26 18:29:44.368 [DefaultDispatcher-worker-6 @request#121] TRACE i.k.s.p.statuspages.StatusPages - No handler found for status code 401 Unauthorized for call: /get-dai-go
+2024-05-26 18:29:44.370 [DefaultDispatcher-worker-6 @request#123] TRACE io.ktor.routing.Routing - Trace for [get-dai-go]
 /, segment:0 -&gt; SUCCESS @ /
   /, segment:0 -&gt; SUCCESS @ /
     /{...}, segment:1 -&gt; SUCCESS; Parameters [static-content-path-parameter=[get-dai-go]] @ /{...}
@@ -1252,12 +1252,12 @@ Matched routes:
   &quot;&quot; -&gt; &quot;(authenticate &quot;default&quot;)&quot; -&gt; &quot;get-dai-go&quot; -&gt; &quot;(method:GET)&quot;
 Route resolve result:
   SUCCESS @ /(authenticate &quot;default&quot;)/get-dai-go/(method:GET)
-2024-05-26 18:29:03.529 [DefaultDispatcher-worker-5 @request#141] INFO  ktor.test - /get-dai-go?target=努力大事
-2024-05-26 18:29:03.529 [DefaultDispatcher-worker-5 @request#141] TRACE io.ktor.server.auth.Authentication - Trying to authenticate /get-dai-go?target=努力大事 with null
-2024-05-26 18:29:03.529 [DefaultDispatcher-worker-5 @request#141] TRACE io.ktor.server.auth.Authentication - Authentication failed for /get-dai-go?target=努力大事 with provider net.ambitious.daigoapi.BearerAuthenticationProvider@163868f7
-2024-05-26 18:29:03.530 [DefaultDispatcher-worker-5 @request#141] TRACE i.k.s.p.c.ContentNegotiation - Skipping because body is already converted.
-2024-05-26 18:29:03.530 [DefaultDispatcher-worker-5 @request#141] TRACE i.k.s.p.statuspages.StatusPages - No handler found for status code 401 Unauthorized for call: /get-dai-go?target=努力大事
-2024-05-26 18:29:03.532 [DefaultDispatcher-worker-5 @request#143] TRACE io.ktor.routing.Routing - Trace for [get-dai-go]
+2024-05-26 18:29:44.372 [DefaultDispatcher-worker-6 @request#123] INFO  ktor.test - /get-dai-go?target=努力大事
+2024-05-26 18:29:44.373 [DefaultDispatcher-worker-6 @request#123] TRACE io.ktor.server.auth.Authentication - Trying to authenticate /get-dai-go?target=努力大事 with null
+2024-05-26 18:29:44.373 [DefaultDispatcher-worker-6 @request#123] TRACE io.ktor.server.auth.Authentication - Authentication failed for /get-dai-go?target=努力大事 with provider net.ambitious.daigoapi.BearerAuthenticationProvider@4ea0c72a
+2024-05-26 18:29:44.373 [DefaultDispatcher-worker-6 @request#123] TRACE i.k.s.p.c.ContentNegotiation - Skipping because body is already converted.
+2024-05-26 18:29:44.373 [DefaultDispatcher-worker-6 @request#123] TRACE i.k.s.p.statuspages.StatusPages - No handler found for status code 401 Unauthorized for call: /get-dai-go?target=努力大事
+2024-05-26 18:29:44.375 [DefaultDispatcher-worker-6 @request#125] TRACE io.ktor.routing.Routing - Trace for [get-dai-go]
 /, segment:0 -&gt; SUCCESS @ /
   /, segment:0 -&gt; SUCCESS @ /
     /{...}, segment:1 -&gt; SUCCESS; Parameters [static-content-path-parameter=[get-dai-go]] @ /{...}
@@ -1278,11 +1278,11 @@ Matched routes:
   &quot;&quot; -&gt; &quot;(authenticate &quot;default&quot;)&quot; -&gt; &quot;get-dai-go&quot; -&gt; &quot;(method:GET)&quot;
 Route resolve result:
   SUCCESS @ /(authenticate &quot;default&quot;)/get-dai-go/(method:GET)
-2024-05-26 18:29:03.532 [DefaultDispatcher-worker-5 @request#143] INFO  ktor.test - /get-dai-go
-2024-05-26 18:29:03.532 [DefaultDispatcher-worker-5 @request#143] TRACE io.ktor.server.auth.Authentication - Trying to authenticate /get-dai-go with null
-2024-05-26 18:29:03.532 [DefaultDispatcher-worker-5 @request#143] TRACE io.ktor.server.auth.Authentication - Authentication succeeded for /get-dai-go with provider net.ambitious.daigoapi.BearerAuthenticationProvider@163868f7
-2024-05-26 18:29:03.532 [DefaultDispatcher-worker-5 @request#143] TRACE i.k.s.p.statuspages.StatusPages - No handler found for status code 400 Bad Request for call: /get-dai-go
-2024-05-26 18:29:03.536 [DefaultDispatcher-worker-2 @request#148] TRACE io.ktor.routing.Routing - Trace for [get-dai-go]
+2024-05-26 18:29:44.377 [DefaultDispatcher-worker-6 @request#125] INFO  ktor.test - /get-dai-go
+2024-05-26 18:29:44.377 [DefaultDispatcher-worker-6 @request#125] TRACE io.ktor.server.auth.Authentication - Trying to authenticate /get-dai-go with null
+2024-05-26 18:29:44.378 [DefaultDispatcher-worker-6 @request#125] TRACE io.ktor.server.auth.Authentication - Authentication succeeded for /get-dai-go with provider net.ambitious.daigoapi.BearerAuthenticationProvider@4ea0c72a
+2024-05-26 18:29:44.378 [DefaultDispatcher-worker-6 @request#125] TRACE i.k.s.p.statuspages.StatusPages - No handler found for status code 400 Bad Request for call: /get-dai-go
+2024-05-26 18:29:44.381 [DefaultDispatcher-worker-6 @request#129] TRACE io.ktor.routing.Routing - Trace for [get-dai-go]
 /, segment:0 -&gt; SUCCESS @ /
   /, segment:0 -&gt; SUCCESS @ /
     /{...}, segment:1 -&gt; SUCCESS; Parameters [static-content-path-parameter=[get-dai-go]] @ /{...}
@@ -1303,21 +1303,21 @@ Matched routes:
   &quot;&quot; -&gt; &quot;(authenticate &quot;default&quot;)&quot; -&gt; &quot;get-dai-go&quot; -&gt; &quot;(method:GET)&quot;
 Route resolve result:
   SUCCESS @ /(authenticate &quot;default&quot;)/get-dai-go/(method:GET)
-2024-05-26 18:29:03.536 [DefaultDispatcher-worker-2 @request#148] INFO  ktor.test - /get-dai-go?target=努力大事
-2024-05-26 18:29:03.536 [DefaultDispatcher-worker-2 @request#148] TRACE io.ktor.server.auth.Authentication - Trying to authenticate /get-dai-go?target=努力大事 with null
-2024-05-26 18:29:03.536 [DefaultDispatcher-worker-2 @request#148] TRACE io.ktor.server.auth.Authentication - Authentication succeeded for /get-dai-go?target=努力大事 with provider net.ambitious.daigoapi.BearerAuthenticationProvider@163868f7
-2024-05-26 18:29:03.706 [DefaultDispatcher-worker-2 @request#148] INFO  ktor.test - 名詞,サ変接続,*,*,*,*,努力,ドリョク,ドリョク
-2024-05-26 18:29:03.707 [DefaultDispatcher-worker-2 @request#148] INFO  ktor.test - 名詞,形容動詞語幹,*,*,*,*,大事,ダイジ,ダイジ
-2024-05-26 18:29:03.707 [DefaultDispatcher-worker-2 @request#148] TRACE i.k.s.p.statuspages.StatusPages - No status code found for call: /get-dai-go?target=努力大事
-2024-05-26 18:29:03.709 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@31e130bf
-2024-05-26 18:29:03.709 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@31e130bf
+2024-05-26 18:29:44.384 [DefaultDispatcher-worker-6 @request#129] INFO  ktor.test - /get-dai-go?target=努力大事
+2024-05-26 18:29:44.384 [DefaultDispatcher-worker-6 @request#129] TRACE io.ktor.server.auth.Authentication - Trying to authenticate /get-dai-go?target=努力大事 with null
+2024-05-26 18:29:44.384 [DefaultDispatcher-worker-6 @request#129] TRACE io.ktor.server.auth.Authentication - Authentication succeeded for /get-dai-go?target=努力大事 with provider net.ambitious.daigoapi.BearerAuthenticationProvider@4ea0c72a
+2024-05-26 18:29:44.546 [DefaultDispatcher-worker-6 @request#129] INFO  ktor.test - 名詞,サ変接続,*,*,*,*,努力,ドリョク,ドリョク
+2024-05-26 18:29:44.547 [DefaultDispatcher-worker-6 @request#129] INFO  ktor.test - 名詞,形容動詞語幹,*,*,*,*,大事,ダイジ,ダイジ
+2024-05-26 18:29:44.547 [DefaultDispatcher-worker-6 @request#129] TRACE i.k.s.p.statuspages.StatusPages - No status code found for call: /get-dai-go?target=努力大事
+2024-05-26 18:29:44.549 [Test worker] INFO  ktor.test - Application stopping: io.ktor.server.application.Application@28237492
+2024-05-26 18:29:44.549 [Test worker] INFO  ktor.test - Application stopped: io.ktor.server.application.Application@28237492
 </pre>
 </span>
 </div>
 <div id="tab2" class="tab">
 <h2>Standard error</h2>
 <span class="code">
-<pre>May 26, 2024 9:29:03 AM io.grpc.internal.ManagedChannelOrphanWrapper$ManagedChannelReference cleanQueue
+<pre>May 26, 2024 9:29:44 AM io.grpc.internal.ManagedChannelOrphanWrapper$ManagedChannelReference cleanQueue
 SEVERE: *~*~*~ Previous channel ManagedChannelImpl{logId=5, target=localhost:8081} was garbage collected without being shut down! ~*~*~*
     Make sure to call shutdown()/shutdownNow()
 java.lang.RuntimeException: ManagedChannel allocation site
@@ -1391,7 +1391,7 @@ java.lang.RuntimeException: ManagedChannel allocation site
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 
-May 26, 2024 9:29:03 AM io.grpc.internal.ManagedChannelOrphanWrapper$ManagedChannelReference cleanQueue
+May 26, 2024 9:29:44 AM io.grpc.internal.ManagedChannelOrphanWrapper$ManagedChannelReference cleanQueue
 SEVERE: *~*~*~ Previous channel ManagedChannelImpl{logId=1, target=localhost:8081} was garbage collected without being shut down! ~*~*~*
     Make sure to call shutdown()/shutdownNow()
 java.lang.RuntimeException: ManagedChannel allocation site
@@ -1465,7 +1465,7 @@ java.lang.RuntimeException: ManagedChannel allocation site
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 
-May 26, 2024 9:29:03 AM io.grpc.internal.ManagedChannelOrphanWrapper$ManagedChannelReference cleanQueue
+May 26, 2024 9:29:44 AM io.grpc.internal.ManagedChannelOrphanWrapper$ManagedChannelReference cleanQueue
 SEVERE: *~*~*~ Previous channel ManagedChannelImpl{logId=9, target=localhost:8081} was garbage collected without being shut down! ~*~*~*
     Make sure to call shutdown()/shutdownNow()
 java.lang.RuntimeException: ManagedChannel allocation site
@@ -1550,7 +1550,7 @@ java.lang.RuntimeException: ManagedChannel allocation site
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.0.2</a> at May 26, 2024, 9:29:04 AM</p>
+<a href="http://www.gradle.org">Gradle 8.0.2</a> at May 26, 2024, 9:29:44 AM</p>
 </div>
 </div>
 </body>
