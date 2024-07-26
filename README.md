@@ -1,5 +1,8 @@
 # D◯I 語 API
 
+> [!WARNING]
+> FW、言語変更に伴いリポジトリを移行しました -> https://github.com/bvlion/DAIgoAPI2
+
 API 4 D◯I 語 app
 
 - Android
